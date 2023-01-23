@@ -1,0 +1,11 @@
+module Register(d, q, clr, clk, le);
+	input [31:0] d;
+	input clr, clk, le;
+	output [31:0] q;
+	//Assuming active high & async clear
+	always @ (posedge clk or posedge clr or posedge le)
+		if(clr and le)
+			q <= 0;
+		else if(clk and le)
+			q <= d;
+	end;
