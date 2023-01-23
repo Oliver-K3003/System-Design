@@ -1,4 +1,9 @@
-|Register
+|Registertb
+a => ~NO_FANOUT~
+b <= <GND>
+
+
+|Registertb|Register:R1
 d[0] => q[0]$latch.DATAIN
 d[1] => q[1]$latch.DATAIN
 d[2] => q[2]$latch.DATAIN

@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module registertb();
+module Registertb(input a, output b);
 
 	reg[31:0] in;
 	wire[31:0] result;
@@ -8,11 +8,18 @@ module registertb();
 	
 	initial
 		begin
-			clr <= 1'b1;
-			clk <= 1'b1;
-			le <= 1'b1;
 			
-			#100 in <= 32'd203;
+			clk = 0;
+			forever #10 clk = ~clk;
+			
 			
 		end
+		
+		always @(posedge clk)
+			begin
+			le <= 1;
+			clr <= 0;
+			#100 in <= 32'd203;
+			end
+		
 endmodule

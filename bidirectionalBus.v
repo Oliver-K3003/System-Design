@@ -1,4 +1,4 @@
-/*module busEncoder(en, in, out);
+module busEncoder(en, in, out);
 	input en;
 	input [31:0] in;
 	output reg [4:0]out;
@@ -6,7 +6,7 @@
 	begin
 		if(en==1)
 			begin
-				if(i[31==1]) out=5'b11111
+				if(i[31==1])      out=5'b11111;
 				else if(i[30]==1) out=5'b11110;
 				else if(i[29]==1) out=5'b11101;
 				else if(i[28]==1) out=5'b11100;
@@ -43,4 +43,6 @@
 	end
 endmodule
 
-module busMUX(in, )*/
+module busMUX(r0, r1, r2, r3, r4, r5, r6, r7, r8, r9, r10, r11, r12, r13, r14, r15, hi, lo, zhi, zlo, pc, mdr, inport, signExt, muxOut);
+	input reg [31..0] r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,hi,lo,zhi,zlo,pc,mdr,inport,signExt;
+	output reg [31..0] muxOut;
