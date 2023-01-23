@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 //Test register
-module Register(d, q, clr, clk, enable);
+module R1(d, q, clr, clk, enable);
 	input [31:0] d, clr, clk, enable;
 	output [31:0] q;
 	//Assuming active high & async clear
