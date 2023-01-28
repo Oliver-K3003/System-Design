@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Mon Jan 23 19:35:06 2023
+Sat Jan 28 18:49:54 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,11 +13,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -43,13 +43,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 23 19:35:06 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jan 28 18:49:54 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; busMUX                                          ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 518                                             ;
-;     Total combinational functions  ; 518                                             ;
+; Total logic elements               ; 486                                             ;
+;     Total combinational functions  ; 486                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 805                                             ;
@@ -172,16 +172,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 518          ;
+; Estimated Total logic elements              ; 486          ;
 ;                                             ;              ;
-; Total combinational functions               ; 518          ;
+; Total combinational functions               ; 486          ;
 ; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 481          ;
-;     -- 3 input functions                    ; 35           ;
+;     -- 4 input functions                    ; 448          ;
+;     -- 3 input functions                    ; 36           ;
 ;     -- <=2 input functions                  ; 2            ;
 ;                                             ;              ;
 ; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 518          ;
+;     -- normal mode                          ; 486          ;
 ;     -- arithmetic mode                      ; 0            ;
 ;                                             ;              ;
 ; Total registers                             ; 0            ;
@@ -191,9 +191,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; I/O pins                                    ; 805          ;
 ; Embedded Multiplier 9-bit elements          ; 0            ;
 ; Maximum fan-out node                        ; sel[1]~input ;
-; Maximum fan-out                             ; 249          ;
-; Total fan-out                               ; 2870         ;
-; Average fan-out                             ; 1.35         ;
+; Maximum fan-out                             ; 244          ;
+; Total fan-out                               ; 2741         ;
+; Average fan-out                             ; 1.31         ;
 +---------------------------------------------+--------------+
 
 
@@ -202,51 +202,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |busMUX                    ; 518 (518)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 805  ; 0            ; |busMUX             ; work         ;
+; |busMUX                    ; 486 (486)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 805  ; 0            ; |busMUX             ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; muxOut[0]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[1]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[2]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[3]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[4]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[5]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[6]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[7]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[8]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[9]$latch                                     ; Mux32               ; yes                    ;
-; muxOut[10]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[11]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[12]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[13]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[14]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[15]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[16]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[17]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[18]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[19]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[20]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[21]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[22]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[23]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[24]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[25]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[26]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[27]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[28]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[29]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[30]$latch                                    ; Mux32               ; yes                    ;
-; muxOut[31]$latch                                    ; Mux32               ; yes                    ;
-; Number of user-specified and inferred latches = 32  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -269,7 +227,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 23:1               ; 32 bits   ; 480 LEs       ; 480 LEs              ; 0 LEs                  ; No         ; |busMUX|Mux0               ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 480 LEs              ; 192 LEs                ; No         ; |busMUX|Mux31              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -278,7 +236,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -288,7 +246,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jan 23 19:35:05 2023
+    Info: Processing started: Sat Jan 28 18:49:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 0 design units, including 0 entities, in source file bidirectionalbus.v
@@ -302,105 +260,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file busmux.
 Info (12021): Found 1 design units, including 1 entities, in source file busencoder.v
     Info (12023): Found entity 1: busEncoder
 Info (12127): Elaborating entity "busMUX" for the top level hierarchy
-Warning (10235): Verilog HDL Always Construct warning at busMUX.v(34): variable "r4" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10270): Verilog HDL Case Statement warning at busMUX.v(30): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at busMUX.v(28): inferring latch(es) for variable "muxOut", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "muxOut[0]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[1]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[2]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[3]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[4]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[5]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[6]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[7]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[8]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[9]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[10]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[11]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[12]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[13]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[14]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[15]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[16]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[17]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[18]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[19]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[20]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[21]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[22]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[23]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[24]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[25]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[26]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[27]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[28]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[29]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[30]" at busMUX.v(28)
-Info (10041): Inferred latch for "muxOut[31]" at busMUX.v(28)
-Warning (13012): Latch muxOut[0]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[1]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[2]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[3]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[4]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[5]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[6]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[7]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[8]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[9]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[10]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[11]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[12]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[13]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[14]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[15]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[16]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[17]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[18]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[19]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[20]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[21]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[22]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[23]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[24]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[25]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[26]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[27]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[28]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[29]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
-Warning (13012): Latch muxOut[30]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[1]
-Warning (13012): Latch muxOut[31]$latch has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal sel[0]
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -437,14 +296,21 @@ Warning (21074): Design contains 32 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "r0[29]"
     Warning (15610): No output dependent on input pin "r0[30]"
     Warning (15610): No output dependent on input pin "r0[31]"
-Info (21057): Implemented 1323 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1291 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 773 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 518 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 102 warnings
+    Info (21061): Implemented 486 logic cells
+Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374/system-design/System-Design/output_files/system.map.smsg
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
     Info: Peak virtual memory: 4584 megabytes
-    Info: Processing ended: Mon Jan 23 19:35:06 2023
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Jan 28 18:49:54 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/altera/13.0sp1/elec374/system-design/System-Design/output_files/system.map.smsg.
 
 
