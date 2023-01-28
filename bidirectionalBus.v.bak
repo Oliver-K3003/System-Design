@@ -1,0 +1,3 @@
+module busEncoder(en, in, out);
+	input en;
+	input [32:0] in;

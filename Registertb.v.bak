@@ -1,0 +1,12 @@
+module registertb();
+
+	reg[31:0] in;
+	wire[31:0] result;
+	reg clr, clk, le;
+	Register R1(in, result, clr, clk, le);
+	
+	initial
+		begin
+			
+		end
+endmodule
