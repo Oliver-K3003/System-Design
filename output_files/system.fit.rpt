@@ -1,5 +1,5 @@
 Fitter report for system
-Sat Jan 28 18:49:58 2023
+Mon Jan 30 14:59:19 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -54,7 +54,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Failed - Sat Jan 28 18:49:57 2023               ;
+; Fitter Status                      ; Failed - Mon Jan 30 14:59:19 2023               ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; busMUX                                          ;
@@ -6725,12 +6725,12 @@ Critical Warning (169085): No exact pin location assignment(s) for 805 pins of 8
     Info (169086): Pin r4[31] not assigned to an exact location on the device
     Info (169086): Pin r7[31] not assigned to an exact location on the device
 Error (169281): There are 773 IO input pads in the design, but only 347 IO input pad locations available on the device.
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
 Error (171000): Can't fit design in device
 Error: Quartus II 64-Bit Fitter was unsuccessful. 2 errors, 4 warnings
-    Error: Peak virtual memory: 4754 megabytes
-    Error: Processing ended: Sat Jan 28 18:49:58 2023
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:03
+    Error: Peak virtual memory: 4753 megabytes
+    Error: Processing ended: Mon Jan 30 14:59:19 2023
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:04
 
 

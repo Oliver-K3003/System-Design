@@ -4,6 +4,7 @@ source_file = 1, C:/altera/13.0sp1/elec374/system-design/System-Design/Registert
 source_file = 1, C:/altera/13.0sp1/elec374/system-design/System-Design/Register.v
 source_file = 1, C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v
 source_file = 1, C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v
+source_file = 1, C:/altera/13.0sp1/elec374/system-design/System-Design/busEncodertb.v
 source_file = 1, C:/altera/13.0sp1/elec374/system-design/System-Design/db/system.cbx.xml
 design_name = busEncoder
 instance = comp, \Equal14~0 , Equal14~0, busEncoder, 1

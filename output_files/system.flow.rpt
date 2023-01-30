@@ -1,5 +1,5 @@
 Flow report for system
-Sat Jan 28 18:49:58 2023
+Mon Jan 30 14:59:19 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Flow Failed - Sat Jan 28 18:49:57 2023          ;
+; Flow Status                        ; Flow Failed - Mon Jan 30 14:59:19 2023          ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; busMUX                                          ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/28/2023 18:49:52 ;
+; Start date & time ; 01/30/2023 14:59:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; system              ;
 +-------------------+---------------------+
@@ -75,16 +75,21 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 269049658834448.167494979225336       ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 269049658834448.167510875107104       ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Registertb     ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Registertb                            ; --            ; --          ; eda_simulation ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busEncodertb   ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; busEncodertb                          ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_FILE                  ; Registertb.v                          ; --            ; --          ; Registertb     ;
+; EDA_TEST_BENCH_FILE                  ; busEncodertb.v                        ; --            ; --          ; busEncodertb   ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Registertb                            ; --            ; --          ; Registertb     ;
+; EDA_TEST_BENCH_MODULE_NAME           ; busEncodertb                          ; --            ; --          ; busEncodertb   ;
 ; EDA_TEST_BENCH_NAME                  ; Registertb                            ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_NAME                  ; busEncodertb                          ; --            ; --          ; eda_simulation ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; Registertb     ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10000 ns                              ; --            ; --          ; busEncodertb   ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
@@ -104,9 +109,9 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 4573 MB             ; 00:00:02                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:05                           ;
+; Analysis & Synthesis ; 00:00:03     ; 1.0                     ; 4573 MB             ; 00:00:03                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 4749 MB             ; 00:00:03                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

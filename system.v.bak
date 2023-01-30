@@ -1,7 +1,0 @@
-`timescale 1ns/10ps
-module Register(inD, outQ, clr, clk, enable);
-	input [31:0] inD, clr, clk, enable;
-	output [31:0] outQ;
-	//Assuming active high
-	always @ (posedge clk)
-		outQ <= inD;
