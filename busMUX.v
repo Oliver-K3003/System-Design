@@ -1,5 +1,3 @@
-`timescale 1ns/10ps
-
 module busMUX(
 			  // general purpose registers
 			  input [31:0] r0, 
@@ -29,7 +27,7 @@ module busMUX(
 			  input [31:0] signExt,
 			  
 			  // select signal
-			  input wire [4:0] sel,
+			  input [4:0] sel,
 			  
 			  // mux output register
 			  output reg [31:0] muxOut);
