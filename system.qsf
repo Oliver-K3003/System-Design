@@ -89,3 +89,4 @@ set_global_assignment -name VERILOG_FILE rotate_right.v
 set_global_assignment -name VERILOG_FILE rotate_left.v
 set_global_assignment -name VERILOG_FILE negate.v
 set_global_assignment -name VERILOG_FILE not_32.v
+set_global_assignment -name VERILOG_FILE multiplier.v
