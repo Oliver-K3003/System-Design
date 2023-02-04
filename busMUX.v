@@ -32,8 +32,7 @@ module busMUX(
 			  // mux output register
 			  output reg [31:0] muxOut);
 
-	always @(*) 
-	begin
+	always @(*) begin
 		case (sel)
 			5'b00001 : muxOut <= r1[31:0];
 			5'b00010 : muxOut <= r2[31:0];

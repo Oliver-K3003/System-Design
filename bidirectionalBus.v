@@ -20,3 +20,9 @@ module bus_32(input [4:0] select, input [31:0] data_in, output reg [31:0] data_o
     assign data_out = mux_out;
 endmodule
 */
+
+// module bus(input [31:0] dataIn, output reg [31:0] dataOut);
+// 	reg [4:0] encoderOut;
+// 	wire [31:0] muxOut;
+	
+// 	busEncoder encoder_instance(dataIn, encoderOut);

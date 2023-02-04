@@ -1,14 +1,14 @@
 `timescale 1ns/10ps
 
-module busEncoder(input wire [31:0] in, input en, output reg [4:0] out);
-	always @(in or en)
-	begin
-		if(en==1)
+module busEncoder(input wire [31:0] in, /*input en,*/ output reg [4:0] out);
+	always @(in /*or en*/)
+	/*begin
+		if(en==1)*/
 			begin
 				case(in)
 					//all connections past 23 can be used for other things if needed
 					32'h00000001 : out <= 5'd0;   
-         		32'h00000002 : out <= 5'd1;     
+         			32'h00000002 : out <= 5'd1;     
 	 				32'h00000004 : out <= 5'd2;      
 					32'h00000008 : out <= 5'd3;     
 					32'h00000010 : out <= 5'd4;     
@@ -36,6 +36,6 @@ module busEncoder(input wire [31:0] in, input en, output reg [4:0] out);
 				endcase
 			end
 			//high impedance fallthrough if the encoder enable is zero
-		else	out=5'bzzzzz;
-	end
+		/*else	out=5'bzzzzz;*/
+	//end
 endmodule

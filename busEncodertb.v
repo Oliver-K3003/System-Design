@@ -3,15 +3,15 @@
 module busEncodertb;
 
 	reg[31:0] in;
-	reg en;
+	//reg en;
 	wire[4:0] out;
 	
-	busEncoder busEncoder_instance(in, en, out);
+	busEncoder busEncoder_instance(in, /*en,*/ out);
 	
 	initial
 		begin
 			in <= 32'h00000001;
-			en <= 1;
+			//en <= 1;
 			
 			#200
 			
@@ -19,12 +19,12 @@ module busEncodertb;
 			
 			#400
 			
-			en <= 0;
+			//en <= 0;
 			in <= 32'h00000001;
 			
 			#600
 			
-			en <= 1;
+			//en <= 1;
 			in <= 32'h00000010;
 			
 		end
