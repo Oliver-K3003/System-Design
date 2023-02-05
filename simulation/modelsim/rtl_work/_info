@@ -3,45 +3,87 @@ K3
 13
 cModel Technology
 Z0 dC:\altera\13.0sp1\elec374\system-design\System-Design\simulation\modelsim
-vbusEncoder
-IBA6iL_ZK?cSC;mj:oLdBR3
-V9Bfg2m?DW6hQUjm?PmPd=0
+vbidirectionalBus
+Ii[Y[l<0beDII=:;06FKTZ0
+VRI6Oan7ZKf[XgNL78KPK`1
 Z1 dC:\altera\13.0sp1\elec374\system-design\System-Design\simulation\modelsim
-w1675540897
-8C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v
-FC:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v
-L0 3
+w1675558551
+8C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBus.v
+FC:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBus.v
+L0 1
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
-nbus@encoder
-!i10b 1
-!s100 :TgQ50:f@mK8oGRoH71:[3
-!s85 0
-!s108 1675540939.118000
-!s107 C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v|
-!s101 -O0
+nbidirectional@bus
 Z4 !s92 -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design -O0
-vbusEncodertb
 !i10b 1
-!s100 :d_8B1Rz1;GF_:H`2>21O2
-IF>W?cX96A0VJ<hA?BI=ZV1
-Va=egX@5>MfXzf5z1DR0[13
+!s100 l_WY[7XTOPH6O=M2]YNn53
+!s85 0
+!s108 1675559063.407000
+!s107 C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBus.v|
+!s101 -O0
+vbidirectionalBustb
+!i10b 1
+!s100 =8FDc2Gbg_[4@EFhloPh_1
+I4=5XTDDi3nT3U`X@R]@Yi2
+VO<O_@F;^QkPe3ie6>QWB63
 R1
-w1675540704
-8C:/altera/13.0sp1/elec374/system-design/System-Design/busEncodertb.v
-FC:/altera/13.0sp1/elec374/system-design/System-Design/busEncodertb.v
+w1675558920
+8C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBustb.v
+FC:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBustb.v
 L0 3
 R2
 r1
 !s85 0
 31
-!s108 1675540939.227000
-!s107 C:/altera/13.0sp1/elec374/system-design/System-Design/busEncodertb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/busEncodertb.v|
+!s108 1675559063.691000
+!s107 C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBustb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBustb.v|
 !s101 -O0
 R3
 R4
-nbus@encodertb
+nbidirectional@bustb
+vbusEncoder
+IBA6iL_ZK?cSC;mj:oLdBR3
+V9Bfg2m?DW6hQUjm?PmPd=0
+R1
+w1675556216
+8C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v
+FC:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v
+L0 3
+R2
+r1
+31
+R3
+R4
+nbus@encoder
+!i10b 1
+!s100 :TgQ50:f@mK8oGRoH71:[3
+!s85 0
+!s108 1675559063.618000
+!s107 C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v|
+!s101 -O0
+vbusMUX
+IUiId8CoR10i?YSA[G7C?91
+V5IDeZLCJW]:_;E75b5DQk1
+R1
+w1675558827
+8C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v
+FC:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v
+L0 1
+R2
+r1
+31
+R3
+R4
+nbus@m@u@x
+!i10b 1
+!s100 X3dW5h`G257E0h^h76c?71
+!s85 0
+!s108 1675559063.529000
+!s107 C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v|
+!s101 -O0

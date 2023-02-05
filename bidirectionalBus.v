@@ -1,28 +1,19 @@
-/*
-module bus_32(input [4:0] select, input [31:0] data_in, output reg [31:0] data_out);
-    reg [4:0] encoder_out;
-    wire [31:0] mux_out;
-
-    // 32-5 encoder
-    encoder encoder_32_5 (
-        .i(select),
-        .o(encoder_out)
-    );
-
-    // 32-1 multiplexer
-    mux mux_32_1 (
-        .sel(encoder_out),
-        .data(data_in),
-        .out(mux_out)
-    );
-
-    // Drive the output of the bus
-    assign data_out = mux_out;
-endmodule
-*/
-
-// module bus(input [31:0] dataIn, output reg [31:0] dataOut);
-// 	reg [4:0] encoderOut;
-// 	wire [31:0] muxOut;
+module bidirectionalBus(input [31:0] dataIn, output wire [31:0] dataOut);
+ 	wire [4:0] encoderOut;
+	wire [31:0] r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,hi,lo,zhi,zlo,pc,mdr,inport,signExt;
+	wire [31:0] muxOut;
 	
-// 	busEncoder encoder_instance(dataIn, encoderOut);
+		//used for testing 
+    assign r0 = 31'd240;
+    assign r1 = 31'd2;
+    assign r2 = 31'd1235;
+    assign r3 = 31'd30;
+    assign r4 = 31'd10;
+    assign r5 = 31'd530;
+
+ 	busEncoder encoder_instance(dataIn[31:0], encoderOut[4:0]);
+	busMUX mux_instance(r0,r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,hi,lo,zhi,zlo,pc,mdr,inport,signExt,encoderOut,muxOut);
+	
+	assign dataOut = muxOut;
+	
+endmodule

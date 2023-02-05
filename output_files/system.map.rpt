@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Sat Feb 04 15:36:41 2023
+Sat Feb 04 20:03:58 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+  9. Port Connectivity Checks: "busMUX:mux_instance"
  10. Elapsed Time Per Partition
  11. Analysis & Synthesis Messages
 
@@ -42,16 +42,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 04 15:36:41 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat Feb 04 20:03:58 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
-; Top-level Entity Name              ; busMUX                                          ;
+; Top-level Entity Name              ; bidirectionalBus                                ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 486                                             ;
-;     Total combinational functions  ; 486                                             ;
+; Total logic elements               ; 78                                              ;
+;     Total combinational functions  ; 78                                              ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 805                                             ;
+; Total pins                         ; 64                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +65,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; busMUX             ; system             ;
+; Top-level entity name                                                      ; bidirectionalBus   ; system             ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,52 +157,56 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
-; busMUX.v                         ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; bidirectionalBus.v               ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBus.v ;         ;
+; busMUX.v                         ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v           ;         ;
+; busEncoder.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v       ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 486          ;
-;                                             ;              ;
-; Total combinational functions               ; 486          ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 448          ;
-;     -- 3 input functions                    ; 36           ;
-;     -- <=2 input functions                  ; 2            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 486          ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 805          ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-; Maximum fan-out node                        ; sel[1]~input ;
-; Maximum fan-out                             ; 244          ;
-; Total fan-out                               ; 2741         ;
-; Average fan-out                             ; 1.31         ;
-+---------------------------------------------+--------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                          ;
++---------------------------------------------+----------------------------------------+
+; Resource                                    ; Usage                                  ;
++---------------------------------------------+----------------------------------------+
+; Estimated Total logic elements              ; 78                                     ;
+;                                             ;                                        ;
+; Total combinational functions               ; 78                                     ;
+; Logic element usage by number of LUT inputs ;                                        ;
+;     -- 4 input functions                    ; 56                                     ;
+;     -- 3 input functions                    ; 16                                     ;
+;     -- <=2 input functions                  ; 6                                      ;
+;                                             ;                                        ;
+; Logic elements by mode                      ;                                        ;
+;     -- normal mode                          ; 78                                     ;
+;     -- arithmetic mode                      ; 0                                      ;
+;                                             ;                                        ;
+; Total registers                             ; 0                                      ;
+;     -- Dedicated logic registers            ; 0                                      ;
+;     -- I/O registers                        ; 0                                      ;
+;                                             ;                                        ;
+; I/O pins                                    ; 64                                     ;
+; Embedded Multiplier 9-bit elements          ; 0                                      ;
+; Maximum fan-out node                        ; busEncoder:encoder_instance|WideNor0~3 ;
+; Maximum fan-out                             ; 7                                      ;
+; Total fan-out                               ; 357                                    ;
+; Average fan-out                             ; 1.73                                   ;
++---------------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |busMUX                    ; 486 (486)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 805  ; 0            ; |busMUX             ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
+; |bidirectionalBus                ; 78 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |bidirectionalBus                             ; work         ;
+;    |busEncoder:encoder_instance| ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bidirectionalBus|busEncoder:encoder_instance ; work         ;
+;    |busMUX:mux_instance|         ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bidirectionalBus|busMUX:mux_instance         ; work         ;
++----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -221,13 +225,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 32:1               ; 32 bits   ; 672 LEs       ; 480 LEs              ; 192 LEs                ; No         ; |busMUX|Mux31              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "busMUX:mux_instance" ;
++------------+-------+----------+-----------------+
+; Port       ; Type  ; Severity ; Details         ;
++------------+-------+----------+-----------------+
+; r0[7..4]   ; Input ; Info     ; Stuck at VCC    ;
+; r0[31..8]  ; Input ; Info     ; Stuck at GND    ;
+; r0[3..0]   ; Input ; Info     ; Stuck at GND    ;
+; r1[31..2]  ; Input ; Info     ; Stuck at GND    ;
+; r1[1]      ; Input ; Info     ; Stuck at VCC    ;
+; r1[0]      ; Input ; Info     ; Stuck at GND    ;
+; r2[7..6]   ; Input ; Info     ; Stuck at VCC    ;
+; r2[1..0]   ; Input ; Info     ; Stuck at VCC    ;
+; r2[31..11] ; Input ; Info     ; Stuck at GND    ;
+; r2[9..8]   ; Input ; Info     ; Stuck at GND    ;
+; r2[3..2]   ; Input ; Info     ; Stuck at GND    ;
+; r2[10]     ; Input ; Info     ; Stuck at VCC    ;
+; r2[5]      ; Input ; Info     ; Stuck at GND    ;
+; r2[4]      ; Input ; Info     ; Stuck at VCC    ;
+; r3[4..1]   ; Input ; Info     ; Stuck at VCC    ;
+; r3[31..5]  ; Input ; Info     ; Stuck at GND    ;
+; r3[0]      ; Input ; Info     ; Stuck at GND    ;
+; r4[31..4]  ; Input ; Info     ; Stuck at GND    ;
+; r4[3]      ; Input ; Info     ; Stuck at VCC    ;
+; r4[2]      ; Input ; Info     ; Stuck at GND    ;
+; r4[1]      ; Input ; Info     ; Stuck at VCC    ;
+; r4[0]      ; Input ; Info     ; Stuck at GND    ;
+; r5[31..10] ; Input ; Info     ; Stuck at GND    ;
+; r5[8..5]   ; Input ; Info     ; Stuck at GND    ;
+; r5[3..2]   ; Input ; Info     ; Stuck at GND    ;
+; r5[9]      ; Input ; Info     ; Stuck at VCC    ;
+; r5[4]      ; Input ; Info     ; Stuck at VCC    ;
+; r5[1]      ; Input ; Info     ; Stuck at VCC    ;
+; r5[0]      ; Input ; Info     ; Stuck at GND    ;
++------------+-------+----------+-----------------+
 
 
 +-------------------------------+
@@ -245,10 +277,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Feb 04 15:36:39 2023
+    Info: Processing started: Sat Feb 04 20:03:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 0 design units, including 0 entities, in source file bidirectionalbus.v
+Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
+    Info (12023): Found entity 1: bidirectionalBus
 Info (12021): Found 1 design units, including 1 entities, in source file registertb.v
     Info (12023): Found entity 1: Registertb
 Info (12021): Found 1 design units, including 1 entities, in source file register.v
@@ -262,52 +295,69 @@ Info (12021): Found 1 design units, including 1 entities, in source file busenco
     Info (12023): Found entity 1: busEncodertb
 Info (12021): Found 1 design units, including 1 entities, in source file busmuxtb.v
     Info (12023): Found entity 1: busMUXtb
-Warning (10236): Verilog HDL Implicit Net warning at busMUXtb.v(11): created implicit net for "data"
-Info (12127): Elaborating entity "busMUX" for the top level hierarchy
+Info (12021): Found 3 design units, including 3 entities, in source file adder.v
+    Info (12023): Found entity 1: adder
+    Info (12023): Found entity 2: cla_4
+    Info (12023): Found entity 3: cla_16
+Info (12021): Found 1 design units, including 1 entities, in source file log_and_32bit.v
+    Info (12023): Found entity 1: log_and_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file log_or_32bit.v
+    Info (12023): Found entity 1: log_or_32bit
+Info (12021): Found 1 design units, including 1 entities, in source file shift_left.v
+    Info (12023): Found entity 1: shift_left
+Info (12021): Found 1 design units, including 1 entities, in source file shift_right.v
+    Info (12023): Found entity 1: shift_right
+Info (12021): Found 1 design units, including 1 entities, in source file rotate_right.v
+    Info (12023): Found entity 1: rotate_right
+Info (12021): Found 1 design units, including 1 entities, in source file rotate_left.v
+    Info (12023): Found entity 1: rotate_left
+Info (12021): Found 1 design units, including 1 entities, in source file negate.v
+    Info (12023): Found entity 1: negate
+Info (12021): Found 1 design units, including 1 entities, in source file not_32.v
+    Info (12023): Found entity 1: not_32
+Info (12021): Found 0 design units, including 0 entities, in source file multiplier.v
+Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbustb.v
+    Info (12023): Found entity 1: bidirectionalBustb
+Info (12127): Elaborating entity "bidirectionalBus" for the top level hierarchy
+Info (12128): Elaborating entity "busEncoder" for hierarchy "busEncoder:encoder_instance"
+Warning (10762): Verilog HDL Case Statement warning at busEncoder.v(8): can't check case statement for completeness because the case expression has too many possible states
+Info (10264): Verilog HDL Case Statement information at busEncoder.v(8): all case item expressions in this case statement are onehot
+Info (12128): Elaborating entity "busMUX" for hierarchy "busMUX:mux_instance"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "dataOut[5]" is stuck at GND
+    Warning (13410): Pin "dataOut[8]" is stuck at GND
+    Warning (13410): Pin "dataOut[11]" is stuck at GND
+    Warning (13410): Pin "dataOut[12]" is stuck at GND
+    Warning (13410): Pin "dataOut[13]" is stuck at GND
+    Warning (13410): Pin "dataOut[14]" is stuck at GND
+    Warning (13410): Pin "dataOut[15]" is stuck at GND
+    Warning (13410): Pin "dataOut[16]" is stuck at GND
+    Warning (13410): Pin "dataOut[17]" is stuck at GND
+    Warning (13410): Pin "dataOut[18]" is stuck at GND
+    Warning (13410): Pin "dataOut[19]" is stuck at GND
+    Warning (13410): Pin "dataOut[20]" is stuck at GND
+    Warning (13410): Pin "dataOut[21]" is stuck at GND
+    Warning (13410): Pin "dataOut[22]" is stuck at GND
+    Warning (13410): Pin "dataOut[23]" is stuck at GND
+    Warning (13410): Pin "dataOut[24]" is stuck at GND
+    Warning (13410): Pin "dataOut[25]" is stuck at GND
+    Warning (13410): Pin "dataOut[26]" is stuck at GND
+    Warning (13410): Pin "dataOut[27]" is stuck at GND
+    Warning (13410): Pin "dataOut[28]" is stuck at GND
+    Warning (13410): Pin "dataOut[29]" is stuck at GND
+    Warning (13410): Pin "dataOut[30]" is stuck at GND
+    Warning (13410): Pin "dataOut[31]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 32 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "r0[0]"
-    Warning (15610): No output dependent on input pin "r0[1]"
-    Warning (15610): No output dependent on input pin "r0[2]"
-    Warning (15610): No output dependent on input pin "r0[3]"
-    Warning (15610): No output dependent on input pin "r0[4]"
-    Warning (15610): No output dependent on input pin "r0[5]"
-    Warning (15610): No output dependent on input pin "r0[6]"
-    Warning (15610): No output dependent on input pin "r0[7]"
-    Warning (15610): No output dependent on input pin "r0[8]"
-    Warning (15610): No output dependent on input pin "r0[9]"
-    Warning (15610): No output dependent on input pin "r0[10]"
-    Warning (15610): No output dependent on input pin "r0[11]"
-    Warning (15610): No output dependent on input pin "r0[12]"
-    Warning (15610): No output dependent on input pin "r0[13]"
-    Warning (15610): No output dependent on input pin "r0[14]"
-    Warning (15610): No output dependent on input pin "r0[15]"
-    Warning (15610): No output dependent on input pin "r0[16]"
-    Warning (15610): No output dependent on input pin "r0[17]"
-    Warning (15610): No output dependent on input pin "r0[18]"
-    Warning (15610): No output dependent on input pin "r0[19]"
-    Warning (15610): No output dependent on input pin "r0[20]"
-    Warning (15610): No output dependent on input pin "r0[21]"
-    Warning (15610): No output dependent on input pin "r0[22]"
-    Warning (15610): No output dependent on input pin "r0[23]"
-    Warning (15610): No output dependent on input pin "r0[24]"
-    Warning (15610): No output dependent on input pin "r0[25]"
-    Warning (15610): No output dependent on input pin "r0[26]"
-    Warning (15610): No output dependent on input pin "r0[27]"
-    Warning (15610): No output dependent on input pin "r0[28]"
-    Warning (15610): No output dependent on input pin "r0[29]"
-    Warning (15610): No output dependent on input pin "r0[30]"
-    Warning (15610): No output dependent on input pin "r0[31]"
-Info (21057): Implemented 1291 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 773 input pins
+Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 486 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 4584 megabytes
-    Info: Processing ended: Sat Feb 04 15:36:41 2023
+    Info (21061): Implemented 78 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4583 megabytes
+    Info: Processing ended: Sat Feb 04 20:03:58 2023
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
