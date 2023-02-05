@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Sat Feb 04 20:03:58 2023
+Sun Feb 05 01:20:02 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,10 +13,11 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "busMUX:mux_instance"
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +43,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Feb 04 20:03:58 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 05 01:20:02 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
-; Top-level Entity Name              ; bidirectionalBus                                ;
+; Top-level Entity Name              ; multiplier                                      ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 78                                              ;
-;     Total combinational functions  ; 78                                              ;
+; Total logic elements               ; 4,445                                           ;
+;     Total combinational functions  ; 4,445                                           ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 64                                              ;
+; Total pins                         ; 128                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -65,7 +66,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP3C16F484C6       ;                    ;
-; Top-level entity name                                                      ; bidirectionalBus   ; system             ;
+; Top-level entity name                                                      ; multiplier         ; system             ;
 ; Family name                                                                ; Cyclone III        ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -157,57 +158,118 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
-; bidirectionalBus.v               ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/bidirectionalBus.v ;         ;
-; busMUX.v                         ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v           ;         ;
-; busEncoder.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v       ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                     ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
+; multiplier.v                     ; yes             ; User Verilog HDL File  ; C:/altera/13.0sp1/elec374/system-design/System-Design/multiplier.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                          ;
-+---------------------------------------------+----------------------------------------+
-; Resource                                    ; Usage                                  ;
-+---------------------------------------------+----------------------------------------+
-; Estimated Total logic elements              ; 78                                     ;
-;                                             ;                                        ;
-; Total combinational functions               ; 78                                     ;
-; Logic element usage by number of LUT inputs ;                                        ;
-;     -- 4 input functions                    ; 56                                     ;
-;     -- 3 input functions                    ; 16                                     ;
-;     -- <=2 input functions                  ; 6                                      ;
-;                                             ;                                        ;
-; Logic elements by mode                      ;                                        ;
-;     -- normal mode                          ; 78                                     ;
-;     -- arithmetic mode                      ; 0                                      ;
-;                                             ;                                        ;
-; Total registers                             ; 0                                      ;
-;     -- Dedicated logic registers            ; 0                                      ;
-;     -- I/O registers                        ; 0                                      ;
-;                                             ;                                        ;
-; I/O pins                                    ; 64                                     ;
-; Embedded Multiplier 9-bit elements          ; 0                                      ;
-; Maximum fan-out node                        ; busEncoder:encoder_instance|WideNor0~3 ;
-; Maximum fan-out                             ; 7                                      ;
-; Total fan-out                               ; 357                                    ;
-; Average fan-out                             ; 1.73                                   ;
-+---------------------------------------------+----------------------------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 4,445       ;
+;                                             ;             ;
+; Total combinational functions               ; 4445        ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 2444        ;
+;     -- 3 input functions                    ; 1217        ;
+;     -- <=2 input functions                  ; 784         ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 2717        ;
+;     -- arithmetic mode                      ; 1728        ;
+;                                             ;             ;
+; Total registers                             ; 0           ;
+;     -- Dedicated logic registers            ; 0           ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 128         ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+; Maximum fan-out node                        ; q[16]~input ;
+; Maximum fan-out                             ; 97          ;
+; Total fan-out                               ; 15154       ;
+; Average fan-out                             ; 3.22        ;
++---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
-+----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
-; Compilation Hierarchy Node       ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
-+----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
-; |bidirectionalBus                ; 78 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |bidirectionalBus                             ; work         ;
-;    |busEncoder:encoder_instance| ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bidirectionalBus|busEncoder:encoder_instance ; work         ;
-;    |busMUX:mux_instance|         ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bidirectionalBus|busMUX:mux_instance         ; work         ;
-+----------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |multiplier                ; 4445 (4445)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 128  ; 0            ; |multiplier         ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; Mux125~0                                               ;    ;
+; Add4~0                                                 ;    ;
+; Add4~1                                                 ;    ;
+; Add4~2                                                 ;    ;
+; Add4~3                                                 ;    ;
+; Add4~4                                                 ;    ;
+; Add4~5                                                 ;    ;
+; Add4~6                                                 ;    ;
+; Add4~7                                                 ;    ;
+; Add4~8                                                 ;    ;
+; Add4~9                                                 ;    ;
+; Add4~10                                                ;    ;
+; Add4~11                                                ;    ;
+; Add4~12                                                ;    ;
+; Add4~13                                                ;    ;
+; Add4~14                                                ;    ;
+; Add4~15                                                ;    ;
+; Add4~16                                                ;    ;
+; Add4~17                                                ;    ;
+; Add4~18                                                ;    ;
+; Add4~19                                                ;    ;
+; Add4~20                                                ;    ;
+; Add4~21                                                ;    ;
+; Add4~22                                                ;    ;
+; Add4~23                                                ;    ;
+; Add4~24                                                ;    ;
+; Add4~25                                                ;    ;
+; Add4~26                                                ;    ;
+; Add4~27                                                ;    ;
+; Add4~28                                                ;    ;
+; Add4~29                                                ;    ;
+; Add4~30                                                ;    ;
+; Mux93~0                                                ;    ;
+; Mux94~0                                                ;    ;
+; Add2~0                                                 ;    ;
+; Mux94~1                                                ;    ;
+; Mux93~1                                                ;    ;
+; Mux92~0                                                ;    ;
+; Add2~1                                                 ;    ;
+; Mux92~1                                                ;    ;
+; Add4~31                                                ;    ;
+; Add4~32                                                ;    ;
+; Add4~33                                                ;    ;
+; Add4~34                                                ;    ;
+; Add4~35                                                ;    ;
+; Add4~36                                                ;    ;
+; Add4~37                                                ;    ;
+; Add4~38                                                ;    ;
+; Add4~39                                                ;    ;
+; Add4~40                                                ;    ;
+; Add4~41                                                ;    ;
+; Add4~42                                                ;    ;
+; Add4~43                                                ;    ;
+; Add4~44                                                ;    ;
+; Add4~45                                                ;    ;
+; Number of logic cells representing combinational loops ; 55 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -225,41 +287,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "busMUX:mux_instance" ;
-+------------+-------+----------+-----------------+
-; Port       ; Type  ; Severity ; Details         ;
-+------------+-------+----------+-----------------+
-; r0[7..4]   ; Input ; Info     ; Stuck at VCC    ;
-; r0[31..8]  ; Input ; Info     ; Stuck at GND    ;
-; r0[3..0]   ; Input ; Info     ; Stuck at GND    ;
-; r1[31..2]  ; Input ; Info     ; Stuck at GND    ;
-; r1[1]      ; Input ; Info     ; Stuck at VCC    ;
-; r1[0]      ; Input ; Info     ; Stuck at GND    ;
-; r2[7..6]   ; Input ; Info     ; Stuck at VCC    ;
-; r2[1..0]   ; Input ; Info     ; Stuck at VCC    ;
-; r2[31..11] ; Input ; Info     ; Stuck at GND    ;
-; r2[9..8]   ; Input ; Info     ; Stuck at GND    ;
-; r2[3..2]   ; Input ; Info     ; Stuck at GND    ;
-; r2[10]     ; Input ; Info     ; Stuck at VCC    ;
-; r2[5]      ; Input ; Info     ; Stuck at GND    ;
-; r2[4]      ; Input ; Info     ; Stuck at VCC    ;
-; r3[4..1]   ; Input ; Info     ; Stuck at VCC    ;
-; r3[31..5]  ; Input ; Info     ; Stuck at GND    ;
-; r3[0]      ; Input ; Info     ; Stuck at GND    ;
-; r4[31..4]  ; Input ; Info     ; Stuck at GND    ;
-; r4[3]      ; Input ; Info     ; Stuck at VCC    ;
-; r4[2]      ; Input ; Info     ; Stuck at GND    ;
-; r4[1]      ; Input ; Info     ; Stuck at VCC    ;
-; r4[0]      ; Input ; Info     ; Stuck at GND    ;
-; r5[31..10] ; Input ; Info     ; Stuck at GND    ;
-; r5[8..5]   ; Input ; Info     ; Stuck at GND    ;
-; r5[3..2]   ; Input ; Info     ; Stuck at GND    ;
-; r5[9]      ; Input ; Info     ; Stuck at VCC    ;
-; r5[4]      ; Input ; Info     ; Stuck at VCC    ;
-; r5[1]      ; Input ; Info     ; Stuck at VCC    ;
-; r5[0]      ; Input ; Info     ; Stuck at GND    ;
-+------------+-------+----------+-----------------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 6:1                ; 48 bits   ; 192 LEs       ; 144 LEs              ; 48 LEs                 ; No         ; |multiplier|Mux114         ;
+; 6:1                ; 49 bits   ; 196 LEs       ; 147 LEs              ; 49 LEs                 ; No         ; |multiplier|Mux171         ;
+; 6:1                ; 50 bits   ; 200 LEs       ; 150 LEs              ; 50 LEs                 ; No         ; |multiplier|Mux241         ;
+; 6:1                ; 51 bits   ; 204 LEs       ; 153 LEs              ; 51 LEs                 ; No         ; |multiplier|Mux279         ;
+; 6:1                ; 52 bits   ; 208 LEs       ; 156 LEs              ; 52 LEs                 ; No         ; |multiplier|Mux333         ;
+; 6:1                ; 53 bits   ; 212 LEs       ; 159 LEs              ; 53 LEs                 ; No         ; |multiplier|Mux388         ;
+; 6:1                ; 54 bits   ; 216 LEs       ; 162 LEs              ; 54 LEs                 ; No         ; |multiplier|Mux481         ;
+; 6:1                ; 55 bits   ; 220 LEs       ; 165 LEs              ; 55 LEs                 ; No         ; |multiplier|Mux520         ;
+; 6:1                ; 56 bits   ; 224 LEs       ; 168 LEs              ; 56 LEs                 ; No         ; |multiplier|Mux617         ;
+; 6:1                ; 57 bits   ; 228 LEs       ; 171 LEs              ; 57 LEs                 ; No         ; |multiplier|Mux684         ;
+; 6:1                ; 58 bits   ; 232 LEs       ; 174 LEs              ; 58 LEs                 ; No         ; |multiplier|Mux711         ;
+; 6:1                ; 59 bits   ; 236 LEs       ; 177 LEs              ; 59 LEs                 ; No         ; |multiplier|Mux790         ;
+; 6:1                ; 60 bits   ; 240 LEs       ; 180 LEs              ; 60 LEs                 ; No         ; |multiplier|Mux836         ;
+; 6:1                ; 61 bits   ; 244 LEs       ; 183 LEs              ; 61 LEs                 ; No         ; |multiplier|Mux903         ;
+; 8:1                ; 62 bits   ; 310 LEs       ; 186 LEs              ; 124 LEs                ; No         ; |multiplier|Mux991         ;
+; 8:1                ; 47 bits   ; 235 LEs       ; 141 LEs              ; 94 LEs                 ; No         ; |multiplier|Mux33          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -267,7 +316,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -277,7 +326,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Feb 04 20:03:56 2023
+    Info: Processing started: Sun Feb 05 01:19:56 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -315,49 +364,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file negate.
     Info (12023): Found entity 1: negate
 Info (12021): Found 1 design units, including 1 entities, in source file not_32.v
     Info (12023): Found entity 1: not_32
-Info (12021): Found 0 design units, including 0 entities, in source file multiplier.v
+Info (12021): Found 1 design units, including 1 entities, in source file multiplier.v
+    Info (12023): Found entity 1: multiplier
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbustb.v
     Info (12023): Found entity 1: bidirectionalBustb
-Info (12127): Elaborating entity "bidirectionalBus" for the top level hierarchy
-Info (12128): Elaborating entity "busEncoder" for hierarchy "busEncoder:encoder_instance"
-Warning (10762): Verilog HDL Case Statement warning at busEncoder.v(8): can't check case statement for completeness because the case expression has too many possible states
-Info (10264): Verilog HDL Case Statement information at busEncoder.v(8): all case item expressions in this case statement are onehot
-Info (12128): Elaborating entity "busMUX" for hierarchy "busMUX:mux_instance"
+Info (12021): Found 1 design units, including 1 entities, in source file multipliertb.v
+    Info (12023): Found entity 1: multipliertb
+Info (12127): Elaborating entity "multiplier" for the top level hierarchy
+Warning (10855): Verilog HDL warning at multiplier.v(9): initial value for variable compare should be constant
+Warning (10230): Verilog HDL assignment warning at multiplier.v(20): truncated value with size 32 to match size of target (5)
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "dataOut[5]" is stuck at GND
-    Warning (13410): Pin "dataOut[8]" is stuck at GND
-    Warning (13410): Pin "dataOut[11]" is stuck at GND
-    Warning (13410): Pin "dataOut[12]" is stuck at GND
-    Warning (13410): Pin "dataOut[13]" is stuck at GND
-    Warning (13410): Pin "dataOut[14]" is stuck at GND
-    Warning (13410): Pin "dataOut[15]" is stuck at GND
-    Warning (13410): Pin "dataOut[16]" is stuck at GND
-    Warning (13410): Pin "dataOut[17]" is stuck at GND
-    Warning (13410): Pin "dataOut[18]" is stuck at GND
-    Warning (13410): Pin "dataOut[19]" is stuck at GND
-    Warning (13410): Pin "dataOut[20]" is stuck at GND
-    Warning (13410): Pin "dataOut[21]" is stuck at GND
-    Warning (13410): Pin "dataOut[22]" is stuck at GND
-    Warning (13410): Pin "dataOut[23]" is stuck at GND
-    Warning (13410): Pin "dataOut[24]" is stuck at GND
-    Warning (13410): Pin "dataOut[25]" is stuck at GND
-    Warning (13410): Pin "dataOut[26]" is stuck at GND
-    Warning (13410): Pin "dataOut[27]" is stuck at GND
-    Warning (13410): Pin "dataOut[28]" is stuck at GND
-    Warning (13410): Pin "dataOut[29]" is stuck at GND
-    Warning (13410): Pin "dataOut[30]" is stuck at GND
-    Warning (13410): Pin "dataOut[31]" is stuck at GND
+    Warning (13410): Pin "out[0]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 32 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 78 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4583 megabytes
-    Info: Processing ended: Sat Feb 04 20:03:58 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+Warning (21074): Design contains 14 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "q[18]"
+    Warning (15610): No output dependent on input pin "q[19]"
+    Warning (15610): No output dependent on input pin "q[20]"
+    Warning (15610): No output dependent on input pin "q[21]"
+    Warning (15610): No output dependent on input pin "q[22]"
+    Warning (15610): No output dependent on input pin "q[23]"
+    Warning (15610): No output dependent on input pin "q[24]"
+    Warning (15610): No output dependent on input pin "q[25]"
+    Warning (15610): No output dependent on input pin "q[26]"
+    Warning (15610): No output dependent on input pin "q[27]"
+    Warning (15610): No output dependent on input pin "q[28]"
+    Warning (15610): No output dependent on input pin "q[29]"
+    Warning (15610): No output dependent on input pin "q[30]"
+    Warning (15610): No output dependent on input pin "q[31]"
+Info (21057): Implemented 4573 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 64 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 4445 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
+    Info: Peak virtual memory: 4599 megabytes
+    Info: Processing ended: Sun Feb 05 01:20:02 2023
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:06
 
 

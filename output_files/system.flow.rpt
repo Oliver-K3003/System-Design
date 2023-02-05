@@ -1,5 +1,5 @@
 Flow report for system
-Sat Feb 04 20:04:10 2023
+Sun Feb 05 01:20:31 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sat Feb 04 20:04:10 2023           ;
+; Flow Status                        ; Successful - Sun Feb 05 01:20:31 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
-; Top-level Entity Name              ; bidirectionalBus                                ;
+; Top-level Entity Name              ; multiplier                                      ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 78 / 15,408 ( < 1 % )                           ;
-;     Total combinational functions  ; 78 / 15,408 ( < 1 % )                           ;
+; Total logic elements               ; 4,445 / 15,408 ( 29 % )                         ;
+;     Total combinational functions  ; 4,445 / 15,408 ( 29 % )                         ;
 ;     Dedicated logic registers      ; 0 / 15,408 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 64 / 347 ( 18 % )                               ;
+; Total pins                         ; 128 / 347 ( 37 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 516,096 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 112 ( 0 % )                                 ;
@@ -64,54 +64,59 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 02/04/2023 20:03:57 ;
+; Start date & time ; 02/05/2023 01:19:56 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; system              ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                     ;
-+--------------------------------------+---------------------------------------+---------------+------------------+--------------------+
-; Assignment Name                      ; Value                                 ; Default Value ; Entity Name      ; Section Id         ;
-+--------------------------------------+---------------------------------------+---------------+------------------+--------------------+
-; COMPILER_SIGNATURE_ID                ; 269049658834448.167555903730756       ; --            ; --               ; --                 ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; Registertb         ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; busEncodertb       ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; busMUXtb           ;
-; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --               ; bidirectionalBustb ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; bidirectionalBustb                    ; --            ; --               ; eda_simulation     ;
-; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --               ; eda_simulation     ;
-; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --               ; --                 ;
-; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --               ; eda_simulation     ;
-; EDA_TEST_BENCH_FILE                  ; Registertb.v                          ; --            ; --               ; Registertb         ;
-; EDA_TEST_BENCH_FILE                  ; busEncodertb.v                        ; --            ; --               ; busEncodertb       ;
-; EDA_TEST_BENCH_FILE                  ; busMUXtb.v                            ; --            ; --               ; busMUXtb           ;
-; EDA_TEST_BENCH_FILE                  ; bidirectionalBustb.v                  ; --            ; --               ; bidirectionalBustb ;
-; EDA_TEST_BENCH_MODULE_NAME           ; Registertb                            ; --            ; --               ; Registertb         ;
-; EDA_TEST_BENCH_MODULE_NAME           ; busEncodertb                          ; --            ; --               ; busEncodertb       ;
-; EDA_TEST_BENCH_MODULE_NAME           ; busMUXtb                              ; --            ; --               ; busMUXtb           ;
-; EDA_TEST_BENCH_MODULE_NAME           ; bidirectionalBustb                    ; --            ; --               ; bidirectionalBustb ;
-; EDA_TEST_BENCH_NAME                  ; Registertb                            ; --            ; --               ; eda_simulation     ;
-; EDA_TEST_BENCH_NAME                  ; busEncodertb                          ; --            ; --               ; eda_simulation     ;
-; EDA_TEST_BENCH_NAME                  ; busMUXtb                              ; --            ; --               ; eda_simulation     ;
-; EDA_TEST_BENCH_NAME                  ; bidirectionalBustb                    ; --            ; --               ; eda_simulation     ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --               ; Registertb         ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10000 ns                              ; --            ; --               ; busEncodertb       ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --               ; busMUXtb           ;
-; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1000 ns                               ; --            ; --               ; bidirectionalBustb ;
-; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --               ; eda_simulation     ;
-; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --               ; --                 ;
-; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --               ; --                 ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --               ; --                 ;
-; PARTITION_COLOR                      ; 16764057                              ; --            ; bidirectionalBus ; Top                ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; bidirectionalBus ; Top                ;
-; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; bidirectionalBus ; Top                ;
-; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --               ; --                 ;
-; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --               ; --                 ;
-; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --               ; --                 ;
-; TOP_LEVEL_ENTITY                     ; bidirectionalBus                      ; system        ; --               ; --                 ;
-+--------------------------------------+---------------------------------------+---------------+------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                ;
++--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id         ;
++--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
+; COMPILER_SIGNATURE_ID                ; 269049658834448.167557799620244       ; --            ; --          ; --                 ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Registertb         ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busEncodertb       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busMUXtb           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; bidirectionalBustb ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; multipliertb       ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; multipliertb                          ; --            ; --          ; eda_simulation     ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation     ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --                 ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_FILE                  ; Registertb.v                          ; --            ; --          ; Registertb         ;
+; EDA_TEST_BENCH_FILE                  ; busEncodertb.v                        ; --            ; --          ; busEncodertb       ;
+; EDA_TEST_BENCH_FILE                  ; busMUXtb.v                            ; --            ; --          ; busMUXtb           ;
+; EDA_TEST_BENCH_FILE                  ; bidirectionalBustb.v                  ; --            ; --          ; bidirectionalBustb ;
+; EDA_TEST_BENCH_FILE                  ; multipliertb.v                        ; --            ; --          ; multipliertb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Registertb                            ; --            ; --          ; Registertb         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; busEncodertb                          ; --            ; --          ; busEncodertb       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; busMUXtb                              ; --            ; --          ; busMUXtb           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; bidirectionalBustb                    ; --            ; --          ; bidirectionalBustb ;
+; EDA_TEST_BENCH_MODULE_NAME           ; multipliertb                          ; --            ; --          ; multipliertb       ;
+; EDA_TEST_BENCH_NAME                  ; Registertb                            ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_NAME                  ; busEncodertb                          ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_NAME                  ; busMUXtb                              ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_NAME                  ; bidirectionalBustb                    ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_NAME                  ; multipliertb                          ; --            ; --          ; eda_simulation     ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; Registertb         ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10000 ns                              ; --            ; --          ; busEncodertb       ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; busMUXtb           ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 1000 ns                               ; --            ; --          ; bidirectionalBustb ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; multipliertb       ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation     ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                 ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                 ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --                 ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; multiplier  ; Top                ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; multiplier  ; Top                ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; multiplier  ; Top                ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --                 ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --                 ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --                 ;
+; TOP_LEVEL_ENTITY                     ; multiplier                            ; system        ; --          ; --                 ;
++--------------------------------------+---------------------------------------+---------------+-------------+--------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -119,12 +124,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4572 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:04     ; 1.0                     ; 4879 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4545 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4590 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4498 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:10     ; --                      ; --                  ; 00:00:10                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4588 MB             ; 00:00:06                           ;
+; Fitter                    ; 00:00:13     ; 1.0                     ; 4921 MB             ; 00:00:13                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4556 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4667 MB             ; 00:00:05                           ;
+; EDA Netlist Writer        ; 00:00:05     ; 1.0                     ; 4541 MB             ; 00:00:05                           ;
+; Total                     ; 00:00:31     ; --                      ; --                  ; 00:00:30                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
