@@ -9,6 +9,23 @@ module multipliertb();
         begin 
             m <= 32'd12;
             q <= 32'd4;
+				
+				#200
+				m <= 32'd8;
+				q <= 32'd6;
+				
+				#200
+				m <=32'd5;
+				q <=-32'd5;
+				
+				#200
+				m <=-32'd4;
+				q <=-32'd6;
+				
+				#200
+				m<=-32'd16;
+				q<=32'd37;
+				
         end
 
 endmodule

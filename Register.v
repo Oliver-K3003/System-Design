@@ -1,10 +1,10 @@
-module Register(d, q, clr, clk, le);
-	input [31:0] d;
-	input clr, clk, le;
-	output reg [31:0] q;
-	
-	
-	// assign
+module Register(
+	input [31:0] d, 
+	output reg [31:0] q, 
+	input clr, 
+	input clk, 
+	input le);
+		// assign
 	//Assuming active high & async clear
 	always @ (clk or clr or le)
 		begin
