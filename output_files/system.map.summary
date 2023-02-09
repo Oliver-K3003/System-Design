@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Mon Feb 06 18:20:19 2023
+Analysis & Synthesis Status : Successful - Wed Feb 08 21:38:07 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : system
-Top-level Entity Name : multiplier
+Top-level Entity Name : division
 Family : Cyclone III
-Total logic elements : 2,037
-    Total combinational functions : 2,037
+Total logic elements : 2,525
+    Total combinational functions : 2,525
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 128

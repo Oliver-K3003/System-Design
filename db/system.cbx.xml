@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="system">
+		<CBX_INST_ENTRY INSTANCE_NAME="|division|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_01p.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|division|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_3po.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
