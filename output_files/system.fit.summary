@@ -1,12 +1,12 @@
-Fitter Status : Successful - Wed Feb 08 21:38:20 2023
+Fitter Status : Successful - Mon Feb 13 19:43:24 2023
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : system
 Top-level Entity Name : division
 Family : Cyclone III
 Device : EP3C16F484C6
 Timing Models : Final
-Total logic elements : 2,525 / 15,408 ( 16 % )
-    Total combinational functions : 2,525 / 15,408 ( 16 % )
+Total logic elements : 2,143 / 15,408 ( 14 % )
+    Total combinational functions : 2,143 / 15,408 ( 14 % )
     Dedicated logic registers : 0 / 15,408 ( 0 % )
 Total registers : 0
 Total pins : 128 / 347 ( 37 % )

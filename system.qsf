@@ -96,16 +96,27 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME multipliertb -section_id 
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
 set_global_assignment -name VERILOG_FILE division.v
 set_global_assignment -name VERILOG_FILE divisiontb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME divisiontb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id divisiontb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id divisiontb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME divisiontb -section_id divisiontb
+set_global_assignment -name VERILOG_FILE datapath_tb.v
+set_global_assignment -name VERILOG_FILE datapath.v
+set_global_assignment -name VERILOG_FILE ALU.v
+set_global_assignment -name VERILOG_FILE sub.v
+set_global_assignment -name VERILOG_FILE MDR.v
+set_global_assignment -name VERILOG_FILE addertb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME addertb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id addertb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id addertb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME addertb -section_id addertb
 set_global_assignment -name EDA_TEST_BENCH_FILE Registertb.v -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busEncodertb.v -section_id busEncodertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busMUXtb.v -section_id busMUXtb
 set_global_assignment -name EDA_TEST_BENCH_FILE bidirectionalBustb.v -section_id bidirectionalBustb
 set_global_assignment -name EDA_TEST_BENCH_FILE multipliertb.v -section_id multipliertb
-set_global_assignment -name EDA_TEST_BENCH_NAME divisiontb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id divisiontb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 s" -section_id divisiontb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME divisiontb -section_id divisiontb
 set_global_assignment -name EDA_TEST_BENCH_FILE divisiontb.v -section_id divisiontb
+set_global_assignment -name EDA_TEST_BENCH_FILE addertb.v -section_id addertb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

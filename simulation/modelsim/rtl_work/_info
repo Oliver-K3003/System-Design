@@ -4,21 +4,21 @@ K3
 cModel Technology
 Z0 dC:\altera\13.0sp1\elec374\system-design\System-Design\simulation\modelsim
 vdivision
-IicXUTRd2[P1cdXUjbV;:>3
+I8RbWi3EdZmR:fL0Q7V=eK2
 V?>5RENARG^h4Y9`2o[cR[1
 Z1 dC:\altera\13.0sp1\elec374\system-design\System-Design\simulation\modelsim
-w1675910277
+w1676335356
 8C:/altera/13.0sp1/elec374/system-design/System-Design/division.v
 FC:/altera/13.0sp1/elec374/system-design/System-Design/division.v
-L0 1
+L0 8
 Z2 OV;L;10.1d;51
 r1
 31
 Z3 o-vlog01compat -work work -O0
 !i10b 1
-!s100 VGeeNO`65C]E2bXbWmYWE0
+!s100 mP44`4fR57=7Y1Z@3eJKB0
 !s85 0
-!s108 1675910340.202000
+!s108 1676335431.722000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/division.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/division.v|
 !s101 -O0
@@ -37,7 +37,7 @@ R2
 r1
 !s85 0
 31
-!s108 1675910340.402000
+!s108 1676335431.847000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/divisiontb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/divisiontb.v|
 !s101 -O0

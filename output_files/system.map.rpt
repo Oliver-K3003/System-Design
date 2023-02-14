@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Wed Feb 08 21:38:07 2023
+Mon Feb 13 19:43:14 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,10 +14,38 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 10. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add1
+ 10. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add3
+ 11. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add5
+ 12. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add7
+ 13. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add9
+ 14. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add11
+ 15. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add13
+ 16. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add15
+ 17. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add17
+ 18. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add19
+ 19. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add21
+ 20. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add23
+ 21. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add25
+ 22. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add27
+ 23. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add29
+ 24. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add31
+ 25. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add33
+ 26. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add35
+ 27. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add37
+ 28. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add39
+ 29. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add41
+ 30. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add43
+ 31. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add45
+ 32. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add47
+ 33. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add49
+ 34. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add51
+ 35. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add53
+ 36. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add55
+ 37. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add57
+ 38. Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add59
+ 39. Elapsed Time Per Partition
+ 40. Analysis & Synthesis Messages
 
 
 
@@ -43,13 +71,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 08 21:38:07 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Feb 13 19:43:14 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; division                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 2,525                                           ;
-;     Total combinational functions  ; 2,525                                           ;
+; Total logic elements               ; 2,143                                           ;
+;     Total combinational functions  ; 2,143                                           ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 128                                             ;
@@ -158,78 +186,120 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
-; division.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/division.v             ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_divide.tdf             ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/abs_divider.inc            ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/sign_div_unsign.inc        ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc             ;         ;
-; db/lpm_divide_01p.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/lpm_divide_01p.tdf  ;         ;
-; db/abs_divider_4dg.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/abs_divider_4dg.tdf ;         ;
-; db/alt_u_div_t8f.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/alt_u_div_t8f.tdf   ;         ;
-; db/add_sub_unc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/add_sub_unc.tdf     ;         ;
-; db/add_sub_vnc.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/add_sub_vnc.tdf     ;         ;
-; db/lpm_abs_9v9.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/lpm_abs_9v9.tdf     ;         ;
-; db/lpm_divide_3po.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/lpm_divide_3po.tdf  ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
+; division.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/division.v          ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
+; db/add_sub_hui.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/add_sub_hui.tdf  ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                      ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 2,525              ;
-;                                             ;                    ;
-; Total combinational functions               ; 2525               ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 1179               ;
-;     -- 3 input functions                    ; 1195               ;
-;     -- <=2 input functions                  ; 151                ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 1382               ;
-;     -- arithmetic mode                      ; 1143               ;
-;                                             ;                    ;
-; Total registers                             ; 0                  ;
-;     -- Dedicated logic registers            ; 0                  ;
-;     -- I/O registers                        ; 0                  ;
-;                                             ;                    ;
-; I/O pins                                    ; 128                ;
-; Embedded Multiplier 9-bit elements          ; 0                  ;
-; Maximum fan-out node                        ; dividend[31]~input ;
-; Maximum fan-out                             ; 78                 ;
-; Total fan-out                               ; 8675               ;
-; Average fan-out                             ; 3.12               ;
-+---------------------------------------------+--------------------+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 2,143   ;
+;                                             ;         ;
+; Total combinational functions               ; 2143    ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 0       ;
+;     -- 3 input functions                    ; 1056    ;
+;     -- <=2 input functions                  ; 1087    ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 1057    ;
+;     -- arithmetic mode                      ; 1086    ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 128     ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+; Maximum fan-out node                        ; Add0~62 ;
+; Maximum fan-out                             ; 35      ;
+; Total fan-out                               ; 5533    ;
+; Average fan-out                             ; 2.31    ;
++---------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |division                              ; 2525 (32)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 128  ; 0            ; |division                                                                                                                   ; work         ;
-;    |lpm_divide:Div0|                   ; 1196 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0                                                                                                   ; work         ;
-;       |lpm_divide_01p:auto_generated|  ; 1196 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated                                                                     ; work         ;
-;          |abs_divider_4dg:divider|     ; 1196 (66)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider                                             ; work         ;
-;             |alt_u_div_t8f:divider|    ; 1057 (1054)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
-;                |add_sub_unc:add_sub_0| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_unc:add_sub_0 ; work         ;
-;                |add_sub_vnc:add_sub_1| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
-;             |lpm_abs_9v9:my_abs_den|   ; 28 (28)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
-;             |lpm_abs_9v9:my_abs_num|   ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Div0|lpm_divide_01p:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num                      ; work         ;
-;    |lpm_divide:Mod0|                   ; 1297 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0                                                                                                   ; work         ;
-;       |lpm_divide_3po:auto_generated|  ; 1297 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0|lpm_divide_3po:auto_generated                                                                     ; work         ;
-;          |abs_divider_4dg:divider|     ; 1297 (64)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider                                             ; work         ;
-;             |alt_u_div_t8f:divider|    ; 1147 (1146)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider                       ; work         ;
-;                |add_sub_vnc:add_sub_1| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|alt_u_div_t8f:divider|add_sub_vnc:add_sub_1 ; work         ;
-;             |lpm_abs_9v9:my_abs_den|   ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_den                      ; work         ;
-;             |lpm_abs_9v9:my_abs_num|   ; 44 (44)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_divide:Mod0|lpm_divide_3po:auto_generated|abs_divider_4dg:divider|lpm_abs_9v9:my_abs_num                      ; work         ;
-+----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
+; |division                          ; 2143 (163)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 128  ; 0            ; |division                                              ; work         ;
+;    |lpm_add_sub:Add11|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add11                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add11|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add13|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add13                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add13|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add15|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add15                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add15|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add17|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add17                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add17|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add19|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add19                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add19|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add1|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add1                             ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add1|add_sub_hui:auto_generated  ; work         ;
+;    |lpm_add_sub:Add21|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add21                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add21|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add23|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add23                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add23|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add25|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add25                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add25|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add27|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add27                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add27|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add29|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add29                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add29|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add31|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add31                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add31|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add33|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add33                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add33|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add35|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add35                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add35|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add37|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add37                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add37|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add39|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add39                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add39|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add3|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add3                             ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add3|add_sub_hui:auto_generated  ; work         ;
+;    |lpm_add_sub:Add41|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add41                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add41|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add43|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add43                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add43|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add45|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add45                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add45|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add47|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add47                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add47|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add49|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add49                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add49|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add51|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add51                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add51|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add53|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add53                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add53|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add55|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add55                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add55|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add57|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add57                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add57|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add59|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add59                            ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add59|add_sub_hui:auto_generated ; work         ;
+;    |lpm_add_sub:Add5|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add5                             ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add5|add_sub_hui:auto_generated  ; work         ;
+;    |lpm_add_sub:Add7|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add7                             ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add7|add_sub_hui:auto_generated  ; work         ;
+;    |lpm_add_sub:Add9|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add9                             ; work         ;
+;       |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |division|lpm_add_sub:Add9|add_sub_hui:auto_generated  ; work         ;
++------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -248,49 +318,843 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                ;
-; LPM_WIDTHD             ; 32             ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_01p ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add1 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 32             ; Untyped                ;
-; LPM_WIDTHD             ; 32             ; Untyped                ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_3po ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add3 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add5 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add7 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add9 ;
++------------------------+-------------+----------------------------+
+; Parameter Name         ; Value       ; Type                       ;
++------------------------+-------------+----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                    ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                    ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                    ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                    ;
+; LPM_PIPELINE           ; 0           ; Untyped                    ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                    ;
+; REGISTERED_AT_END      ; 0           ; Untyped                    ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                    ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                    ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                    ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH         ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                    ;
+; USE_WYS                ; OFF         ; Untyped                    ;
+; STYLE                  ; FAST        ; Untyped                    ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                    ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY               ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE               ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE             ;
++------------------------+-------------+----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add11 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add13 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add15 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add17 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add19 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add21 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add23 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add25 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add27 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add29 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add31 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add33 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add35 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add37 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add39 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add41 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add43 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add45 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add47 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add49 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add51 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add53 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add55 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add57 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_add_sub:Add59 ;
++------------------------+-------------+-----------------------------+
+; Parameter Name         ; Value       ; Type                        ;
++------------------------+-------------+-----------------------------+
+; LPM_WIDTH              ; 33          ; Untyped                     ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                     ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                     ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                     ;
+; LPM_PIPELINE           ; 0           ; Untyped                     ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                     ;
+; REGISTERED_AT_END      ; 0           ; Untyped                     ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                     ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                     ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                     ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH          ;
+; DEVICE_FAMILY          ; Cyclone III ; Untyped                     ;
+; USE_WYS                ; OFF         ; Untyped                     ;
+; STYLE                  ; FAST        ; Untyped                     ;
+; CBXI_PARAMETER         ; add_sub_hui ; Untyped                     ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                  ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE              ;
++------------------------+-------------+-----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -299,7 +1163,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -309,7 +1173,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 08 21:38:01 2023
+    Info: Processing started: Mon Feb 13 19:43:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -329,8 +1193,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file busmuxt
     Info (12023): Found entity 1: busMUXtb
 Info (12021): Found 3 design units, including 3 entities, in source file adder.v
     Info (12023): Found entity 1: adder
-    Info (12023): Found entity 2: cla_4
-    Info (12023): Found entity 3: cla_16
+    Info (12023): Found entity 2: cla_16
+    Info (12023): Found entity 3: cla_4
 Info (12021): Found 1 design units, including 1 entities, in source file log_and_32bit.v
     Info (12023): Found entity 1: log_and_32bit
 Info (12021): Found 1 design units, including 1 entities, in source file log_or_32bit.v
@@ -357,51 +1221,95 @@ Info (12021): Found 1 design units, including 1 entities, in source file divisio
     Info (12023): Found entity 1: division
 Info (12021): Found 1 design units, including 1 entities, in source file divisiontb.v
     Info (12023): Found entity 1: divisiontb
+Info (12021): Found 0 design units, including 0 entities, in source file datapath_tb.v
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file sub.v
+    Info (12023): Found entity 1: sub
+Info (12021): Found 2 design units, including 2 entities, in source file mdr.v
+    Info (12023): Found entity 1: MDR
+    Info (12023): Found entity 2: mux2to1
+Info (12021): Found 1 design units, including 1 entities, in source file addertb.v
+    Info (12023): Found entity 1: addertb
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(25): created implicit net for "BuxMuxInR0"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(26): created implicit net for "BuxMuxInR1"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(27): created implicit net for "BuxMuxInR2"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(28): created implicit net for "BuxMuxInR3"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(29): created implicit net for "BuxMuxInR4"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(30): created implicit net for "BuxMuxInR5"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(31): created implicit net for "BuxMuxInR6"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(32): created implicit net for "BuxMuxInR7"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(33): created implicit net for "BuxMuxInR8"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(34): created implicit net for "BuxMuxInR9"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(35): created implicit net for "BuxMuxInR10"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(36): created implicit net for "BuxMuxInR11"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(37): created implicit net for "BuxMuxInR12"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(38): created implicit net for "BuxMuxInR13"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(39): created implicit net for "BuxMuxInR14"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(40): created implicit net for "BuxMuxInR15"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(41): created implicit net for "BuxMuxInHI"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(42): created implicit net for "BuxMuxInLO"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(43): created implicit net for "BuxMuxInZhi"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(44): created implicit net for "BuxMuxInZlo"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(45): created implicit net for "BuxMuxInPC"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(47): created implicit net for "BuxMuxInInport"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(48): created implicit net for "BuxMuxInSignExt"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(48): created implicit net for "SignExtout"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(50): created implicit net for "IncPC"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(50): created implicit net for "Y"
 Info (12127): Elaborating entity "division" for the top level hierarchy
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0"
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0"
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0"
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "32"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_01p.tdf
-    Info (12023): Found entity 1: lpm_divide_01p
-Info (12021): Found 1 design units, including 1 entities, in source file db/abs_divider_4dg.tdf
-    Info (12023): Found entity 1: abs_divider_4dg
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t8f.tdf
-    Info (12023): Found entity 1: alt_u_div_t8f
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
-    Info (12023): Found entity 1: add_sub_unc
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
-    Info (12023): Found entity 1: add_sub_vnc
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_abs_9v9.tdf
-    Info (12023): Found entity 1: lpm_abs_9v9
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0"
-Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter:
-    Info (12134): Parameter "LPM_WIDTHN" = "32"
-    Info (12134): Parameter "LPM_WIDTHD" = "32"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info (12134): Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_3po.tdf
-    Info (12023): Found entity 1: lpm_divide_3po
-Info (13014): Ignored 124 buffer(s)
-    Info (13016): Ignored 124 CARRY_SUM buffer(s)
+Info (278001): Inferred 30 megafunctions from design logic
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add1"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add3"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add5"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add7"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add9"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add11"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add13"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add15"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add17"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add19"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add21"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add23"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add25"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add27"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add29"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add31"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add33"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add35"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add37"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add39"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add41"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add43"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add45"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add47"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add49"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add51"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add53"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add55"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add57"
+    Info (278002): Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "Add59"
+Info (12130): Elaborated megafunction instantiation "lpm_add_sub:Add1"
+Info (12133): Instantiated megafunction "lpm_add_sub:Add1" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "33"
+    Info (12134): Parameter "LPM_DIRECTION" = "DEFAULT"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hui.tdf
+    Info (12023): Found entity 1: add_sub_hui
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2653 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2271 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 64 input pins
     Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 2525 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4617 megabytes
-    Info: Processing ended: Wed Feb 08 21:38:07 2023
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info (21061): Implemented 2143 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4601 megabytes
+    Info: Processing ended: Mon Feb 13 19:43:14 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 

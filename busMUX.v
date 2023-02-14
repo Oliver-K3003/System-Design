@@ -35,6 +35,7 @@ module busMUX(
 	always @(*) begin
 		case (sel)
 		// ADD R0 to this and shift everything down
+			5'b00000 : muxOut <= r0[31:0];
 			5'b00001 : muxOut <= r1[31:0];
 			5'b00010 : muxOut <= r2[31:0];
 			5'b00011 : muxOut <= r3[31:0];
