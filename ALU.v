@@ -13,8 +13,9 @@ module ALU(
 					shl=5'b01001, ror=5'b01010, rol=5'b01011, addi=5'b01100, andi=5'b01101, ori=5'b01110, mul=5'b01111, div=5'b10000, neg=5'b10001, 
 					NOT=5'b10010;
 					
-	wire [31:0] div_hi_out, div_lo_out, IncPC_out, add_out, sub_out, add_cout, sub_cout, and_out, or_out, shr_out, shra_out, shl_out, ror_out, rol_out, neg_out, not_out;
+	wire [31:0] div_hi_out, div_lo_out, IncPC_out, add_out, sub_out, and_out, or_out, shr_out, shra_out, shl_out, ror_out, rol_out, neg_out, not_out;
 	wire [63:0] mul_out;
+	wire add_cout, sub_cout;
 	
 	always@(*) begin 
 		case(opcode) 
@@ -80,7 +81,7 @@ module ALU(
 		end
 		//Operations
 		adder add_instance(.ra(y), .rb(b), .cin(1'd0), .sum(add_out), .cout(add_cout));
-		sub sub_instance(.ra(y), .rb(b), .cin(1'd0), .sum(sub_out), .count(sub_cout));
+		sub sub_instance(.ra(y), .rb(b), .cin(1'd0), .sum(sub_out), .cout(sub_cout));
 		log_and_32bit land_instance(y, b, and_out);
 		log_or_32bit lor_instance(y, b, or_out);
 		shift_right shr_instance(y, b, shr_out);

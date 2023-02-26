@@ -6,7 +6,7 @@ module Register(
 	input le);
 		// assign
 	//Assuming active high & async clear
-	always @ (clk or clr or le)
+	always @ (clk or le)
 		begin
 			if(clr == 1 && le == 1)
 				q <= 0;

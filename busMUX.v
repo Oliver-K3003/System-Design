@@ -25,7 +25,7 @@ module busMUX(
 			  input [31:0] mdr, 
 			  input [31:0] inport, 
 			  input [31:0] signExt,
-			  
+			  input [31:0] Yreg,
 			  // select signal
 			  input [4:0] sel,
 			  
@@ -59,6 +59,7 @@ module busMUX(
 			5'b10101 : muxOut <= mdr[31:0];
 			5'b10110 : muxOut <= inport[31:0];
 			5'b10111 : muxOut <= signExt[31:0];
+			5'b11000 : muxOut <= Yreg[31:0];
 			default: muxOut <= 32'd0;
 		endcase
 	end
