@@ -6,11 +6,12 @@ module Register(
 	input le);
 		// assign
 	//Assuming active high & async clear
-	always @ (clk or le)
+	
+	always @ (posedge clk)
 		begin
-			if(clr == 1 && le == 1)
-				q <= 0;
-			else if(clk && le)
+			if(le == 1)
 				q <= d;
+			else if(clr == 1 && le == 1)
+				q <= 31'd0;
 		end
 endmodule

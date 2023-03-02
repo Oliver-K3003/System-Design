@@ -20,6 +20,7 @@ module Registertb(input a, output b);
 			le <= 1;
 			clr <= 0;
 			#100 in <= 32'd203;
+			#100 in <= 32'd15;
 			end
 		
 endmodule

@@ -1,12 +1,12 @@
 module ALU(
 	input clk, clr, IncPC,
 	
-	input wire [31:0] b,
 	input wire [31:0] y,
+	input wire [31:0] b,
 	
 	input wire [4:0] opcode,
 	
-	output reg [63:0] c
+	output reg [63:0] z
 );
 
 	parameter load=5'b00000, loadi=5'b00001, store=5'b00010, add=5'b00011, sub=5'b00100, AND=5'b00101, OR=5'b00110, shr=5'b00111, shra=5'b01000, 
@@ -20,62 +20,62 @@ module ALU(
 	always@(*) begin 
 		case(opcode) 
 			load, loadi, store: begin 
-				c[31:0] <= add_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= add_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			add: begin 
-				c[31:0] <= add_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= add_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			sub: begin 
-				c[31:0] <= sub_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= sub_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			AND, andi: begin 
-				c[31:0] <= and_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= and_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			OR, ori: begin 
-				c[31:0] <= or_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= or_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			shr, shra: begin 
-				c[31:0] <= shr_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= shr_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			shl: begin 
-				c[31:0] <= shl_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= shl_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			ror: begin 
-				c[31:0] <= ror_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= ror_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			rol: begin 
-				c[31:0] <= rol_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= rol_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			addi: begin 
-				c[31:0] <= add_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= add_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			mul: begin 
-				c[63:0] <= mul_out[63:0];
+				z[63:0] <= mul_out[63:0];
 			end
 			div: begin 
-				c[31:0] <= div_lo_out[31:0];
-				c[63:32] <= div_hi_out[31:0];
+				z[31:0] <= div_lo_out[31:0];
+				z[63:32] <= div_hi_out[31:0];
 			end
 			neg: begin 
-				c[31:0] <= neg_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= neg_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			NOT: begin 
-				c[31:0] <= not_out[31:0];
-				c[63:32] <= 32'd0;
+				z[31:0] <= not_out[31:0];
+				z[63:32] <= 32'd0;
 			end
 			default: begin 
-				c[63:0] <= 64'd0;
+				z[63:0] <= 64'd0;
 			end
 		endcase
 		end

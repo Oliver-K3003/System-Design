@@ -119,6 +119,11 @@ set_global_assignment -name EDA_TEST_BENCH_NAME MDRtb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id MDRtb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "200 ns" -section_id MDRtb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME MDRtb -section_id MDRtb
+set_global_assignment -name VERILOG_FILE ALUtb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME ALUtb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALUtb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1200 ns" -section_id ALUtb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALUtb -section_id ALUtb
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -131,4 +136,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE divisiontb.v -section_id divisio
 set_global_assignment -name EDA_TEST_BENCH_FILE addertb.v -section_id addertb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb.v -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE MDRtb.v -section_id MDRtb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALUtb.v -section_id ALUtb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

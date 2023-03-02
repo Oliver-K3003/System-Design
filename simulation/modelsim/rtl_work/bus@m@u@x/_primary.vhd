@@ -25,7 +25,6 @@ entity busMUX is
         pc              : in     vl_logic_vector(31 downto 0);
         mdr             : in     vl_logic_vector(31 downto 0);
         inport          : in     vl_logic_vector(31 downto 0);
-        signExt         : in     vl_logic_vector(31 downto 0);
         Yreg            : in     vl_logic_vector(31 downto 0);
         sel             : in     vl_logic_vector(4 downto 0);
         muxOut          : out    vl_logic_vector(31 downto 0)

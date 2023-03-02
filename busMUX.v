@@ -24,7 +24,6 @@ module busMUX(
 			  input [31:0] pc, 
 			  input [31:0] mdr, 
 			  input [31:0] inport, 
-			  input [31:0] signExt,
 			  input [31:0] Yreg,
 			  // select signal
 			  input [4:0] sel,
@@ -34,7 +33,6 @@ module busMUX(
 
 	always @(*) begin
 		case (sel)
-		// ADD R0 to this and shift everything down
 			5'b00000 : muxOut <= r0[31:0];
 			5'b00001 : muxOut <= r1[31:0];
 			5'b00010 : muxOut <= r2[31:0];
@@ -58,8 +56,8 @@ module busMUX(
 			5'b10100 : muxOut <= pc[31:0];
 			5'b10101 : muxOut <= mdr[31:0];
 			5'b10110 : muxOut <= inport[31:0];
-			5'b10111 : muxOut <= signExt[31:0];
-			5'b11000 : muxOut <= Yreg[31:0];
+			
+			5'b10111 : muxOut <= Yreg[31:0];
 			default: muxOut <= 32'd0;
 		endcase
 	end

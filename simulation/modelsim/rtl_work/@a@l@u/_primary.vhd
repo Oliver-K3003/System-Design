@@ -26,10 +26,10 @@ entity ALU is
         clk             : in     vl_logic;
         clr             : in     vl_logic;
         IncPC           : in     vl_logic;
-        b               : in     vl_logic_vector(31 downto 0);
         y               : in     vl_logic_vector(31 downto 0);
+        b               : in     vl_logic_vector(31 downto 0);
         opcode          : in     vl_logic_vector(4 downto 0);
-        c               : out    vl_logic_vector(63 downto 0)
+        z               : out    vl_logic_vector(63 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of load : constant is 1;
