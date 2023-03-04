@@ -1,1 +1,12 @@
 Warning (10268): Verilog HDL information at datapath_tb.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb2.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb3.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb4.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb5.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb6.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb7.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb8.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb9.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb10.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb11.v(45): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at datapath_tb12.v(45): always construct contains both blocking and non-blocking assignments

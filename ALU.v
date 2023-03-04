@@ -13,8 +13,8 @@ module ALU(
 					shl=5'b01001, ror=5'b01010, rol=5'b01011, addi=5'b01100, andi=5'b01101, ori=5'b01110, mul=5'b01111, div=5'b10000, neg=5'b10001, 
 					NOT=5'b10010;
 					
-	wire [31:0] div_hi_out, div_lo_out, IncPC_out, add_out, sub_out, and_out, or_out, shr_out, shra_out, shl_out, ror_out, rol_out, neg_out, not_out;
-	wire [63:0] mul_out;
+	wire [31:0] IncPC_out, add_out, sub_out, and_out, or_out, shr_out, shra_out, shl_out, ror_out, rol_out, neg_out, not_out;
+	wire [63:0] div_out, mul_out;
 	wire add_cout, sub_cout;
 	
 	always@(*) begin 
@@ -63,8 +63,7 @@ module ALU(
 				z[63:0] <= mul_out[63:0];
 			end
 			div: begin 
-				z[31:0] <= div_lo_out[31:0];
-				z[63:32] <= div_hi_out[31:0];
+				z[63:0] <= div_out;
 			end
 			neg: begin 
 				z[31:0] <= neg_out[31:0];
@@ -89,7 +88,7 @@ module ALU(
 		rotate_right ror_instance(y, b, ror_out);
 		rotate_left rol_instance(y, b, rol_out);
 		multiplier mul_instance(y, b, mul_out);
-		division div_instance(y, b, div_hi_out, div_lo_out);
+		division div_instance(y, b, div_out);
 		negate neg_instance(b, neg_out);
 		not_32 not_instance(b, not_out);
 	

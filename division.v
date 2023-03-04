@@ -6,7 +6,7 @@
 // endmodule
 
 //non-restoring division -> Bonus?
-module division(input signed [31:0] dividend, input signed [31:0] divisor, output reg[31:0]quotient, output reg[31:0]remainder);
+module division(input signed [31:0] dividend, input signed [31:0] divisor, output reg[63:0] out);
 	reg signed [32:0] a;
 	reg signed [31:0] q;
 	integer i;
@@ -33,7 +33,6 @@ module division(input signed [31:0] dividend, input signed [31:0] divisor, outpu
 		if (a[32] == 1) begin
 			a = a + divisor;
 		end
-		quotient = q[31:0];
-		remainder = a[31:0];
+		out = {q[31:0], a[31:0]};
 	end
 endmodule

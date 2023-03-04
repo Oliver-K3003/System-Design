@@ -2,8 +2,8 @@
 
 module divisiontb();
     reg [31:0] m,q;
-    wire [31:0] quotient, remainder;
-    division division_instance(m,q,quotient,remainder);
+    wire [63:0] out;
+    division division_instance(m,q,out);
 
     initial begin 
         m <= 32'd24;

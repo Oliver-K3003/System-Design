@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 
-module datapath_tb();
+module datapath_tb8();
 	reg R0in, R1in, R2in, R3in, R4in, R5in, R6in, R7in, R8in, R9in, R10in, R11in, R12in, R13in, R14in, R15in, HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, AND;
 	reg R0out, R1out, R2out, R3out, R4out, R5out, R6out, R7out, R8out, R9out, R10out, R11out, R12out, R13out, R14out, R15out, HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, Zout,  Yout;
 	reg Clock, Read, IncPC;
@@ -63,7 +63,7 @@ module datapath_tb();
 					 MDRout <= 0; INPORTout <= 0; Zout <= 0; 
 					 Yout <= 0; IncPC <=0; Read <= 0; Mdatain <= 32'd0;
             end
-				//and R1, R2, R3
+				//shl R1, R3, R5
             Reg_load1a:begin 
                 Mdatain<=32'h00000012;
                 Read=0; MDRin=0;
@@ -71,8 +71,8 @@ module datapath_tb();
                 #15 Read<=0; MDRin<=0;
             end
             Reg_load1b:begin 
-                #10 MDRout<=1; R2in<=1;
-                #15 MDRout<=0;R2in<=0;
+                #10 MDRout<=1; R3in<=1;
+                #15 MDRout<=0; R3in<=0;
             end
             Reg_load2a:begin 
                 Mdatain<=32'h00000014;
@@ -80,8 +80,8 @@ module datapath_tb();
                 #15 Read<=0; MDRin<=0;
             end
             Reg_load2b:begin 
-                #10 MDRout<=1;R3in<=1;
-                #15 MDRout<=0;R3in<=0;
+                #10 MDRout<=1;R5in<=1;
+                #15 MDRout<=0;R5in<=0;
             end
             Reg_load3a:begin 
                 Mdatain<=32'h00000018;
@@ -98,7 +98,7 @@ module datapath_tb();
             end
 				
             T1:begin 
-                Mdatain<=32'h28918000;
+                Mdatain<=32'h48918000;
                 #10 ZLOout<=1; PCin<=1; Read<=1; MDRin<=1; 
                 #15 ZLOout<=0; PCin<=0; Read<=0; MDRin<=0;
             end
