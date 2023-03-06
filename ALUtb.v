@@ -50,6 +50,7 @@ module ALUtb();
 		y <= 32'h00000001;
 		opcode <= 5'b00111;
 		
+		//shra - good
 		#100
 		b <= 32'hF0000000;
 		y <= 32'h00000004;
@@ -87,19 +88,3 @@ module ALUtb();
 	end
 	
 endmodule
-
-/*module ALU(
-	input clk, clr, IncPC,
-	
-	input wire [31:0] b,
-	input wire [31:0] y,
-	
-	input wire [4:0] opcode,
-	
-	output reg [63:0] z
-);
-
-	parameter load=5'b00000, loadi=5'b00001, store=5'b00010, add=5'b00011, sub=5'b00100, AND=5'b00101, OR=5'b00110, shr=5'b00111, shra=5'b01000, 
-					shl=5'b01001, ror=5'b01010, rol=5'b01011, addi=5'b01100, andi=5'b01101, ori=5'b01110, mul=5'b01111, div=5'b10000, neg=5'b10001, 
-					NOT=5'b10010;
-					*/
