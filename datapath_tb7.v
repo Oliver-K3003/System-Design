@@ -75,7 +75,7 @@ module datapath_tb7();
                 #15 MDRout<=0; R3in<=0;
             end
             Reg_load2a:begin 
-                Mdatain<=32'h00000014;
+                Mdatain<=32'h00000004;
                 #10 Read<=1; MDRin<=1;
                 #15 Read<=0; MDRin<=0;
             end
@@ -107,12 +107,12 @@ module datapath_tb7();
                 #15 MDRout<=0; IRin<=0;
             end
             T3:begin 
-                #10 R2out<=1; Yin<=1;
-                #15 R2out<=0; Yin<=0;
+                #10 R3out<=1; Yin<=1;
+                #15 R3out<=0; Yin<=0;
             end
             T4:begin 
-                #10 R3out<=1; AND<=1; Zin<=1;
-                #15 R3out<=0; AND<=0; Zin<=0;
+                #10 R5out<=1; AND<=1; Zin<=1;
+                #15 R5out<=0; AND<=0; Zin<=0;
             end
             T5:begin 
                 #10 ZLOout<=1; R1in<=1;

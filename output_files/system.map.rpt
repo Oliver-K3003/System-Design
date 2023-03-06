@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Sat Mar 04 16:02:14 2023
+Sun Mar 05 20:24:08 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -78,13 +78,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar 04 16:02:14 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sun Mar 05 20:24:07 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 6,710                                           ;
-;     Total combinational functions  ; 6,038                                           ;
+; Total logic elements               ; 6,766                                           ;
+;     Total combinational functions  ; 6,094                                           ;
 ;     Dedicated logic registers      ; 768                                             ;
 ; Total registers                    ; 768                                             ;
 ; Total pins                         ; 891                                             ;
@@ -193,38 +193,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
-; Register.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/Register.v          ;         ;
-; busMUX.v                         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v            ;         ;
-; busEncoder.v                     ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v        ;         ;
-; adder.v                          ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/adder.v             ;         ;
-; log_and_32bit.v                  ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/log_and_32bit.v     ;         ;
-; log_or_32bit.v                   ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/log_or_32bit.v      ;         ;
-; shift_left.v                     ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/shift_left.v        ;         ;
-; shift_right.v                    ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right.v       ;         ;
-; rotate_right.v                   ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_right.v      ;         ;
-; rotate_left.v                    ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_left.v       ;         ;
-; negate.v                         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/negate.v            ;         ;
-; not_32.v                         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/not_32.v            ;         ;
-; multiplier.v                     ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/multiplier.v        ;         ;
-; division.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/division.v          ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v          ;         ;
-; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/ALU.v               ;         ;
-; sub.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/sub.v               ;         ;
-; MDR.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/MDR.v               ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc          ;         ;
-; db/add_sub_hui.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/add_sub_hui.tdf  ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; Register.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/Register.v               ;         ;
+; busMUX.v                         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v                 ;         ;
+; busEncoder.v                     ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v             ;         ;
+; adder.v                          ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/adder.v                  ;         ;
+; log_and_32bit.v                  ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/log_and_32bit.v          ;         ;
+; log_or_32bit.v                   ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/log_or_32bit.v           ;         ;
+; shift_left.v                     ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/shift_left.v             ;         ;
+; shift_right.v                    ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right.v            ;         ;
+; rotate_right.v                   ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_right.v           ;         ;
+; rotate_left.v                    ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_left.v            ;         ;
+; negate.v                         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/negate.v                 ;         ;
+; not_32.v                         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/not_32.v                 ;         ;
+; multiplier.v                     ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/multiplier.v             ;         ;
+; division.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/division.v               ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v               ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/ALU.v                    ;         ;
+; sub.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/sub.v                    ;         ;
+; MDR.v                            ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/MDR.v                    ;         ;
+; shift_right_arithmetic.v         ; yes             ; User Verilog HDL File        ; C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right_arithmetic.v ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf              ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/addcore.inc                  ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/look_add.inc                 ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altshift.inc                 ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc      ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                 ; c:/altera/13.0sp1/quartus/libraries/megafunctions/aglobal130.inc               ;         ;
+; db/add_sub_hui.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/altera/13.0sp1/elec374/system-design/System-Design/db/add_sub_hui.tdf       ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -232,16 +233,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 6,710       ;
+; Estimated Total logic elements              ; 6,766       ;
 ;                                             ;             ;
-; Total combinational functions               ; 6038        ;
+; Total combinational functions               ; 6094        ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 2345        ;
-;     -- 3 input functions                    ; 1971        ;
-;     -- <=2 input functions                  ; 1722        ;
+;     -- 4 input functions                    ; 2370        ;
+;     -- 3 input functions                    ; 2000        ;
+;     -- <=2 input functions                  ; 1724        ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 4349        ;
+;     -- normal mode                          ; 4405        ;
 ;     -- arithmetic mode                      ; 1689        ;
 ;                                             ;             ;
 ; Total registers                             ; 768         ;
@@ -252,138 +253,139 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ; Maximum fan-out node                        ; Clock~input ;
 ; Maximum fan-out                             ; 768         ;
-; Total fan-out                               ; 22797       ;
-; Average fan-out                             ; 2.65        ;
+; Total fan-out                               ; 23036       ;
+; Average fan-out                             ; 2.66        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                   ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node               ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |datapath                                ; 6038 (0)          ; 768 (0)      ; 0           ; 0            ; 0       ; 0         ; 891  ; 0            ; |datapath                                                                                       ; work         ;
-;    |ALU:logic_unit|                      ; 5445 (383)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit                                                                        ; work         ;
-;       |adder:add_instance|               ; 105 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                                     ; work         ;
-;          |cla_16:instance1|              ; 51 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                                    ; work         ;
-;             |cla_4:instance1|            ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1                    ; work         ;
-;             |cla_4:instance2|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2                    ; work         ;
-;             |cla_4:instance3|            ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3                    ; work         ;
-;             |cla_4:instance4|            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance4                    ; work         ;
-;          |cla_16:instance2|              ; 54 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                                    ; work         ;
-;             |cla_4:instance1|            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance1                    ; work         ;
-;             |cla_4:instance2|            ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance2                    ; work         ;
-;             |cla_4:instance3|            ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance3                    ; work         ;
-;             |cla_4:instance4|            ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance4                    ; work         ;
-;       |division:div_instance|            ; 2143 (163)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance                                                  ; work         ;
-;          |lpm_add_sub:Add11|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add11                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add11|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add13|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add13                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add13|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add15|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add15                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add15|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add17|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add17                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add17|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add19|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add19                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add19|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add21|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add21                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add21|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add23|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add23                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add23|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add25|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add25                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add25|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add27|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add27                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add27|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add29|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add29                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add29|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add31|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add31                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add31|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add33|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add33                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add33|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add35|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add35                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add35|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add37|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add37                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add37|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add39|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add39                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add39|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add3|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add3                                 ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add3|add_sub_hui:auto_generated      ; work         ;
-;          |lpm_add_sub:Add41|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add41                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add41|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add43|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add43                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add43|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add45|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add45                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add45|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add47|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add47                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add47|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add49|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add49                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add49|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add51|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add51                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add51|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add53|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add53                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add53|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add55|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add55                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add55|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add57|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add57                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add57|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add59|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add59                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add59|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add5|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add5                                 ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add5|add_sub_hui:auto_generated      ; work         ;
-;          |lpm_add_sub:Add61|             ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add61                                ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add61|add_sub_hui:auto_generated     ; work         ;
-;          |lpm_add_sub:Add7|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add7                                 ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add7|add_sub_hui:auto_generated      ; work         ;
-;          |lpm_add_sub:Add9|              ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9                                 ; work         ;
-;             |add_sub_hui:auto_generated| ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9|add_sub_hui:auto_generated      ; work         ;
-;       |log_and_32bit:land_instance|      ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_and_32bit:land_instance                                            ; work         ;
-;       |log_or_32bit:lor_instance|        ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_or_32bit:lor_instance                                              ; work         ;
-;       |multiplier:mul_instance|          ; 2034 (2034)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|multiplier:mul_instance                                                ; work         ;
-;       |rotate_left:rol_instance|         ; 154 (154)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_left:rol_instance                                               ; work         ;
-;       |rotate_right:ror_instance|        ; 193 (193)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_right:ror_instance                                              ; work         ;
-;       |shift_left:shl_instance|          ; 118 (118)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_left:shl_instance                                                ; work         ;
-;       |shift_right:shr_instance|         ; 129 (129)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right:shr_instance                                               ; work         ;
-;       |sub:sub_instance|                 ; 146 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance                                                       ; work         ;
-;          |adder:adder_instance|          ; 114 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance                                  ; work         ;
-;             |cla_16:instance1|           ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1                 ; work         ;
-;                |cla_4:instance1|         ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance1 ; work         ;
-;                |cla_4:instance2|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance2 ; work         ;
-;                |cla_4:instance3|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance3 ; work         ;
-;                |cla_4:instance4|         ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance4 ; work         ;
-;             |cla_16:instance2|           ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2                 ; work         ;
-;                |cla_4:instance1|         ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance1 ; work         ;
-;                |cla_4:instance2|         ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance2 ; work         ;
-;                |cla_4:instance3|         ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance3 ; work         ;
-;                |cla_4:instance4|         ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance4 ; work         ;
-;          |negate:negate_instance|        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|negate:negate_instance                                ; work         ;
-;    |MDR:mdr_reg|                         ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg                                                                           ; work         ;
-;       |Register:MDR|                     ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg|Register:MDR                                                              ; work         ;
-;    |Register:HI|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:HI                                                                           ; work         ;
-;    |Register:INPORT|                     ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:INPORT                                                                       ; work         ;
-;    |Register:LO|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:LO                                                                           ; work         ;
-;    |Register:PC|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:PC                                                                           ; work         ;
-;    |Register:R0|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R0                                                                           ; work         ;
-;    |Register:R10|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R10                                                                          ; work         ;
-;    |Register:R11|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R11                                                                          ; work         ;
-;    |Register:R12|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R12                                                                          ; work         ;
-;    |Register:R13|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R13                                                                          ; work         ;
-;    |Register:R14|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R14                                                                          ; work         ;
-;    |Register:R15|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R15                                                                          ; work         ;
-;    |Register:R1|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R1                                                                           ; work         ;
-;    |Register:R2|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R2                                                                           ; work         ;
-;    |Register:R3|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R3                                                                           ; work         ;
-;    |Register:R4|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R4                                                                           ; work         ;
-;    |Register:R5|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R5                                                                           ; work         ;
-;    |Register:R6|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R6                                                                           ; work         ;
-;    |Register:R7|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R7                                                                           ; work         ;
-;    |Register:R8|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R8                                                                           ; work         ;
-;    |Register:R9|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R9                                                                           ; work         ;
-;    |Register:Y|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:Y                                                                            ; work         ;
-;    |Register:ZHI|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZHI                                                                          ; work         ;
-;    |Register:ZLO|                        ; 8 (8)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZLO                                                                          ; work         ;
-;    |busEncoder:enc|                      ; 73 (73)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busEncoder:enc                                                                        ; work         ;
-;    |busMUX:mux|                          ; 480 (480)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busMUX:mux                                                                            ; work         ;
-+------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
+; |datapath                                    ; 6094 (0)          ; 768 (0)      ; 0           ; 0            ; 0       ; 0         ; 891  ; 0            ; |datapath                                                                                       ; work         ;
+;    |ALU:logic_unit|                          ; 5477 (385)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit                                                                        ; work         ;
+;       |adder:add_instance|                   ; 109 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                                     ; work         ;
+;          |cla_16:instance1|                  ; 52 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                                    ; work         ;
+;             |cla_4:instance1|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1                    ; work         ;
+;             |cla_4:instance2|                ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2                    ; work         ;
+;             |cla_4:instance3|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3                    ; work         ;
+;             |cla_4:instance4|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance4                    ; work         ;
+;          |cla_16:instance2|                  ; 57 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                                    ; work         ;
+;             |cla_4:instance1|                ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance1                    ; work         ;
+;             |cla_4:instance2|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance2                    ; work         ;
+;             |cla_4:instance3|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance3                    ; work         ;
+;             |cla_4:instance4|                ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance4                    ; work         ;
+;       |division:div_instance|                ; 2143 (163)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance                                                  ; work         ;
+;          |lpm_add_sub:Add11|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add11                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add11|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add13|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add13                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add13|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add15|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add15                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add15|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add17|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add17                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add17|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add19|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add19                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add19|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add21|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add21                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add21|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add23|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add23                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add23|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add25|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add25                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add25|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add27|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add27                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add27|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add29|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add29                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add29|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add31|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add31                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add31|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add33|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add33                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add33|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add35|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add35                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add35|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add37|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add37                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add37|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add39|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add39                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add39|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add3|                  ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add3                                 ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add3|add_sub_hui:auto_generated      ; work         ;
+;          |lpm_add_sub:Add41|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add41                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add41|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add43|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add43                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add43|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add45|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add45                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add45|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add47|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add47                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add47|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add49|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add49                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add49|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add51|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add51                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add51|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add53|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add53                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add53|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add55|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add55                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add55|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add57|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add57                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add57|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add59|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add59                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add59|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add5|                  ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add5                                 ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add5|add_sub_hui:auto_generated      ; work         ;
+;          |lpm_add_sub:Add61|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add61                                ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add61|add_sub_hui:auto_generated     ; work         ;
+;          |lpm_add_sub:Add7|                  ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add7                                 ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add7|add_sub_hui:auto_generated      ; work         ;
+;          |lpm_add_sub:Add9|                  ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9                                 ; work         ;
+;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9|add_sub_hui:auto_generated      ; work         ;
+;       |log_and_32bit:land_instance|          ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_and_32bit:land_instance                                            ; work         ;
+;       |log_or_32bit:lor_instance|            ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_or_32bit:lor_instance                                              ; work         ;
+;       |multiplier:mul_instance|              ; 2085 (2085)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|multiplier:mul_instance                                                ; work         ;
+;       |rotate_left:rol_instance|             ; 147 (147)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_left:rol_instance                                               ; work         ;
+;       |rotate_right:ror_instance|            ; 183 (183)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_right:ror_instance                                              ; work         ;
+;       |shift_left:shl_instance|              ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_left:shl_instance                                                ; work         ;
+;       |shift_right:shr_instance|             ; 102 (102)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right:shr_instance                                               ; work         ;
+;       |shift_right_arithmetic:shra_instance| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right_arithmetic:shra_instance                                   ; work         ;
+;       |sub:sub_instance|                     ; 151 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance                                                       ; work         ;
+;          |adder:adder_instance|              ; 119 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance                                  ; work         ;
+;             |cla_16:instance1|               ; 58 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1                 ; work         ;
+;                |cla_4:instance1|             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance1 ; work         ;
+;                |cla_4:instance2|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance2 ; work         ;
+;                |cla_4:instance3|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance3 ; work         ;
+;                |cla_4:instance4|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance4 ; work         ;
+;             |cla_16:instance2|               ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2                 ; work         ;
+;                |cla_4:instance1|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance1 ; work         ;
+;                |cla_4:instance2|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance2 ; work         ;
+;                |cla_4:instance3|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance3 ; work         ;
+;                |cla_4:instance4|             ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance4 ; work         ;
+;          |negate:negate_instance|            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|negate:negate_instance                                ; work         ;
+;    |MDR:mdr_reg|                             ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg                                                                           ; work         ;
+;       |Register:MDR|                         ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg|Register:MDR                                                              ; work         ;
+;    |Register:HI|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:HI                                                                           ; work         ;
+;    |Register:INPORT|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:INPORT                                                                       ; work         ;
+;    |Register:LO|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:LO                                                                           ; work         ;
+;    |Register:PC|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:PC                                                                           ; work         ;
+;    |Register:R0|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R0                                                                           ; work         ;
+;    |Register:R10|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R10                                                                          ; work         ;
+;    |Register:R11|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R11                                                                          ; work         ;
+;    |Register:R12|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R12                                                                          ; work         ;
+;    |Register:R13|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R13                                                                          ; work         ;
+;    |Register:R14|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R14                                                                          ; work         ;
+;    |Register:R15|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R15                                                                          ; work         ;
+;    |Register:R1|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R1                                                                           ; work         ;
+;    |Register:R2|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R2                                                                           ; work         ;
+;    |Register:R3|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R3                                                                           ; work         ;
+;    |Register:R4|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R4                                                                           ; work         ;
+;    |Register:R5|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R5                                                                           ; work         ;
+;    |Register:R6|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R6                                                                           ; work         ;
+;    |Register:R7|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R7                                                                           ; work         ;
+;    |Register:R8|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R8                                                                           ; work         ;
+;    |Register:R9|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R9                                                                           ; work         ;
+;    |Register:Y|                              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:Y                                                                            ; work         ;
+;    |Register:ZHI|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZHI                                                                          ; work         ;
+;    |Register:ZLO|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZLO                                                                          ; work         ;
+;    |busEncoder:enc|                          ; 73 (73)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busEncoder:enc                                                                        ; work         ;
+;    |busMUX:mux|                              ; 480 (480)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busMUX:mux                                                                            ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -393,8 +395,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 768   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Synchronous Clear  ; 16    ;
+; Number of registers using Synchronous Load   ; 48    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 768   ;
@@ -407,32 +409,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
-; 33:1               ; 30 bits   ; 660 LEs       ; 270 LEs              ; 390 LEs                ; Yes        ; |datapath|Register:ZLO|q[25]                                  ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux3         ;
+; 35:1               ; 16 bits   ; 368 LEs       ; 160 LEs              ; 208 LEs                ; Yes        ; |datapath|Register:ZLO|q[19]                                  ;
+; 35:1               ; 13 bits   ; 299 LEs       ; 143 LEs              ; 156 LEs                ; Yes        ; |datapath|Register:ZLO|q[7]                                   ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux17        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux31        ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_right:shr_instance|ShiftRight0 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux31        ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_right:shr_instance|ShiftRight0 ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 512 LEs              ; 160 LEs                ; No         ; |datapath|busMUX:mux|Mux15                                    ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_right:shr_instance|ShiftRight0 ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux61        ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux67        ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux135       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux207       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux281       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux326       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux390       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux462       ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux109       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux164       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux242       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux303       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux380       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux434       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux495       ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 512 LEs              ; 160 LEs                ; No         ; |datapath|busMUX:mux|Mux8                                     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux47        ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux75        ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux142       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux202       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux269       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux335       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux402       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux464       ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux107       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux165       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux240       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux298       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux367       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux429       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux491       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
 
@@ -1347,7 +1353,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:11     ;
 +----------------+--------------+
 
 
@@ -1357,7 +1363,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Mar 04 16:01:58 2023
+    Info: Processing started: Sun Mar 05 20:23:54 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -1444,6 +1450,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file datapat
     Info (12023): Found entity 1: datapath_tb11
 Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb12.v
     Info (12023): Found entity 1: datapath_tb12
+Info (12021): Found 1 design units, including 1 entities, in source file shift_right_arithmetic.v
+    Info (12023): Found entity 1: shift_right_arithmetic
+Info (12021): Found 1 design units, including 1 entities, in source file datapath_tb13.v
+    Info (12023): Found entity 1: datapath_tb13
 Warning (10236): Verilog HDL Implicit Net warning at ALUtb.v(9): created implicit net for "IncPC"
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Info (12128): Elaborating entity "busEncoder" for hierarchy "busEncoder:enc"
@@ -1462,6 +1472,7 @@ Info (12128): Elaborating entity "negate" for hierarchy "ALU:logic_unit|sub:sub_
 Info (12128): Elaborating entity "log_and_32bit" for hierarchy "ALU:logic_unit|log_and_32bit:land_instance"
 Info (12128): Elaborating entity "log_or_32bit" for hierarchy "ALU:logic_unit|log_or_32bit:lor_instance"
 Info (12128): Elaborating entity "shift_right" for hierarchy "ALU:logic_unit|shift_right:shr_instance"
+Info (12128): Elaborating entity "shift_right_arithmetic" for hierarchy "ALU:logic_unit|shift_right_arithmetic:shra_instance"
 Info (12128): Elaborating entity "shift_left" for hierarchy "ALU:logic_unit|shift_left:shl_instance"
 Info (12128): Elaborating entity "rotate_right" for hierarchy "ALU:logic_unit|rotate_right:ror_instance"
 Info (12128): Elaborating entity "rotate_left" for hierarchy "ALU:logic_unit|rotate_left:rol_instance"
@@ -1526,15 +1537,15 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "IRin"
     Warning (15610): No output dependent on input pin "AND"
     Warning (15610): No output dependent on input pin "IncPC"
-Info (21057): Implemented 7633 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7689 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 86 input pins
     Info (21059): Implemented 805 output pins
-    Info (21061): Implemented 6742 logic cells
+    Info (21061): Implemented 6798 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 4625 megabytes
-    Info: Processing ended: Sat Mar 04 16:02:14 2023
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Peak virtual memory: 4622 megabytes
+    Info: Processing ended: Sun Mar 05 20:24:08 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:13
 
 
 +------------------------------------------+

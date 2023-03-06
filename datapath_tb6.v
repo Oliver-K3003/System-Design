@@ -65,7 +65,7 @@ module datapath_tb6();
             end
 				//div R6, R7
             Reg_load1a:begin 
-                Mdatain<=32'h00000012;
+                Mdatain<=32'h000001DC;
                 Read=0; MDRin=0;
                 #10 Read<=1; MDRin<=1;
                 #15 Read<=0; MDRin<=0;
@@ -75,7 +75,7 @@ module datapath_tb6();
                 #15 MDRout<=0;R6in<=0;
             end
             Reg_load2a:begin 
-                Mdatain<=32'h00000014;
+                Mdatain<=32'h00000017;
                 #10 Read<=1; MDRin<=1;
                 #15 Read<=0; MDRin<=0;
             end
@@ -107,16 +107,14 @@ module datapath_tb6();
                 #15 MDRout<=0; IRin<=0;
             end
             T3:begin 
-                #10 R2out<=1; Yin<=1;
-                #15 R2out<=0; Yin<=0;
+                #10 R6out<=1; Yin<=1;
+                #15 R6out<=0; Yin<=0;
             end
             T4:begin 
-                #10 R3out<=1; Zin<=1;
-                #15 R3out<=0; Zin<=0;
+                #10 R7out<=1; Zin<=1;
+                #15 R7out<=0; Zin<=0;
             end
             T5:begin 
-                #10 ZLOout<=1;
-                #15 ZLOout<=0;
             end
         endcase
     end

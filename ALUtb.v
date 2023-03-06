@@ -14,7 +14,7 @@ module ALUtb();
 		forever #10 clk = ~clk;
 	end
 	
-	always@(*)begin 
+	always@(posedge clk)begin 
 		//load - good
 		b <= 32'd14;
 		y <= 32'd4;
@@ -22,8 +22,8 @@ module ALUtb();
 		
 		//add - good
 		#100
-		b <= 32'd123;
-		y <= 32'd7;
+		b <= 32'h00000012;
+		y <= 32'h00000014;
 		opcode <= 5'b00011;
 		
 		//sub - good
@@ -50,6 +50,11 @@ module ALUtb();
 		y <= 32'h00000001;
 		opcode <= 5'b00111;
 		
+		#100
+		b <= 32'hF0000000;
+		y <= 32'h00000004;
+		opcode <= 5'b01000;
+		
 		//shl - good
 		#100
 		b <= 32'h00000001;
@@ -62,7 +67,7 @@ module ALUtb();
 		y <= 32'd4;
 		opcode <= 5'b01111;
 		
-		//div - NOT SHOWING UPPER BITS???
+		//div - good
 		#100
 		b <= 32'd12;
 		y <= 32'd27;

@@ -107,16 +107,15 @@ module datapath_tb12();
                 #15 MDRout<=0; IRin<=0;
             end
             T3:begin 
-                #10 R2out<=1; Yin<=1;
-                #15 R2out<=0; Yin<=0;
+					 #10 R1out<=1; Zin<=1;
+                #15 R1out<=0; Zin<=0;
             end
             T4:begin 
-                #10 R3out<=1; Zin<=1;
-                #15 R3out<=0; Zin<=0;
-            end
-            T5:begin 
                 #10 ZLOout<=1; R0in <= 1;
                 #15 ZLOout<=0; R0in <= 0;
+            end
+            T5:begin 
+                
             end
         endcase
     end

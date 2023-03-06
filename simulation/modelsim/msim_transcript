@@ -121,6 +121,12 @@
 # 
 # Top level modules:
 # 	MDR
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right_arithmetic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shift_right_arithmetic
+# 
+# Top level modules:
+# 	shift_right_arithmetic
 # 
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/datapath_tb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -147,6 +153,7 @@
 # Loading work.log_and_32bit
 # Loading work.log_or_32bit
 # Loading work.shift_right
+# Loading work.shift_right_arithmetic
 # Loading work.shift_left
 # Loading work.rotate_right
 # Loading work.rotate_left
@@ -159,4 +166,4 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 10000 ns
+# run 1000 ns

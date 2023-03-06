@@ -98,7 +98,7 @@ module datapath_tb5();
             end
 				
             T1:begin 
-                Mdatain<=32'h20918000;
+                Mdatain<=32'h78918000;
                 #10 ZLOout<=1; PCin<=1; Read<=1; MDRin<=1; 
                 #15 ZLOout<=0; PCin<=0; Read<=0; MDRin<=0;
             end
@@ -107,16 +107,14 @@ module datapath_tb5();
                 #15 MDRout<=0; IRin<=0;
             end
             T3:begin 
-                #10 R2out<=1; Yin<=1;
-                #15 R2out<=0; Yin<=0;
+                #10 R6out<=1; Yin<=1;
+                #15 R6out<=0; Yin<=0;
             end
             T4:begin 
-                #10 R3out<=1; Zin<=1;
-                #15 R3out<=0; Zin<=0;
+                #10 R7out<=1; Zin<=1;
+                #15 R7out<=0; Zin<=0;
             end
             T5:begin 
-                #10 ZLOout<=1;
-                #15 ZLOout<=0;
             end
         endcase
     end

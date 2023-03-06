@@ -39,10 +39,14 @@ module ALU(
 				z[31:0] <= or_out[31:0];
 				z[63:32] <= 32'd0;
 			end
-			shr, shra: begin 
+			shr: begin 
 				z[31:0] <= shr_out[31:0];
 				z[63:32] <= 32'd0;
 			end
+			shra: begin 
+				z[31:0] <= shra_out[31:0];
+				z[63:32] <= 32'd0;
+			end 
 			shl: begin 
 				z[31:0] <= shl_out[31:0];
 				z[63:32] <= 32'd0;
@@ -84,6 +88,7 @@ module ALU(
 		log_and_32bit land_instance(y, b, and_out);
 		log_or_32bit lor_instance(y, b, or_out);
 		shift_right shr_instance(y, b, shr_out);
+		shift_right_arithmetic shra_instance(y, b, shra_out);
 		shift_left shl_instance(y, b, shl_out);
 		rotate_right ror_instance(y, b, ror_out);
 		rotate_left rol_instance(y, b, rol_out);

@@ -72,7 +72,7 @@ module datapath_tb3();
             end
             Reg_load1b:begin 
                 #10 MDRout<=1; R4in<=1;
-                #15 MDRout<=0;R4in<=0;
+                #15 MDRout<=0; R4in<=0;
             end
             Reg_load2a:begin 
                 Mdatain<=32'h00000014;
@@ -107,12 +107,12 @@ module datapath_tb3();
                 #15 MDRout<=0; IRin<=0;
             end
             T3:begin 
-                #10 R2out<=1; Yin<=1;
-                #15 R2out<=0; Yin<=0;
+                #10 R4out<=1; Yin<=1;
+                #15 R4out<=0; Yin<=0;
             end
             T4:begin 
-                #10 R3out<=1; Zin<=1;
-                #15 R3out<=0; Zin<=0;
+                #10 R5out<=1; Zin<=1;
+                #15 R5out<=0; Zin<=0;
             end
             T5:begin 
                 #10 ZLOout<=1; R0in<=1;
