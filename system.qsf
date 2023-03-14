@@ -211,3 +211,8 @@ set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb10.v -section_id data
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb11.v -section_id datapath_tb11
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb12.v -section_id datapath_tb12
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb13.v -section_id datapath_tb13
+set_global_assignment -name VERILOG_FILE selectAndEncode.v
+set_global_assignment -name VERILOG_FILE conff_logic.v
+set_global_assignment -name VERILOG_FILE ram.v
+set_global_assignment -name VERILOG_FILE mar.v
+set_global_assignment -name VERILOG_FILE loadInstructionstb.v
