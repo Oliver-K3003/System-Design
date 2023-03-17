@@ -54,7 +54,7 @@ set_global_assignment -name VERILOG_FILE Registertb.v
 set_global_assignment -name VERILOG_FILE Register.v
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH loadInstructionstb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH loadInstruction2tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME Registertb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Registertb
@@ -193,7 +193,7 @@ set_global_assignment -name VERILOG_FILE loadInstructionstb.v
 set_global_assignment -name MIF_FILE memoryInit.mif
 set_global_assignment -name EDA_TEST_BENCH_NAME loadInstructionstb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id loadInstructionstb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "750 ns" -section_id loadInstructionstb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id loadInstructionstb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME loadInstructionstb -section_id loadInstructionstb
 set_global_assignment -name VERILOG_FILE ramtb.v
 set_global_assignment -name EDA_TEST_BENCH_NAME ramtb -section_id eda_simulation
@@ -205,6 +205,16 @@ set_global_assignment -name EDA_TEST_BENCH_NAME select_encodetb -section_id eda_
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id select_encodetb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "300 ns" -section_id select_encodetb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME select_encodetb -section_id select_encodetb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE loadInstruction2tb.v
+set_global_assignment -name VERILOG_FILE incrementPC.v
+set_global_assignment -name EDA_TEST_BENCH_NAME loadInstruction2tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id loadInstruction2tb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id loadInstruction2tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME loadInstruction2tb -section_id loadInstruction2tb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE Registertb.v -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busEncodertb.v -section_id busEncodertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busMUXtb.v -section_id busMUXtb
@@ -230,7 +240,4 @@ set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb13.v -section_id data
 set_global_assignment -name EDA_TEST_BENCH_FILE loadInstructionstb.v -section_id loadInstructionstb
 set_global_assignment -name EDA_TEST_BENCH_FILE ramtb.v -section_id ramtb
 set_global_assignment -name EDA_TEST_BENCH_FILE select_encodetb.v -section_id select_encodetb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE loadInstruction2tb.v -section_id loadInstruction2tb

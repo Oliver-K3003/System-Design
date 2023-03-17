@@ -57,8 +57,8 @@ module busMUX(
 			5'b10011 : muxOut <= zlo[31:0];
 			5'b10100 : muxOut <= pc[31:0];
 			5'b10101 : muxOut <= mdr[31:0];
-			5'b10110 : muxOut <= inport[31:0];
-			5'b10111 : muxOut <= outport[31:0];
+			5'b10110 : muxOut <= outport[31:0];
+			5'b10111 : muxOut <= inport[31:0];
 			5'b11000 : muxOut <= Yreg[31:0];
 			5'b11001 : muxOut <= Creg[31:0];
 			default: muxOut <= 32'd0;

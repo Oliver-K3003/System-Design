@@ -3,11 +3,12 @@ module datapath(
     input HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, 
     input Gra, Grb, Grc, Rin, Rout, BAout,
     input Clock, Read, IncPC, write,
+    input [31:0] inportInput,
     output [31:0] busMuxOut,
     output [4:0] encoderOut,
     output CON,
     output [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
-		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, 
+		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister,
 	 output [8:0] marToRam
 );
     wire [31:0] encoderIn;
@@ -51,7 +52,7 @@ module datapath(
     MDR mdr_reg(.clr(clr), .clk(Clock), .MDRin(MDRin), .read(Read), .busMuxOut(busMuxOut), .Mdatain(mdrToRam), .q(BusMuxInMDR));
     mar mar_reg(.d(busMuxOut), .q(marToRam), .le(MARin), .clk(Clock), .clr(clr));
     Register IR(.d(busMuxOut), .q(IRregister), .clr(clr), .clk(Clock), .le(IRin));
-	Register INPORT(.d(busMuxOut), .q(BusMuxInInport), .clr(clr), .clk(Clock), .le(INPORTin));
+	Register INPORT(.d(inportInput), .q(BusMuxInInport), .clr(clr), .clk(Clock), .le(INPORTin));
 	Register OUTPORT(.d(busMuxOut), .q(BusMuxInOutport), .clr(clr), .clk(Clock), .le(OUTPORTin));
     Register Y(.d(busMuxOut), .q(BusMuxInY), .clr(clr), .clk(Clock), .le(Yin));
 

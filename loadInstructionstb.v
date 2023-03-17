@@ -9,6 +9,7 @@ module loadInstructionstb();
 	reg HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout;
     reg Gra, Grb, Grc, Rin, Rout, BAout;
 	reg Clock, Read, IncPC, write;
+    reg [31:0] inportInput;
 	wire [31:0] busMuxOut;
     wire [4:0] encoderOut;
     wire CON;
@@ -16,15 +17,16 @@ module loadInstructionstb();
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister;
 	wire [8:0] marToRam;
 	
-	parameter Default=4'b0000, Reg_load1a=4'b0001, Reg_load1b=4'b0010,Reg_load2a=4'b0011, 
-					Reg_load2b=4'b0100, Reg_load3a=4'b0101,Reg_load3b = 4'b0110, T0 = 4'b0111,
-					T1 = 4'b1000, T2 = 4'b1001, T3 = 4'b1010, T4 = 4'b1011, T5 = 4'b1100, T6=4'b1101, T7=4'b1110;
+	parameter Default=5'd0, Reg_load1a=5'd1, Reg_load1b=5'd2,Reg_load2a=5'd3, 
+					Reg_load2b=5'd4, Reg_load3a=5'd5,Reg_load3b = 5'd6, T0 = 5'd7,
+					T1 = 5'd8, T2 = 5'd9, T3 = 5'd10, T4 = 5'd11, T5 = 5'd12, T6=5'd13, T7=5'd14, T8=5'd15,
+                    T9=5'd16, T10=5'd17, T11=5'd18, T12=5'd19, T13=5'd20, T14=5'd21, T15=5'd22;
 					
-	reg [3:0] Present_state = Default;
+	reg [4:0] Present_state = Default;
 	
 	datapath DUT(HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, CONin,
             HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, Gra, Grb, Grc, Rin, Rout, BAout,
-            Clock, Read, IncPC, write, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
+            Clock, Read, IncPC, write, inportInput, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, marToRam);
     initial begin 
         Clock = 0;
@@ -34,7 +36,8 @@ module loadInstructionstb();
     always@(posedge Clock)begin 
         case(Present_state)
             Default     :  #35 Present_state=Reg_load1a;
-            Reg_load1a  :  #35 Present_state=T0;
+            Reg_load1a  :  #35 Present_state=Reg_load1b;
+				Reg_load1b	:  #35 Present_state=T0;
             T0          :  #35 Present_state=T1;
             T1          :  #35 Present_state=T2;
             T2          :  #35 Present_state=T3;
@@ -42,6 +45,16 @@ module loadInstructionstb();
             T4          :  #35 Present_state=T5;
             T5          :  #35 Present_state=T6;
             T6          :  #35 Present_state=T7;
+			T7			:  #35 Present_state=Reg_load2a;
+			Reg_load2a	:  #35 Present_state=Reg_load2b;
+			Reg_load2b	:  #35 Present_state=T8;
+            T8          :  #35 Present_state=T9;
+            T9          :  #35 Present_state=T10;
+            T10          :  #35 Present_state=T11;
+            T11          :  #35 Present_state=T12;
+            T12          :  #35 Present_state=T13;
+            T13          :  #35 Present_state=T14;
+            T14          :  #35 Present_state=T15;
         endcase
     end
 
@@ -59,17 +72,22 @@ module loadInstructionstb();
             end
 				//ld R1, 0x75
             Reg_load1a:begin 
-                #10 PCin<=1;
-                #15 PCin<=0;
+				inportInput<=32'd0;
+                #10 INPORTin<=1;
+                #15 INPORTin<=0;
             end
+				Reg_load1b:begin 
+					#10 INPORTout<=1; PCin<=1;
+					#15 INPORTout<=0; PCin<=0;
+				end
             T0:begin 
                 #10 PCout<=1; MARin<=1; IncPC<=1; Zin<=1;
-                #15 PCout<=0; MARin<=0; IncPC<=0; Zin<=0;
+                #15 PCout<=0; MARin<=0; IncPC<=0; Zin<=0; 
             end
 				
             T1:begin 
-                #10 ZLOout<=1; PCin<=1; Read<=1; MDRin<=1; 
-                #15 ZLOout<=0; PCin<=0; Read<=0; MDRin<=0;
+                #10 Read<=1; MDRin<=1; PCin<=1; 
+                #15 Read<=0; MDRin<=0; PCin<=0; 
             end
             T2:begin 
                 #10 MDRout<=1; IRin<=1;
@@ -92,6 +110,49 @@ module loadInstructionstb();
                 #15 Read<=0; MDRin<=0;
             end
             T7:begin 
+                #10 MDRout<=1; Gra<=1; Rin<=1;
+                #15 MDRout<=0; Gra<=0; Rin<=0;
+            end
+			//ld R0, 0x45(R1)
+            Reg_load2a:begin 
+				inportInput<=32'd1;
+                #10 INPORTin<=1;
+                #15 INPORTin<=0;
+            end
+			Reg_load2b:begin 
+				#10 INPORTout<=1; PCin<=1;
+				#15 INPORTout<=0; PCin<=0;
+			end
+            T8:begin 
+                #10 PCout<=1; MARin<=1; IncPC<=1; Zin<=1;
+                #15 PCout<=0; MARin<=0; IncPC<=0; Zin<=0; 
+            end
+				
+            T9:begin 
+                #10 Read<=1; MDRin<=1; PCin<=1; 
+                #15 Read<=0; MDRin<=0; PCin<=0; 
+            end
+            T10:begin 
+                #10 MDRout<=1; IRin<=1;
+                #15 MDRout<=0; IRin<=0;
+            end
+            T11:begin 
+                #10 Grb<=1; BAout<=1; Yin<=1;
+                #15 Grb<=0; BAout<=0; Yin<=0;
+            end
+            T12:begin 
+                #10  Cout<=1; Zin<=1;
+                #15  Cout<=0; Zin<=0;
+            end
+            T13:begin 
+                #10 ZLOout<=1; MARin<=1;
+                #15 ZLOout<=0; MARin<=0;
+            end
+            T14:begin 
+                #10 Read<=1; MDRin<=1;
+                #15 Read<=0; MDRin<=0;
+            end
+            T15:begin 
                 #10 MDRout<=1; Gra<=1; Rin<=1;
                 #15 MDRout<=0; Gra<=0; Rin<=0;
             end

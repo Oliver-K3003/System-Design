@@ -32,6 +32,7 @@ entity datapath is
         Read            : in     vl_logic;
         IncPC           : in     vl_logic;
         write           : in     vl_logic;
+        inportInput     : in     vl_logic_vector(31 downto 0);
         busMuxOut       : out    vl_logic_vector(31 downto 0);
         encoderOut      : out    vl_logic_vector(4 downto 0);
         CON             : out    vl_logic;
