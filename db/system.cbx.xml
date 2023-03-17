@@ -27,6 +27,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add29" CBX_FILE_NAME="add_sub_hui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_hui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add47" CBX_FILE_NAME="add_sub_hui.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ram:memory|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_7d81.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add13" CBX_FILE_NAME="add_sub_hui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add31" CBX_FILE_NAME="add_sub_hui.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add39" CBX_FILE_NAME="add_sub_hui.tdf"/>

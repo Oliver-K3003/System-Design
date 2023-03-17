@@ -8,11 +8,11 @@ module MDR(
     output wire [31:0] q
 );
     wire [31:0] muxOut;
-    mux2to1 MDMux(read, busMuxOut, Mdatain, muxOut);
+    mdrmux2to1 MDMux(read, busMuxOut, Mdatain, muxOut);
     Register MDR(muxOut, q, clr, clk, MDRin);
 endmodule
 
-module mux2to1(
+module mdrmux2to1(
     input read, 
     input [31:0] busMuxOut, 
     input [31:0] Mdatain, 

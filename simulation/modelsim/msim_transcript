@@ -117,7 +117,7 @@
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/MDR.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module MDR
-# -- Compiling module mux2to1
+# -- Compiling module mdrmux2to1
 # 
 # Top level modules:
 # 	MDR
@@ -127,23 +127,57 @@
 # 
 # Top level modules:
 # 	shift_right_arithmetic
-# 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/datapath_tb11.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/selectAndEncode.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module datapath_tb11
+# -- Compiling module selectAndEncode
+# -- Compiling module decoder4to16
 # 
 # Top level modules:
-# 	datapath_tb11
+# 	selectAndEncode
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/conff_logic.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module conff_logic
+# -- Compiling module decoder2to4
+# -- Compiling module ff_register
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  datapath_tb11
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps datapath_tb11 
-# Loading work.datapath_tb11
+# Top level modules:
+# 	conff_logic
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/mar.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mar
+# 
+# Top level modules:
+# 	mar
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/ram.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ram
+# 
+# Top level modules:
+# 	ram
+# 
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/loadInstructionstb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module loadInstructionstb
+# 
+# Top level modules:
+# 	loadInstructionstb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  loadInstructionstb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps loadInstructionstb 
+# Loading work.loadInstructionstb
 # Loading work.datapath
+# Loading work.selectAndEncode
+# Loading work.decoder4to16
+# Loading work.ram
 # Loading work.busEncoder
 # Loading work.busMUX
 # Loading work.Register
 # Loading work.MDR
-# Loading work.mux2to1
+# Loading work.mdrmux2to1
+# Loading work.mar
+# Loading work.conff_logic
+# Loading work.decoder2to4
+# Loading work.ff_register
 # Loading work.ALU
 # Loading work.adder
 # Loading work.cla_16
@@ -166,4 +200,4 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 1000 ns
+# run 750 ns

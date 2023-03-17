@@ -18,7 +18,7 @@ module conff_logic(
     ff_register CON(.le(conIn), .d(orOut), .q(conOut));
 endmodule
 
-module decoder2to4(input [1:0] decoderIn, output [3:0] decoderOut);
+module decoder2to4(input [1:0] decoderIn, output reg [3:0] decoderOut);
     always@(decoderIn)begin 
         case(decoderIn)
             2'b00 : decoderOut <= 4'b0001;
@@ -30,8 +30,8 @@ module decoder2to4(input [1:0] decoderIn, output [3:0] decoderOut);
 endmodule
 
 module ff_register(
-    input le, d
-    output q
+    input le, d,
+    output reg q
 );
     always@(le)begin 
         q <= d;

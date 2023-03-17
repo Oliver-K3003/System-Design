@@ -16,6 +16,8 @@ module ram
 	// Variable to hold the registered read address
 	reg [ADDR_WIDTH-1:0] addr_reg;
 
+	initial $readmemh("memoryInit.mif", ram);
+	
 	always @ (posedge clk)
 	begin
 		// Write

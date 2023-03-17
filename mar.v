@@ -1,5 +1,7 @@
-module mar(input [31:0] d, output reg [8:0] q, input le, clk, clr) 
-	always@(posedge clk)begin 
-		q <= d[8:0];
-	end
+module mar(input [31:0] d, output [8:0] q, input le, clk, clr); 
+	wire [31:0] marData;
+	
+	Register MAR(d, marData, clr, clk, le);
+	
+	assign q = marData[8:0];
 endmodule

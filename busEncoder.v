@@ -30,6 +30,7 @@ module busEncoder(input wire [31:0] in, output reg [4:0] out);
 				32'h00400000 : out <= 5'd22;    
 				32'h00800000 : out <= 5'd23; 
 				32'h01000000 : out <= 5'd24;
+				32'h02000000 : out <= 5'd25;
 				//default value if nothing is selected     
   				default: out <= 5'd31;
 			endcase

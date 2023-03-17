@@ -23,8 +23,10 @@ module busMUX(
 			  input [31:0] zlo, 
 			  input [31:0] pc, 
 			  input [31:0] mdr, 
-			  input [31:0] inport, 
+			  input [31:0] inport,
+			  input [31:0] outport, 
 			  input [31:0] Yreg,
+			  input [31:0] Creg,
 			  // select signal
 			  input [4:0] sel,
 			  
@@ -56,8 +58,9 @@ module busMUX(
 			5'b10100 : muxOut <= pc[31:0];
 			5'b10101 : muxOut <= mdr[31:0];
 			5'b10110 : muxOut <= inport[31:0];
-			
-			5'b10111 : muxOut <= Yreg[31:0];
+			5'b10111 : muxOut <= outport[31:0];
+			5'b11000 : muxOut <= Yreg[31:0];
+			5'b11001 : muxOut <= Creg[31:0];
 			default: muxOut <= 32'd0;
 		endcase
 	end
