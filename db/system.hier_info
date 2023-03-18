@@ -1159,18 +1159,18 @@ out[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-out[4] <= <GND>
-out[5] <= <GND>
-out[6] <= <GND>
-out[7] <= <GND>
-out[8] <= <GND>
-out[9] <= <GND>
-out[10] <= <GND>
-out[11] <= <GND>
-out[12] <= <GND>
-out[13] <= <GND>
-out[14] <= <GND>
-out[15] <= <GND>
+out[4] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |datapath|ram:memory

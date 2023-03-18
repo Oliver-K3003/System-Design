@@ -8,13 +8,12 @@ module select_encodetb();
 	selectAndEncode selogic(Gra, Grb, Grc, Rin, Rout, BAout, IRin, registersIn, registersOut, CsignExt);
 
 	initial begin 
-	IRin <= 31'h00800075;
+	IRin <= 31'h12000090;
 	#10
-	Grb <= 1; BAout <= 1;
+	Gra <= 1; Rin <= 1;
 	
 	#15 Grb <= 0; BAout <= 0;
 	
-	#10 Gra <= 1; Rin <=1;
 	end
 	
 endmodule

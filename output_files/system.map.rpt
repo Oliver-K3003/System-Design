@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Fri Mar 17 13:50:40 2023
+Fri Mar 17 18:06:43 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -86,15 +86,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Mar 17 13:50:40 2023           ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 17 18:06:43 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 6,260                                           ;
-;     Total combinational functions  ; 5,963                                           ;
-;     Dedicated logic registers      ; 425                                             ;
-; Total registers                    ; 425                                             ;
+; Total logic elements               ; 6,946                                           ;
+;     Total combinational functions  ; 6,265                                           ;
+;     Dedicated logic registers      ; 809                                             ;
+; Total registers                    ; 809                                             ;
 ; Total pins                         ; 973                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 16,384                                          ;
@@ -256,29 +256,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Estimated Total logic elements              ; 6,260              ;
+; Estimated Total logic elements              ; 6,946              ;
 ;                                             ;                    ;
-; Total combinational functions               ; 5963               ;
+; Total combinational functions               ; 6265               ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 2423               ;
-;     -- 3 input functions                    ; 3320               ;
-;     -- <=2 input functions                  ; 220                ;
+;     -- 4 input functions                    ; 2637               ;
+;     -- 3 input functions                    ; 3333               ;
+;     -- <=2 input functions                  ; 295                ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 4274               ;
+;     -- normal mode                          ; 4576               ;
 ;     -- arithmetic mode                      ; 1689               ;
 ;                                             ;                    ;
-; Total registers                             ; 425                ;
-;     -- Dedicated logic registers            ; 425                ;
+; Total registers                             ; 809                ;
+;     -- Dedicated logic registers            ; 809                ;
 ;     -- I/O registers                        ; 0                  ;
 ;                                             ;                    ;
 ; I/O pins                                    ; 973                ;
 ; Total memory bits                           ; 16384              ;
 ; Embedded Multiplier 9-bit elements          ; 0                  ;
-; Maximum fan-out node                        ; busMUX:mux|Mux17~5 ;
-; Maximum fan-out                             ; 1907               ;
-; Total fan-out                               ; 23266              ;
-; Average fan-out                             ; 2.78               ;
+; Maximum fan-out node                        ; busMUX:mux|Mux17~8 ;
+; Maximum fan-out                             ; 1798               ;
+; Total fan-out                               ; 25847              ;
+; Average fan-out                             ; 2.86               ;
 +---------------------------------------------+--------------------+
 
 
@@ -287,12 +287,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |datapath                                    ; 5963 (32)         ; 425 (0)      ; 16384       ; 0            ; 0       ; 0         ; 973  ; 0            ; |datapath                                                                                       ; work         ;
-;    |ALU:logic_unit|                          ; 5497 (390)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit                                                                        ; work         ;
-;       |adder:add_instance|                   ; 110 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                                     ; work         ;
-;          |cla_16:instance1|                  ; 54 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                                    ; work         ;
+; |datapath                                    ; 6265 (32)         ; 809 (0)      ; 16384       ; 0            ; 0       ; 0         ; 973  ; 0            ; |datapath                                                                                       ; work         ;
+;    |ALU:logic_unit|                          ; 5483 (377)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit                                                                        ; work         ;
+;       |adder:add_instance|                   ; 106 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                                     ; work         ;
+;          |cla_16:instance1|                  ; 50 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                                    ; work         ;
 ;             |cla_4:instance1|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1                    ; work         ;
-;             |cla_4:instance2|                ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2                    ; work         ;
+;             |cla_4:instance2|                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2                    ; work         ;
 ;             |cla_4:instance3|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3                    ; work         ;
 ;             |cla_4:instance4|                ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance4                    ; work         ;
 ;          |cla_16:instance2|                  ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                                    ; work         ;
@@ -363,22 +363,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9|add_sub_hui:auto_generated      ; work         ;
 ;       |log_and_32bit:land_instance|          ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_and_32bit:land_instance                                            ; work         ;
 ;       |log_or_32bit:lor_instance|            ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_or_32bit:lor_instance                                              ; work         ;
-;       |multiplier:mul_instance|              ; 2092 (2092)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|multiplier:mul_instance                                                ; work         ;
-;       |rotate_left:rol_instance|             ; 150 (150)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_left:rol_instance                                               ; work         ;
-;       |rotate_right:ror_instance|            ; 185 (185)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_right:ror_instance                                              ; work         ;
+;       |multiplier:mul_instance|              ; 2089 (2089)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|multiplier:mul_instance                                                ; work         ;
+;       |rotate_left:rol_instance|             ; 152 (152)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_left:rol_instance                                               ; work         ;
+;       |rotate_right:ror_instance|            ; 188 (188)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_right:ror_instance                                              ; work         ;
 ;       |shift_left:shl_instance|              ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_left:shl_instance                                                ; work         ;
-;       |shift_right:shr_instance|             ; 95 (95)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right:shr_instance                                               ; work         ;
+;       |shift_right:shr_instance|             ; 97 (97)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right:shr_instance                                               ; work         ;
 ;       |shift_right_arithmetic:shra_instance| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right_arithmetic:shra_instance                                   ; work         ;
-;       |sub:sub_instance|                     ; 153 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance                                                       ; work         ;
-;          |adder:adder_instance|              ; 121 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance                                  ; work         ;
+;       |sub:sub_instance|                     ; 152 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance                                                       ; work         ;
+;          |adder:adder_instance|              ; 120 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance                                  ; work         ;
 ;             |cla_16:instance1|               ; 60 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1                 ; work         ;
 ;                |cla_4:instance1|             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance1 ; work         ;
 ;                |cla_4:instance2|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance2 ; work         ;
 ;                |cla_4:instance3|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance3 ; work         ;
 ;                |cla_4:instance4|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance4 ; work         ;
-;             |cla_16:instance2|               ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2                 ; work         ;
+;             |cla_16:instance2|               ; 60 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2                 ; work         ;
 ;                |cla_4:instance1|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance1 ; work         ;
-;                |cla_4:instance2|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance2 ; work         ;
+;                |cla_4:instance2|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance2 ; work         ;
 ;                |cla_4:instance3|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance3 ; work         ;
 ;                |cla_4:instance4|             ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance4 ; work         ;
 ;          |negate:negate_instance|            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|negate:negate_instance                                ; work         ;
@@ -391,21 +391,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |Register:LO|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:LO                                                                           ; work         ;
 ;    |Register:PC|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:PC                                                                           ; work         ;
 ;    |Register:R0|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R0                                                                           ; work         ;
+;    |Register:R10|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R10                                                                          ; work         ;
+;    |Register:R11|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R11                                                                          ; work         ;
+;    |Register:R12|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R12                                                                          ; work         ;
+;    |Register:R13|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R13                                                                          ; work         ;
+;    |Register:R14|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R14                                                                          ; work         ;
+;    |Register:R15|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R15                                                                          ; work         ;
 ;    |Register:R1|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R1                                                                           ; work         ;
 ;    |Register:R2|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R2                                                                           ; work         ;
 ;    |Register:R3|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R3                                                                           ; work         ;
+;    |Register:R4|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R4                                                                           ; work         ;
+;    |Register:R5|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R5                                                                           ; work         ;
+;    |Register:R6|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R6                                                                           ; work         ;
+;    |Register:R7|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R7                                                                           ; work         ;
+;    |Register:R8|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R8                                                                           ; work         ;
+;    |Register:R9|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R9                                                                           ; work         ;
 ;    |Register:Y|                              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:Y                                                                            ; work         ;
 ;    |Register:ZHI|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZHI                                                                          ; work         ;
-;    |Register:ZLO|                            ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZLO                                                                          ; work         ;
-;    |busEncoder:enc|                          ; 42 (42)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busEncoder:enc                                                                        ; work         ;
-;    |busMUX:mux|                              ; 295 (295)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busMUX:mux                                                                            ; work         ;
-;    |conff_logic:CONFF|                       ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|conff_logic:CONFF                                                                     ; work         ;
+;    |Register:ZLO|                            ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZLO                                                                          ; work         ;
+;    |busEncoder:enc|                          ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busEncoder:enc                                                                        ; work         ;
+;    |busMUX:mux|                              ; 553 (553)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busMUX:mux                                                                            ; work         ;
+;    |conff_logic:CONFF|                       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|conff_logic:CONFF                                                                     ; work         ;
 ;    |mar:mar_reg|                             ; 0 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|mar:mar_reg                                                                           ; work         ;
 ;       |Register:MAR|                         ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|mar:mar_reg|Register:MAR                                                              ; work         ;
 ;    |ram:memory|                              ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ram:memory                                                                            ; work         ;
 ;       |altsyncram:ram_rtl_0|                 ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ram:memory|altsyncram:ram_rtl_0                                                       ; work         ;
 ;          |altsyncram_7d81:auto_generated|    ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ram:memory|altsyncram:ram_rtl_0|altsyncram_7d81:auto_generated                        ; work         ;
-;    |selectAndEncode:selogic|                 ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selectAndEncode:selogic                                                               ; work         ;
+;    |selectAndEncode:selogic|                 ; 51 (35)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selectAndEncode:selogic                                                               ; work         ;
+;       |decoder4to16:decoder|                 ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selectAndEncode:selogic|decoder4to16:decoder                                          ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -419,419 +432,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+-----------------------------------------+----------------------------------------+
-; Register name                           ; Reason for Removal                     ;
-+-----------------------------------------+----------------------------------------+
-; Register:R10|q[13]                      ; Merged with Register:OUTPORT|q[0]      ;
-; Register:R4|q[29]                       ; Merged with Register:OUTPORT|q[0]      ;
-; Register:OUTPORT|q[11]                  ; Merged with Register:OUTPORT|q[0]      ;
-; Register:R10|q[15]                      ; Merged with Register:OUTPORT|q[0]      ;
-; Register:OUTPORT|q[2,6,14,30]           ; Merged with Register:OUTPORT|q[0]      ;
-; Register:R15|q[30]                      ; Merged with Register:OUTPORT|q[0]      ;
-; Register:R13|q[30]                      ; Merged with Register:OUTPORT|q[0]      ;
-; Register:R9|q[30]                       ; Merged with Register:OUTPORT|q[0]      ;
-; Register:R7|q[23]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R12|q[27]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R7|q[25]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[13]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R7|q[27]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R12|q[29]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R7|q[29]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:OUTPORT|q[3]                   ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R7|q[31]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R12|q[31]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[1]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[15]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[3]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[1]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[5]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R15|q[7]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[7]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[3]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[9]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[17]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[11]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[5]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[13]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:OUTPORT|q[19]                  ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[15]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[7]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[17]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[19]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[19]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[9]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[21]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R15|q[9]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[23]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[11]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[25]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[21]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[27]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[13]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[29]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:OUTPORT|q[9]                   ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R6|q[31]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[15]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[1]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[23]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[3]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[17]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[5]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R15|q[11]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[7]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[19]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[9]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[25]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[11]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[21]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[13]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:OUTPORT|q[21]                  ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[15]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[23]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[17]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[27]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[19]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[25]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[21]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R15|q[13]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[23]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[27]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[25]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[29]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[27]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[29]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R5|q[29,31]                    ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R11|q[31]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[1]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R14|q[31]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[3]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[1]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[5]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R15|q[15]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[7]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[3]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[9]                        ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R13|q[1]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[11]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[5]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[13]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:OUTPORT|q[23]                  ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[15]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[7]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[17]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R13|q[3]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[19]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[9]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[21]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R15|q[17]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[23]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[11]                      ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[25]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R13|q[5]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R4|q[27]                       ; Merged with Register:OUTPORT|q[1]      ;
-; Register:R10|q[24]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[12]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R10|q[28]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:OUTPORT|q[12]                  ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[0]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[16]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[4]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[24]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[8]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[20]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[12]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:OUTPORT|q[28]                  ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[16]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[24]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[20]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[28]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[24]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[28]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[0]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R9|q[28]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[0]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[4]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[0]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[8]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[4]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[12]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[0]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[16]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[8]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[20]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[4]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[24]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[12]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R8|q[28]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:OUTPORT|q[16]                  ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[0]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[16]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[4]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[8]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[8]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[20]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[12]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[4]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[16]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[24]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[20]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[12]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[24]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R12|q[28]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R7|q[28]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:OUTPORT|q[8]                   ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[0]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[0]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[4]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[16]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[8]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[4]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[12]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[8]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[16]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[8]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[20]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[20]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[24]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[12]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R6|q[28]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:OUTPORT|q[20]                  ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[0]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[16]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[4]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[24]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[8]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[20]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[12]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[12]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[16]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[24]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[20]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R14|q[28]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[24]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R11|q[28]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R5|q[28]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[0]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R10|q[0]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[4]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[0]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[8]                        ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R10|q[4]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[12]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R15|q[16]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[16]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R10|q[8]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[20]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[4]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[24]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R10|q[12]                      ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[28]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:OUTPORT|q[24]                  ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R4|q[31]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R13|q[7]                       ; Merged with Register:OUTPORT|q[4]      ;
-; Register:R10|q[17]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[19]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R10|q[19]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[9]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R10|q[21]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[25]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R10|q[23]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[11]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R10|q[25]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[21]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R10|q[27]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[13]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R10|q[29,31]                   ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[15]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[1]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[23]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[3]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[17]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[5]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[27]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[7]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[19]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[9]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[25]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[11]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[21]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[13]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[13]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[15]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[23]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[17]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[27]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[19]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[25]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[21]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[29]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[23]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[27]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[25]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[29]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[27]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[29]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R9|q[29,31]                    ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R13|q[31]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[1]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[31]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[3]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[1]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[5]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[31]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[7]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[3]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[9]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R14|q[1]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[11]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[5]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[13]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[15]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[15]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[7]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[17]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R14|q[3]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[19]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[9]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[21]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[1]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[23]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[11]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[25]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R14|q[5]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[27]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[13]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[29]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[7]                   ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R8|q[31]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[15]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[1]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R14|q[7]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[3]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[17]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[5]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[3]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[7]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[19]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[9]                        ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R14|q[9]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[11]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[21]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[13]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:OUTPORT|q[17]                  ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[15]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[23]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[17]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R14|q[11]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[19]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R12|q[25]                      ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[21]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R15|q[5]                       ; Merged with Register:OUTPORT|q[5]      ;
-; Register:R7|q[30]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[30]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[30]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[30]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[30]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[30]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[30]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[30]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[30]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[14]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[14]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[14]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[14]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[14]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[14]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[14]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[14]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[14]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[14]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[14]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[14,22]                   ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[22]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[6]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[22]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[6]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[22]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[6]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[22]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[6]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[6]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[22]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[22]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[6]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[6]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[6]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[22]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[22]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[6]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[22]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[22]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:OUTPORT|q[22]                  ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[6]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[6]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[22]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[6]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[18]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[10]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[26]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:OUTPORT|q[26]                  ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[2]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[18]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[10]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[26]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[18]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[26]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[2]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R9|q[26]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[2]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[10]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[2]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[18]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[10]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R8|q[26]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[2]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[2]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[18]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[10]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[10]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[18]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R12|q[26]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R7|q[26]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:OUTPORT|q[18]                  ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[2]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[2]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[10]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[18]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[18]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[10]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R6|q[26]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[10]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[2]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[18]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[10]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R14|q[26]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[18]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R11|q[26]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R5|q[26]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[2]                        ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[2]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[10]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[2]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[18]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[10]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R4|q[26]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[18]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[16]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R13|q[8]                       ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R10|q[20]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:R15|q[20]                      ; Merged with Register:OUTPORT|q[10]     ;
-; Register:OUTPORT|q[1,4,5,10]            ; Merged with Register:OUTPORT|q[0]      ;
-; Register:OUTPORT|q[0]                   ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 416 ;                                        ;
-+-----------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Register:OUTPORT|q[1..31]              ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[0]                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -839,12 +448,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 425   ;
+; Total registers                              ; 809   ;
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 425   ;
+; Number of registers using Clock Enable       ; 809   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -875,7 +484,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
-; 32:1               ; 17 bits   ; 357 LEs       ; 153 LEs              ; 204 LEs                ; No         ; |datapath|busMUX:mux|Mux17                                    ;
+; 32:1               ; 17 bits   ; 357 LEs       ; 289 LEs              ; 68 LEs                 ; No         ; |datapath|busMUX:mux|Mux17                                    ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
 ; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux46        ;
 ; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux125       ;
@@ -893,7 +502,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux473       ;
 ; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux406       ;
 ; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux346       ;
-; 23:1               ; 15 bits   ; 225 LEs       ; 135 LEs              ; 90 LEs                 ; No         ; |datapath|busMUX:mux|Mux1                                     ;
+; 29:1               ; 15 bits   ; 285 LEs       ; 255 LEs              ; 30 LEs                 ; No         ; |datapath|busMUX:mux|Mux1                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
 
@@ -1918,7 +1527,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:13     ;
+; Top            ; 00:00:17     ;
 +----------------+--------------+
 
 
@@ -1928,7 +1537,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Mar 17 13:50:25 2023
+    Info: Processing started: Fri Mar 17 18:06:24 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -2040,23 +1649,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file loadins
     Info (12023): Found entity 1: loadInstruction2tb
 Info (12021): Found 1 design units, including 1 entities, in source file incrementpc.v
     Info (12023): Found entity 1: incrementPC
+Info (12021): Found 1 design units, including 1 entities, in source file storeinstructionstb.v
+    Info (12023): Found entity 1: storeInstructionstb
 Warning (10236): Verilog HDL Implicit Net warning at datapath.v(56): created implicit net for "OUTPORTin"
 Warning (10236): Verilog HDL Implicit Net warning at ALUtb.v(9): created implicit net for "IncPC"
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
 Info (12128): Elaborating entity "selectAndEncode" for hierarchy "selectAndEncode:selogic"
 Info (12128): Elaborating entity "decoder4to16" for hierarchy "selectAndEncode:selogic|decoder4to16:decoder"
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(34): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(35): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(36): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(37): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(38): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(39): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(40): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(41): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(42): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(43): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(44): case item expression never matches the case expression
-Warning (10199): Verilog HDL Case Statement warning at selectAndEncode.v(45): case item expression never matches the case expression
 Info (12128): Elaborating entity "ram" for hierarchy "ram:memory"
 Info (12128): Elaborating entity "busEncoder" for hierarchy "busEncoder:enc"
 Warning (10762): Verilog HDL Case Statement warning at busEncoder.v(6): can't check case statement for completeness because the case expression has too many possible states
@@ -2167,390 +1766,6 @@ Info (12133): Instantiated megafunction "ALU:logic_unit|division:div_instance|lp
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hui.tdf
     Info (12023): Found entity 1: add_sub_hui
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "BusMuxInR4[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR4[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR5[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR6[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR7[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR8[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR9[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR10[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR11[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR12[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR13[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR14[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInR15[31]" is stuck at GND
     Warning (13410): Pin "BusMuxInOutport[0]" is stuck at GND
     Warning (13410): Pin "BusMuxInOutport[1]" is stuck at GND
     Warning (13410): Pin "BusMuxInOutport[2]" is stuck at GND
@@ -2590,16 +1805,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "CONin"
     Warning (15610): No output dependent on input pin "IncPC"
-Info (21057): Implemented 7297 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 7983 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 62 input pins
     Info (21059): Implemented 911 output pins
-    Info (21061): Implemented 6292 logic cells
+    Info (21061): Implemented 6978 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 453 warnings
-    Info: Peak virtual memory: 4636 megabytes
-    Info: Processing ended: Fri Mar 17 13:50:40 2023
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:16
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 4625 megabytes
+    Info: Processing ended: Fri Mar 17 18:06:43 2023
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

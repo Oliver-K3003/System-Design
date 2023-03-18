@@ -155,16 +155,16 @@
 # Top level modules:
 # 	ram
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/loadInstruction2tb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/storeInstructionstb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module loadInstruction2tb
+# -- Compiling module storeInstructionstb
 # 
 # Top level modules:
-# 	loadInstruction2tb
+# 	storeInstructionstb
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  loadInstruction2tb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps loadInstruction2tb 
-# Loading work.loadInstruction2tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  storeInstructionstb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps storeInstructionstb 
+# Loading work.storeInstructionstb
 # Loading work.datapath
 # Loading work.selectAndEncode
 # Loading work.decoder4to16
