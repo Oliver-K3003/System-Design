@@ -11,7 +11,7 @@ module loadInstruction2tb();
 	wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister;
 	wire [8:0] marToRam;
-    reg [15:0] regIn, regOut;
+    reg [15:0] regIn;
 	
 	parameter Default=5'd0, Reg_load1a=5'd1, Reg_load1b=5'd2,Reg_load2a=5'd3, 
 					Reg_load2b=5'd4, Reg_load3a=5'd5,Reg_load3b = 5'd6, T0 = 5'd7,
@@ -22,7 +22,7 @@ module loadInstruction2tb();
 	
 	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin,
             HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, Gra, Grb, Grc, Rin, Rout, BAout,
-            Clock, Read, IncPC, write, inportInput, regIn, regOut, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
+            Clock, Read, IncPC, write, inportInput, regIn, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, marToRam);
     initial begin 
         Clock = 0;

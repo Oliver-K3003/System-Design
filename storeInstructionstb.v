@@ -43,16 +43,6 @@ module storeInstructionstb();
             T4          :  #35 Present_state=T5;
             T5          :  #35 Present_state=T6;
             T6          :  #35 Present_state=T7;
-			/*T7			:  #35 Present_state=Reg_load2a;
-			Reg_load2a	:  #35 Present_state=Reg_load2b;
-			Reg_load2b	:  #35 Present_state=T8;
-            T8          :  #35 Present_state=T9;
-            T9          :  #35 Present_state=T10;
-            T10          :  #35 Present_state=T11;
-            T11          :  #35 Present_state=T12;
-            T12          :  #35 Present_state=T13;
-            T13          :  #35 Present_state=T14;
-            T14          :  #35 Present_state=T15;*/
         endcase
     end
 

@@ -1,7 +1,7 @@
 `timescale 1ns/10ps
 
 module immediateAddtb();
-	reg HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, CONin;
+	reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin;
 	reg HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout;
     reg Gra, Grb, Grc, Rin, Rout, BAout;
 	reg Clock, Read, IncPC, write;
@@ -12,6 +12,7 @@ module immediateAddtb();
 	wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister;
 	wire [8:0] marToRam;
+	reg [15:0] regIn;
 	
 	parameter Default=5'd0, Reg_load1a=5'd1, Reg_load1b=5'd2,Reg_load2a=5'd3, 
 					Reg_load2b=5'd4, Reg_load3a=5'd5,Reg_load3b = 5'd6, T0 = 5'd7,
@@ -20,9 +21,9 @@ module immediateAddtb();
 					
 	reg [4:0] Present_state = Default;
 	
-	datapath DUT(HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, CONin,
+	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin,
             HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, Gra, Grb, Grc, Rin, Rout, BAout,
-            Clock, Read, IncPC, write, inportInput, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
+            Clock, Read, IncPC, write, inportInput, regIn, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, marToRam);
     initial begin 
         Clock = 0;
@@ -33,24 +34,14 @@ module immediateAddtb();
         case(Present_state)
             Default     :  #35 Present_state=Reg_load1a;
             Reg_load1a  :  #35 Present_state=Reg_load1b;
-				Reg_load1b	:  #35 Present_state=T0;
+				Reg_load1b	:  #35 Present_state=Reg_load2a;
+				Reg_load2a	:	#35 Present_state=Reg_load2b;
+				Reg_load2b	: 	#35 Present_state=T0;
             T0          :  #35 Present_state=T1;
             T1          :  #35 Present_state=T2;
             T2          :  #35 Present_state=T3;
             T3          :  #35 Present_state=T4;
             T4          :  #35 Present_state=T5;
-            T5          :  #35 Present_state=T6;
-            T6          :  #35 Present_state=T7;
-			T7			:  #35 Present_state=Reg_load2a;
-			Reg_load2a	:  #35 Present_state=Reg_load2b;
-			Reg_load2b	:  #35 Present_state=T8;
-            T8          :  #35 Present_state=T9;
-            T9          :  #35 Present_state=T10;
-            T10          :  #35 Present_state=T11;
-            T11          :  #35 Present_state=T12;
-            T12          :  #35 Present_state=T13;
-            T13          :  #35 Present_state=T14;
-            T14          :  #35 Present_state=T15;
         endcase
     end
 
@@ -58,7 +49,7 @@ module immediateAddtb();
         case(Present_state)
             Default:begin 
                 HIin <= 0; LOin <= 0; CONin <= 0;
-                PCin <= 0; MDRin <= 0; INPORTin <= 0;
+                PCin <= 0; MDRin <= 0;
                 Zin <= 0; Yin <= 0; MARin <= 0; IRin <= 0;
                 HIout <= 0; LOout <= 0; BAout <= 0;
 				ZHIout <= 0; ZLOout <=0; PCout <= 0; 
@@ -66,15 +57,20 @@ module immediateAddtb();
                 Gra <= 0; Grb <= 0; Grc <= 0; Rin <= 0; Rout <= 0;
 				Yout <= 0; IncPC <=0; Read <= 0;
             end
-				//addi R2, R3, 
+				//addi R2, R3, -3
             Reg_load1a:begin 
 				inportInput<=32'd6;
-                #10 INPORTin<=1;
-                #15 INPORTin<=0;
             end
 				Reg_load1b:begin 
 					#10 INPORTout<=1; PCin<=1;
 					#15 INPORTout<=0; PCin<=0;
+				end
+				 Reg_load2a:begin 
+				inportInput<=32'd15;
+            end
+				Reg_load2b:begin 
+					#10 INPORTout<=1; regIn<=16'h0008;
+					#15 INPORTout<=0; regIn<=16'h0000;
 				end
             T0:begin 
                 #10 PCout<=1; MARin<=1; IncPC<=1; Zin<=1;
