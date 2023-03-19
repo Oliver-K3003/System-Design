@@ -15,7 +15,7 @@ module selectAndEncode(
 	decoder4to16 decoder(decodeIn, decodeOut);
 
 	assign registersIn = {16{Rin}} & decodeOut;
-	assign registersOut = {16{Rout}} | {16{BAout}} & decodeOut;
+	assign registersOut = ({16{Rout}} | {16{BAout}}) & decodeOut;
 	
 	assign CsignExt = { {14{IRin[17]}}, IRin[17:0]};
 	

@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 module loadInstruction2tb();
-	reg HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, CONin;
+	reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin;
 	reg HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout;
     reg Gra, Grb, Grc, Rin, Rout, BAout;
 	reg Clock, Read, IncPC, write;
@@ -11,6 +11,7 @@ module loadInstruction2tb();
 	wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister;
 	wire [8:0] marToRam;
+    reg [15:0] regIn, regOut;
 	
 	parameter Default=5'd0, Reg_load1a=5'd1, Reg_load1b=5'd2,Reg_load2a=5'd3, 
 					Reg_load2b=5'd4, Reg_load3a=5'd5,Reg_load3b = 5'd6, T0 = 5'd7,
@@ -19,9 +20,9 @@ module loadInstruction2tb();
 					
 	reg [4:0] Present_state = Default;
 	
-	datapath DUT(HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, CONin,
+	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin,
             HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, Gra, Grb, Grc, Rin, Rout, BAout,
-            Clock, Read, IncPC, write, inportInput, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
+            Clock, Read, IncPC, write, inportInput, regIn, regOut, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, marToRam);
     initial begin 
         Clock = 0;
@@ -53,7 +54,7 @@ module loadInstruction2tb();
         case(Present_state)
             Default:begin 
                 HIin <= 0; LOin <= 0; CONin <= 0;
-                PCin <= 0; MDRin <= 0; INPORTin <= 0;
+                PCin <= 0; MDRin <= 0;
                 Zin <= 0; Yin <= 0; MARin <= 0; IRin <= 0;
                 HIout <= 0; LOout <= 0; BAout <= 0;
 				ZHIout <= 0; ZLOout <=0; PCout <= 0; 
@@ -64,8 +65,6 @@ module loadInstruction2tb();
 				//ld R1, 0x75
             Reg_load1a:begin 
 					 inportInput<=32'd2;
-                #10 INPORTin<=1;
-                #15 INPORTin<=0;
             end
 				Reg_load1b:begin 
 					#10 INPORTout<=1; PCin<=1;
@@ -98,8 +97,6 @@ module loadInstruction2tb();
 				//ld R0, 0x45(R1)
             Reg_load2a:begin 
 				inportInput<=32'd3;
-                #10 INPORTin<=1;
-                #15 INPORTin<=0;
             end
 				Reg_load2b:begin 
 					#10 INPORTout<=1; PCin<=1;

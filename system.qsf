@@ -216,10 +216,15 @@ set_global_assignment -name EDA_TEST_BENCH_NAME storeInstructionstb -section_id 
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id storeInstructionstb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1000 ns" -section_id storeInstructionstb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME storeInstructionstb -section_id storeInstructionstb
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE immediateAddtb.v
+set_global_assignment -name VERILOG_FILE immediateAndtb.v
+set_global_assignment -name VERILOG_FILE immediateOrtb.v
+set_global_assignment -name VERILOG_FILE branchzrtb.v
+set_global_assignment -name VERILOG_FILE branchnztb.v
+set_global_assignment -name VERILOG_FILE branchpltb.v
+set_global_assignment -name VERILOG_FILE branchmitb.v
+set_global_assignment -name VERILOG_FILE jrtb.v
+set_global_assignment -name VERILOG_FILE jaltb.v
 set_global_assignment -name EDA_TEST_BENCH_FILE Registertb.v -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busEncodertb.v -section_id busEncodertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busMUXtb.v -section_id busMUXtb
@@ -247,12 +252,7 @@ set_global_assignment -name EDA_TEST_BENCH_FILE ramtb.v -section_id ramtb
 set_global_assignment -name EDA_TEST_BENCH_FILE select_encodetb.v -section_id select_encodetb
 set_global_assignment -name EDA_TEST_BENCH_FILE loadInstruction2tb.v -section_id loadInstruction2tb
 set_global_assignment -name EDA_TEST_BENCH_FILE storeInstructionstb.v -section_id storeInstructionstb
-set_global_assignment -name VERILOG_FILE immediateAddtb.v
-set_global_assignment -name VERILOG_FILE immediateAndtb.v
-set_global_assignment -name VERILOG_FILE immediateOrtb.v
-set_global_assignment -name VERILOG_FILE branchzrtb.v
-set_global_assignment -name VERILOG_FILE branchnztb.v
-set_global_assignment -name VERILOG_FILE branchpltb.v
-set_global_assignment -name VERILOG_FILE branchmitb.v
-set_global_assignment -name VERILOG_FILE jrtb.v
-set_global_assignment -name VERILOG_FILE jaltb.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

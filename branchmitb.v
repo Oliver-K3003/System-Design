@@ -1,5 +1,5 @@
 `timescale 1ns/10ps
-module branchpltb();
+module branchmitb();
 	reg HIin, LOin, PCin, MDRin, INPORTin, Zin, Yin, MARin, IRin, CONin;
 	reg HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout;
     reg Gra, Grb, Grc, Rin, Rout, BAout;

@@ -9,10 +9,8 @@ module select_encodetb();
 
 	initial begin 
 	IRin <= 31'h12000090;
-	#10
-	Gra <= 1; Rin <= 1;
 	
-	#15 Grb <= 0; BAout <= 0;
+	#15 Gra <= 1; Rout <= 1;
 	
 	end
 	
