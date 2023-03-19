@@ -1,6 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
-entity immediateOrtb is
+entity branchmitb is
     generic(
         Default         : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi0, Hi0);
         Reg_load1a      : vl_logic_vector(0 to 4) := (Hi0, Hi0, Hi0, Hi0, Hi1);
@@ -50,4 +50,4 @@ entity immediateOrtb is
     attribute mti_svvh_generic_type of T13 : constant is 1;
     attribute mti_svvh_generic_type of T14 : constant is 1;
     attribute mti_svvh_generic_type of T15 : constant is 1;
-end immediateOrtb;
+end branchmitb;

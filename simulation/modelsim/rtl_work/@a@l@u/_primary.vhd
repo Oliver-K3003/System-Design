@@ -20,12 +20,22 @@ entity ALU is
         mul             : vl_logic_vector(0 to 4) := (Hi0, Hi1, Hi1, Hi1, Hi1);
         div             : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi0, Hi0);
         neg             : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi0, Hi1);
-        \NOT\           : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi1, Hi0)
+        \NOT\           : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi1, Hi0);
+        branch          : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi0, Hi1, Hi1);
+        jr              : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi1, Hi0, Hi0);
+        jal             : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi1, Hi0, Hi1);
+        \in\            : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi1, Hi1, Hi0);
+        \out\           : vl_logic_vector(0 to 4) := (Hi1, Hi0, Hi1, Hi1, Hi1);
+        mfhi            : vl_logic_vector(0 to 4) := (Hi1, Hi1, Hi0, Hi0, Hi0);
+        mflo            : vl_logic_vector(0 to 4) := (Hi1, Hi1, Hi0, Hi0, Hi1);
+        nop             : vl_logic_vector(0 to 4) := (Hi1, Hi1, Hi0, Hi1, Hi0);
+        halt            : vl_logic_vector(0 to 4) := (Hi1, Hi1, Hi0, Hi1, Hi1)
     );
     port(
         clk             : in     vl_logic;
         clr             : in     vl_logic;
         IncPC           : in     vl_logic;
+        branchFlag      : in     vl_logic;
         y               : in     vl_logic_vector(31 downto 0);
         b               : in     vl_logic_vector(31 downto 0);
         opcode          : in     vl_logic_vector(4 downto 0);
@@ -51,4 +61,13 @@ entity ALU is
     attribute mti_svvh_generic_type of div : constant is 1;
     attribute mti_svvh_generic_type of neg : constant is 1;
     attribute mti_svvh_generic_type of \NOT\ : constant is 1;
+    attribute mti_svvh_generic_type of branch : constant is 1;
+    attribute mti_svvh_generic_type of jr : constant is 1;
+    attribute mti_svvh_generic_type of jal : constant is 1;
+    attribute mti_svvh_generic_type of \in\ : constant is 1;
+    attribute mti_svvh_generic_type of \out\ : constant is 1;
+    attribute mti_svvh_generic_type of mfhi : constant is 1;
+    attribute mti_svvh_generic_type of mflo : constant is 1;
+    attribute mti_svvh_generic_type of nop : constant is 1;
+    attribute mti_svvh_generic_type of halt : constant is 1;
 end ALU;

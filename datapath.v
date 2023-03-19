@@ -60,7 +60,7 @@ module datapath(
 
     
     conff_logic CONFF(.IRin(IRregister[20:19]), .busMuxOut(busMuxOut), .conIn(CONin), .conOut(CON));
-    ALU logic_unit(Clock, clr, IncPC, BusMuxInY, busMuxOut, IRregister[31:27], alu_out);
+    ALU logic_unit(Clock, clr, IncPC, CON, BusMuxInY, busMuxOut, IRregister[31:27], alu_out);
 
 endmodule
 
