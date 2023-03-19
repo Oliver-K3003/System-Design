@@ -11,6 +11,7 @@ entity datapath is
         MARin           : in     vl_logic;
         IRin            : in     vl_logic;
         CONin           : in     vl_logic;
+        OUTPORTin       : in     vl_logic;
         HIout           : in     vl_logic;
         LOout           : in     vl_logic;
         ZHIout          : in     vl_logic;

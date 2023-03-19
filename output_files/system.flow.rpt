@@ -1,5 +1,5 @@
 Flow report for system
-Sun Mar 19 16:28:15 2023
+Sun Mar 19 18:53:48 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Sun Mar 19 16:28:15 2023           ;
+; Flow Status                        ; Successful - Sun Mar 19 18:53:48 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
 ; Device                             ; EP3C16F484C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 6,991                                           ;
-;     Total combinational functions  ; 6,310                                           ;
-;     Dedicated logic registers      ; 809                                             ;
-; Total registers                    ; 809                                             ;
-; Total pins                         ; 988                                             ;
+; Total logic elements               ; 7,020                                           ;
+;     Total combinational functions  ; 6,307                                           ;
+;     Dedicated logic registers      ; 841                                             ;
+; Total registers                    ; 841                                             ;
+; Total pins                         ; 989                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 16,384                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/19/2023 16:27:52 ;
+; Start date & time ; 03/19/2023 18:53:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; system              ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+---------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id          ;
 +--------------------------------------+---------------------------------------+---------------+-------------+---------------------+
-; COMPILER_SIGNATURE_ID                ; 269049658834448.167925767216276       ; --            ; --          ; --                  ;
+; COMPILER_SIGNATURE_ID                ; 269049658834448.167926640818000       ; --            ; --          ; --                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Registertb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busEncodertb        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busMUXtb            ;
@@ -110,7 +110,13 @@ applicable agreement for further details.
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; branchnztb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; branchpltb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; branchmitb          ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; branchmitb                            ; --            ; --          ; eda_simulation      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; jrtb                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; jaltb               ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mfhitb              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; mflotb              ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; outporttb           ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; inporttb            ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; jrtb                                  ; --            ; --          ; eda_simulation      ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation      ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --                  ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation      ;
@@ -148,6 +154,12 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_FILE                  ; branchnztb.v                          ; --            ; --          ; branchnztb          ;
 ; EDA_TEST_BENCH_FILE                  ; branchpltb.v                          ; --            ; --          ; branchpltb          ;
 ; EDA_TEST_BENCH_FILE                  ; branchmitb.v                          ; --            ; --          ; branchmitb          ;
+; EDA_TEST_BENCH_FILE                  ; jrtb.v                                ; --            ; --          ; jrtb                ;
+; EDA_TEST_BENCH_FILE                  ; jaltb.v                               ; --            ; --          ; jaltb               ;
+; EDA_TEST_BENCH_FILE                  ; mfhitb.v                              ; --            ; --          ; mfhitb              ;
+; EDA_TEST_BENCH_FILE                  ; mflotb.v                              ; --            ; --          ; mflotb              ;
+; EDA_TEST_BENCH_FILE                  ; outporttb.v                           ; --            ; --          ; outporttb           ;
+; EDA_TEST_BENCH_FILE                  ; inporttb.v                            ; --            ; --          ; inporttb            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; Registertb                            ; --            ; --          ; Registertb          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; busEncodertb                          ; --            ; --          ; busEncodertb        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; busMUXtb                              ; --            ; --          ; busMUXtb            ;
@@ -182,6 +194,12 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_MODULE_NAME           ; branchnztb                            ; --            ; --          ; branchnztb          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; branchpltb                            ; --            ; --          ; branchpltb          ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; branchmitb                            ; --            ; --          ; branchmitb          ;
+; EDA_TEST_BENCH_MODULE_NAME           ; jrtb                                  ; --            ; --          ; jrtb                ;
+; EDA_TEST_BENCH_MODULE_NAME           ; jaltb                                 ; --            ; --          ; jaltb               ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mfhitb                                ; --            ; --          ; mfhitb              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mflotb                                ; --            ; --          ; mflotb              ;
+; EDA_TEST_BENCH_MODULE_NAME           ; outporttb                             ; --            ; --          ; outporttb           ;
+; EDA_TEST_BENCH_MODULE_NAME           ; inporttb                              ; --            ; --          ; inporttb            ;
 ; EDA_TEST_BENCH_NAME                  ; Registertb                            ; --            ; --          ; eda_simulation      ;
 ; EDA_TEST_BENCH_NAME                  ; busEncodertb                          ; --            ; --          ; eda_simulation      ;
 ; EDA_TEST_BENCH_NAME                  ; busMUXtb                              ; --            ; --          ; eda_simulation      ;
@@ -216,6 +234,12 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_NAME                  ; branchnztb                            ; --            ; --          ; eda_simulation      ;
 ; EDA_TEST_BENCH_NAME                  ; branchpltb                            ; --            ; --          ; eda_simulation      ;
 ; EDA_TEST_BENCH_NAME                  ; branchmitb                            ; --            ; --          ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; jrtb                                  ; --            ; --          ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; jaltb                                 ; --            ; --          ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; mfhitb                                ; --            ; --          ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; mflotb                                ; --            ; --          ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; outporttb                             ; --            ; --          ; eda_simulation      ;
+; EDA_TEST_BENCH_NAME                  ; inporttb                              ; --            ; --          ; eda_simulation      ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; Registertb          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 10000 ns                              ; --            ; --          ; busEncodertb        ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; busMUXtb            ;
@@ -250,6 +274,12 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 600 ns                                ; --            ; --          ; branchnztb          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 600 ns                                ; --            ; --          ; branchpltb          ;
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 600 ns                                ; --            ; --          ; branchmitb          ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; jrtb                ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 600 ns                                ; --            ; --          ; jaltb               ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; mfhitb              ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; mflotb              ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; outporttb           ;
+; EDA_TEST_BENCH_RUN_SIM_FOR           ; 500 ns                                ; --            ; --          ; inporttb            ;
 ; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation      ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --                  ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --                  ;
@@ -269,8 +299,8 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4625 MB             ; 00:00:21                           ;
-; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:21                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4617 MB             ; 00:00:18                           ;
+; Total                ; 00:00:20     ; --                      ; --                  ; 00:00:18                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

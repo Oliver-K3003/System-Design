@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 module branchzrtb();
-	reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin;
+reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin;
 	reg HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout;
     reg Gra, Grb, Grc, Rin, Rout, BAout;
 	reg Clock, Read, IncPC, write;
@@ -20,7 +20,7 @@ module branchzrtb();
 					
 	reg [4:0] Present_state = Default;
 	
-	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin,
+	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin,
             HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, Gra, Grb, Grc, Rin, Rout, BAout,
             Clock, Read, IncPC, write, inportInput, regIn, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, marToRam);
@@ -73,13 +73,13 @@ module branchzrtb();
 					#15 INPORTout<=0; regIn<=16'h0000;
 				end
             T0:begin 
-                #10 PCout<=1; MARin<=1; IncPC<=1; Zin<=1;
-                #15 PCout<=0; MARin<=0; IncPC<=0; Zin<=0; 
+                #10 PCout<=1; MARin<=1; 
+                #15 PCout<=0; MARin<=0;  
             end
 				
             T1:begin 
-                #10 Read<=1; MDRin<=1; PCin<=1; 
-                #15 Read<=0; MDRin<=0; PCin<=0; 
+                #10 Read<=1; MDRin<=1; PCin<=1; IncPC<=1;
+                #15 Read<=0; MDRin<=0; PCin<=0; IncPC<=0;
             end
             T2:begin 
                 #10 MDRout<=1; IRin<=1;

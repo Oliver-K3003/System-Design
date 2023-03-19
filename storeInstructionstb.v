@@ -1,6 +1,6 @@
 `timescale 1ns/10ps
 module storeInstructionstb();
-	reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin;
+	reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin;
 	reg HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout;
     reg Gra, Grb, Grc, Rin, Rout, BAout;
 	reg Clock, Read, IncPC, write;
@@ -20,7 +20,7 @@ module storeInstructionstb();
 					
 	reg [4:0] Present_state = Default;
 	
-	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin,
+	datapath DUT(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin,
             HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, Gra, Grb, Grc, Rin, Rout, BAout,
             Clock, Read, IncPC, write, inportInput, regIn, busMuxOut, encoderOut, CON, BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, 
 		BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister, marToRam);
@@ -59,7 +59,7 @@ module storeInstructionstb();
 				Yout <= 0; IncPC <=0; Read <= 0;
             end
 				//st 0x90, R4
-            /*Reg_load1a:begin 
+            Reg_load1a:begin 
 				inportInput<=32'd4;
             end
 				Reg_load1b:begin 
@@ -74,12 +74,59 @@ module storeInstructionstb();
 					#15 INPORTout<=0; regIn<=16'h0000;
 				end
             T0:begin 
-                #10 PCout<=1; MARin<=1; IncPC<=1; Zin<=1;
-                #15 PCout<=0; MARin<=0; IncPC<=0; Zin<=0; 
+                #10 PCout<=1; MARin<=1;
+                #15 PCout<=0; MARin<=0;
             end
             T1:begin 
-                #10 Read<=1; MDRin<=1; PCin<=1; 
-                #15 Read<=0; MDRin<=0; PCin<=0; 
+                #10 Read<=1; MDRin<=1; PCin<=1; IncPC<=1;
+                #15 Read<=0; MDRin<=0; PCin<=0; IncPC<=0;
+            end
+            T2:begin 
+                #10 MDRout<=1; IRin<=1;
+                #15 MDRout<=0; IRin<=0;
+            end
+            T3:begin 
+                #10 Grb<=1; BAout<=1; Yin<=1;
+                #15 Grb<=0; BAout<=0; Yin<=0;
+            end
+            T4:begin 
+                #10  Cout<=1; Zin<=1;
+                #15  Cout<=0; Zin<=0;
+            end
+            T5:begin 
+                #10 ZLOout<=1; MARin<=1;
+                #15 ZLOout<=0; MARin<=0;
+            end
+            T6:begin 
+                #10 Gra<=1; Rout<=1; MDRin<=1; write<=1;
+                #15 Gra<=0; Rout<=0; MDRin<=0; write<=0;
+            end
+				T7:begin 
+					#10 write<=1;
+					#15 write<=0;
+				end
+				//st 0x90(R4), R4
+            /*Reg_load1a:begin 
+				inportInput<=32'd5;
+            end
+				Reg_load1b:begin 
+					#10 INPORTout<=1; PCin<=1;
+					#15 INPORTout<=0; PCin<=0;
+				end
+				Reg_load2a:begin 
+				inportInput<=32'd22;
+            end
+				Reg_load2b:begin 
+					#10 INPORTout<=1; regIn<=16'h0010;
+					#15 INPORTout<=0; regIn<=16'h0000;
+				end
+            T0:begin 
+                #10 PCout<=1; MARin<=1;
+                #15 PCout<=0; MARin<=0; 
+            end
+            T1:begin 
+                #10 Read<=1; MDRin<=1; PCin<=1; IncPC<=1;
+                #15 Read<=0; MDRin<=0; PCin<=0; IncPC<=0;
             end
             T2:begin 
                 #10 MDRout<=1; IRin<=1;
@@ -105,53 +152,6 @@ module storeInstructionstb();
 					#10 write<=1;
 					#15 write<=0;
 				end*/
-				//st 0x90(R4), R4
-            Reg_load1a:begin 
-				inportInput<=32'd5;
-            end
-				Reg_load1b:begin 
-					#10 INPORTout<=1; PCin<=1;
-					#15 INPORTout<=0; PCin<=0;
-				end
-				Reg_load2a:begin 
-				inportInput<=32'd22;
-            end
-				Reg_load2b:begin 
-					#10 INPORTout<=1; regIn<=16'h0010;
-					#15 INPORTout<=0; regIn<=16'h0000;
-				end
-            T0:begin 
-                #10 PCout<=1; MARin<=1; IncPC<=1; Zin<=1;
-                #15 PCout<=0; MARin<=0; IncPC<=0; Zin<=0; 
-            end
-            T1:begin 
-                #10 Read<=1; MDRin<=1; PCin<=1; 
-                #15 Read<=0; MDRin<=0; PCin<=0; 
-            end
-            T2:begin 
-                #10 MDRout<=1; IRin<=1;
-                #15 MDRout<=0; IRin<=0;
-            end
-            T3:begin 
-                #10 Grb<=1; BAout<=1; Yin<=1;
-                #15 Grb<=0; BAout<=0; Yin<=0;
-            end
-            T4:begin 
-                #10  Cout<=1; Zin<=1;
-                #15  Cout<=0; Zin<=0;
-            end
-            T5:begin 
-                #10 ZLOout<=1; MARin<=1;
-                #15 ZLOout<=0; MARin<=0;
-            end
-            T6:begin 
-                #10 Gra<=1; Rout<=1; MDRin<=1; write<=1;
-                #15 Gra<=0; Rout<=0; MDRin<=0; write<=0;
-            end
-				T7:begin 
-					#10 write<=1;
-					#15 write<=0;
-				end
         endcase
     end
 endmodule

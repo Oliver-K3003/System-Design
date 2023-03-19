@@ -54,7 +54,7 @@ set_global_assignment -name VERILOG_FILE Registertb.v
 set_global_assignment -name VERILOG_FILE Register.v
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH branchmitb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH inporttb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME Registertb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id Registertb
@@ -256,6 +256,35 @@ set_global_assignment -name EDA_TEST_BENCH_NAME branchmitb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id branchmitb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "600 ns" -section_id branchmitb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME branchmitb -section_id branchmitb
+set_global_assignment -name EDA_TEST_BENCH_NAME jrtb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id jrtb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id jrtb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jrtb -section_id jrtb
+set_global_assignment -name EDA_TEST_BENCH_NAME jaltb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id jaltb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "600 ns" -section_id jaltb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME jaltb -section_id jaltb
+set_global_assignment -name VERILOG_FILE mfhitb.v
+set_global_assignment -name VERILOG_FILE mflotb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME mfhitb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mfhitb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id mfhitb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mfhitb -section_id mfhitb
+set_global_assignment -name EDA_TEST_BENCH_NAME mflotb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mflotb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id mflotb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mflotb -section_id mflotb
+set_global_assignment -name VERILOG_FILE outporttb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME outporttb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id outporttb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id outporttb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME outporttb -section_id outporttb
+set_global_assignment -name VERILOG_FILE inporttb.v
+set_global_assignment -name EDA_TEST_BENCH_NAME inporttb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id inporttb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id inporttb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME inporttb -section_id inporttb
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE Registertb.v -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busEncodertb.v -section_id busEncodertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busMUXtb.v -section_id busMUXtb
@@ -290,4 +319,9 @@ set_global_assignment -name EDA_TEST_BENCH_FILE branchzrtb.v -section_id branchz
 set_global_assignment -name EDA_TEST_BENCH_FILE branchnztb.v -section_id branchnztb
 set_global_assignment -name EDA_TEST_BENCH_FILE branchpltb.v -section_id branchpltb
 set_global_assignment -name EDA_TEST_BENCH_FILE branchmitb.v -section_id branchmitb
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_FILE jrtb.v -section_id jrtb
+set_global_assignment -name EDA_TEST_BENCH_FILE jaltb.v -section_id jaltb
+set_global_assignment -name EDA_TEST_BENCH_FILE mfhitb.v -section_id mfhitb
+set_global_assignment -name EDA_TEST_BENCH_FILE mflotb.v -section_id mflotb
+set_global_assignment -name EDA_TEST_BENCH_FILE outporttb.v -section_id outporttb
+set_global_assignment -name EDA_TEST_BENCH_FILE inporttb.v -section_id inporttb

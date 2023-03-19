@@ -148,6 +148,12 @@
 # 
 # Top level modules:
 # 	mar
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/incrementPC.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module incrementPC
+# 
+# Top level modules:
+# 	incrementPC
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/ram.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ram
@@ -155,16 +161,16 @@
 # Top level modules:
 # 	ram
 # 
-# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/branchmitb.v}
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/inporttb.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module branchmitb
+# -- Compiling module inporttb
 # 
 # Top level modules:
-# 	branchmitb
+# 	inporttb
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  branchmitb
-# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps branchmitb 
-# Loading work.branchmitb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs="+acc"  inporttb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps inporttb 
+# Loading work.inporttb
 # Loading work.datapath
 # Loading work.selectAndEncode
 # Loading work.decoder4to16
@@ -175,6 +181,7 @@
 # Loading work.MDR
 # Loading work.mdrmux2to1
 # Loading work.mar
+# Loading work.incrementPC
 # Loading work.conff_logic
 # Loading work.decoder2to4
 # Loading work.ff_register
@@ -200,4 +207,4 @@
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 600 ns
+# run 500 ns
