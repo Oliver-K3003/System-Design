@@ -14,7 +14,7 @@ L0 1
 Z5 OV;L;10.1d;51
 r1
 31
-Z6 !s108 1679267665.178000
+Z6 !s108 1679340794.899000
 Z7 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/adder.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/adder.v|
 Z9 o-vlog01compat -work work -O0
@@ -40,7 +40,7 @@ n@a@l@u
 !i10b 1
 !s100 _>RY;V]UoQD0Io30NZfOX1
 !s85 0
-!s108 1679267666.116000
+!s108 1679340796.589000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/ALU.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/ALU.v|
 !s101 -O0
@@ -61,7 +61,7 @@ nbus@encoder
 !i10b 1
 !s100 4:[>];gz]HdDTXF7<Y=3A3
 !s85 0
-!s108 1679267665.103000
+!s108 1679340794.793000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/busEncoder.v|
 !s101 -O0
@@ -82,7 +82,7 @@ nbus@m@u@x
 !i10b 1
 !s100 ZOczk=]Jjl6QL2YjS[C6h2
 !s85 0
-!s108 1679267665.013000
+!s108 1679340794.681000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/busMUX.v|
 !s101 -O0
@@ -137,7 +137,7 @@ L0 1
 R5
 r1
 31
-Z14 !s108 1679267666.522000
+Z14 !s108 1679340797.366000
 Z15 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/conff_logic.v|
 Z16 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/conff_logic.v|
 R9
@@ -162,7 +162,7 @@ R10
 !i10b 1
 !s100 ;KQRSTDO9=HETE4lLd2RN0
 !s85 0
-!s108 1679267666.041000
+!s108 1679340796.460000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v|
 !s101 -O0
@@ -197,7 +197,7 @@ L0 24
 R5
 r1
 31
-Z20 !s108 1679267666.438000
+Z20 !s108 1679340797.207000
 Z21 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/selectAndEncode.v|
 Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/selectAndEncode.v|
 R9
@@ -222,7 +222,7 @@ R10
 !i10b 1
 !s100 NjU=6H?Wghg83DQco6gm_3
 !s85 0
-!s108 1679267665.967000
+!s108 1679340796.304000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/division.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/division.v|
 !s101 -O0
@@ -263,7 +263,7 @@ nincrement@p@c
 !i10b 1
 !s100 :Of=_PBJGD_geK3@WEPZ]0
 !s85 0
-!s108 1679267666.694000
+!s108 1679340797.697000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/incrementPC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/incrementPC.v|
 !s101 -O0
@@ -281,7 +281,7 @@ R5
 r1
 !s85 0
 31
-!s108 1679267666.848000
+!s108 1679340797.943000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/inporttb.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/inporttb.v|
 !s101 -O0
@@ -303,7 +303,7 @@ R10
 !i10b 1
 !s100 1zjgQS<U8G`SlSOj9;^kC0
 !s85 0
-!s108 1679267665.286000
+!s108 1679340795.060000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/log_and_32bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/log_and_32bit.v|
 !s101 -O0
@@ -323,7 +323,7 @@ R10
 !i10b 1
 !s100 SAR2?:70oXKAl1z7;mIEU1
 !s85 0
-!s108 1679267665.362000
+!s108 1679340795.203000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/log_or_32bit.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/log_or_32bit.v|
 !s101 -O0
@@ -343,7 +343,7 @@ R10
 !i10b 1
 !s100 ;K3bJb=RK4[dR;iza6mLD3
 !s85 0
-!s108 1679267666.622000
+!s108 1679340797.565000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/mar.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/mar.v|
 !s101 -O0
@@ -358,7 +358,7 @@ L0 1
 R5
 r1
 31
-Z26 !s108 1679267666.270000
+Z26 !s108 1679340796.890000
 Z27 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/MDR.v|
 Z28 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/MDR.v|
 R9
@@ -404,7 +404,7 @@ R10
 !i10b 1
 !s100 BBE?:>5Cg^g@8cES`hIa33
 !s85 0
-!s108 1679267665.897000
+!s108 1679340796.149000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/multiplier.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/multiplier.v|
 !s101 -O0
@@ -424,7 +424,7 @@ R10
 !i10b 1
 !s100 ^PY2Y[6QUf2KCWJTc_oAM2
 !s85 0
-!s108 1679267665.746000
+!s108 1679340795.887000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/negate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/negate.v|
 !s101 -O0
@@ -444,7 +444,7 @@ R10
 !i10b 1
 !s100 J7[SDfaC5z5F^4<k4=hl]0
 !s85 0
-!s108 1679267665.821000
+!s108 1679340796.029000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/not_32.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/not_32.v|
 !s101 -O0
@@ -464,7 +464,7 @@ R10
 !i10b 1
 !s100 S:2UgBBKncU9MFFR7d;LC3
 !s85 0
-!s108 1679267666.768000
+!s108 1679340797.828000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/ram.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/ram.v|
 !s101 -O0
@@ -485,7 +485,7 @@ R10
 !i10b 1
 !s100 7<F7Nz>17m<9?50`CBN;N2
 !s85 0
-!s108 1679267664.924000
+!s108 1679340794.546000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/Register.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/Register.v|
 !s101 -O0
@@ -505,7 +505,7 @@ R10
 !i10b 1
 !s100 zkFDkAzg3Q9oDb;VF`8Kg0
 !s85 0
-!s108 1679267665.670000
+!s108 1679340795.757000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_left.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_left.v|
 !s101 -O0
@@ -525,7 +525,7 @@ R10
 !i10b 1
 !s100 f3:KHOzdJoMYC:ibl`M8i3
 !s85 0
-!s108 1679267665.592000
+!s108 1679340795.618000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_right.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/rotate_right.v|
 !s101 -O0
@@ -566,7 +566,7 @@ R10
 !i10b 1
 !s100 bZH_o^:DN^XTFV3S5fca@1
 !s85 0
-!s108 1679267665.442000
+!s108 1679340795.338000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/shift_left.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/shift_left.v|
 !s101 -O0
@@ -586,7 +586,7 @@ R10
 !i10b 1
 !s100 T2;2Ec5jb;3lY1h_g=_oc0
 !s85 0
-!s108 1679267665.518000
+!s108 1679340795.497000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right.v|
 !s101 -O0
@@ -606,7 +606,7 @@ R10
 !i10b 1
 !s100 eC34Y`YGb@POD]Rn:QZVX0
 !s85 0
-!s108 1679267666.364000
+!s108 1679340797.068000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right_arithmetic.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/shift_right_arithmetic.v|
 !s101 -O0
@@ -626,7 +626,7 @@ R10
 !i10b 1
 !s100 EA57TkMRZRPnFOk13k4UP3
 !s85 0
-!s108 1679267666.192000
+!s108 1679340796.741000
 !s107 C:/altera/13.0sp1/elec374/system-design/System-Design/sub.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/altera/13.0sp1/elec374/system-design/System-Design|C:/altera/13.0sp1/elec374/system-design/System-Design/sub.v|
 !s101 -O0

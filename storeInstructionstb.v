@@ -59,7 +59,7 @@ module storeInstructionstb();
 				Yout <= 0; IncPC <=0; Read <= 0;
             end
 				//st 0x90, R4
-            Reg_load1a:begin 
+            /*Reg_load1a:begin 
 				inportInput<=32'd4;
             end
 				Reg_load1b:begin 
@@ -104,9 +104,9 @@ module storeInstructionstb();
 				T7:begin 
 					#10 write<=1;
 					#15 write<=0;
-				end
+				end*/
 				//st 0x90(R4), R4
-            /*Reg_load1a:begin 
+            Reg_load1a:begin 
 				inportInput<=32'd5;
             end
 				Reg_load1b:begin 
@@ -151,7 +151,7 @@ module storeInstructionstb();
 				T7:begin 
 					#10 write<=1;
 					#15 write<=0;
-				end*/
+				end
         endcase
     end
 endmodule

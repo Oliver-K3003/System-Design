@@ -66,7 +66,7 @@ module branchmitb();
 					#15 INPORTout<=0; PCin<=0;
 				end
 				Reg_load2a:begin 
-				inportInput<=32'd0;
+				inportInput<=32'hFFFF0000;
             end
 				Reg_load2b:begin 
 					#10 INPORTout<=1; regIn<=16'h0040;

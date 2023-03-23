@@ -325,3 +325,4 @@ set_global_assignment -name EDA_TEST_BENCH_FILE mfhitb.v -section_id mfhitb
 set_global_assignment -name EDA_TEST_BENCH_FILE mflotb.v -section_id mflotb
 set_global_assignment -name EDA_TEST_BENCH_FILE outporttb.v -section_id outporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE inporttb.v -section_id inporttb
+set_global_assignment -name VERILOG_FILE control_unit.v

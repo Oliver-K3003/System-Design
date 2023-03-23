@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Sun Mar 19 18:53:48 2023
+Mon Mar 20 14:59:17 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -86,7 +86,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Mar 19 18:53:48 2023           ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 20 14:59:16 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
@@ -1536,7 +1536,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:16     ;
+; Top            ; 00:00:20     ;
 +----------------+--------------+
 
 
@@ -1546,7 +1546,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Mar 19 18:53:27 2023
+    Info: Processing started: Mon Mar 20 14:58:52 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -1812,10 +1812,10 @@ Info (21057): Implemented 8073 device resources after synthesis - the final reso
     Info (21061): Implemented 7052 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4628 megabytes
-    Info: Processing ended: Sun Mar 19 18:53:48 2023
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Mon Mar 20 14:59:17 2023
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+
