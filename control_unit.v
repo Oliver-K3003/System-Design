@@ -3,7 +3,8 @@ module control_unit(
 	output reg HIin, LOin, PCin, MDRin, Zin, Yin, IRin, CONin, OUTPORTin, 
 	HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout,
 	Gra, Grb, Grc, Rin, Rout, BAout, Read, IncPC, Write,
-	input Clock, Reset, Stop, CON_FF,
+	output reg [15:0] regIn,
+	input Clock, Reset, Stop,
 	input [31:0] IR
 );
 	parameter reset_state=8'd0, 
@@ -200,12 +201,176 @@ always@(present_state)begin
 			Read<=0; MDRin<=0; PCin<=0; IncPC<=0;
 			MDRout<=1; IRin<=1;
 		end
-	//---------------
+	//---------------Add / Sub---------------
 		add3, sub3: begin 
-			
-			
+			MDRout<=0; IRin<=0;
+			Grb<=1; Rout<=1; Yin<=1;
 		end
+		add4, sub4: begin 
+			Grb<=0; Rout<=0; Yin<=0;
+			Cout<=1; Zin<=1; //Check if this works -> might need to be Grc Yout and Zin
+		end
+		add5, sub5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; Gra<=1; Rin<=1;
+		end
+	//---------------And / Or / Shift / Rotate---------------
+		and3, or3, shl3, shr3, rol3, ror3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; Rout<=1; Yin<=1;
+		end
+		and4, or4, shl4, shr4, rol4, ror4: begin 
+			Grb<=0; Rout<=0; Yin<=0;
+			Cout<=1; Zin<=1; //Check if this works -> might need to be Grc Yout and Zin
+		end
+		and5, or5, shl5, shr5, rol5, ror5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; Gra<=1; Rin<=1;
+		end
+	//---------------Multiply / Divide---------------
+		mul3, div3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; Rout<=1; Yin<=1;
+		end
+		mul4, div4: begin 
+			Grb<=0; Rout<=0; Yin<=0;
+			Cout<=1; Zin<=1; //Check if this works -> might need to be Grc Yout and Zin
+		end
+		mul5, div5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; LOin<=1;
+		end
+		mul6, div6: begin 
+			ZLOout<=0; LOin<=0;
+			ZHIout<=1; HIin<=1;
+		end
+	//---------------Not / Negate---------------
+		not3, neg3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; Rout<=1; Yin<=1;//Might need to be ZHIin and ZLOin instead of Yin
+		end
+		not4, neg4: begin 
+			Grb<=0; Rout<=0; Yin<=0;
+			ZLOout<=1; Gra<=1; Rin<=1;
+		end
+	//---------------Immediate Instructions---------------
+		addi3, ori3, andi3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; Rout<=1; Yin<=1;
+		end 
+		addi4, ori4, andi4: begin 
+			Grb<=0; Rout<=0; Yin<=0;
+			Cout<=1; Zin<=1;
+		end
+		addi5, ori5, andi5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; Gra<=1; Rin<=1;
+		end
+	//---------------Load Instruction---------------
+		ld3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; BAout<=1; Yin<=1;
+		end
+		ld4: begin 
+			Grb<=0; BAout<=0; Yin<=0;
+			Cout<=1; Zin<=1;
+		end
+		ld5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; MARin<=1;
+		end
+		ld6: begin 
+			ZLOout<=0; MARin<=0;
+			Read<=1; MDRin<=1;
+		end
+		ld7: begin 
+			Read<=0; MDRin<=0;
+			MDRout<=1; Gra<=1; Rin<=1;
+		end
+	//---------------Load Immediate Instruction---------------
+		ldi3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; BAout<=1; Yin<=1;
+		end
+		ldi4: begin 
+			Grb<=0; BAout<=0; Yin<=0;
+			Cout<=1; Zin<=1;
+		end
+		ldi5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; Gra<=1; Rin<=1;
+		end
+	//---------------Store Instruction---------------
+		st3: begin 
+			MDRout<=0; IRin<=0;
+			Grb<=1; BAout<=1; Yin<=1;
+		end
+		st4: begin 
+			Grb<=0; BAout<=0; Yin<=0;
+			Cout<=1; Zin<=1;
+		end
+		st5: begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; MARin<=1;
+		end
+		st6: begin 
+			ZLOout<=0; MARin<=0; 
+			Gra<=1; Rout<=1; MDRin<=1; write<=1;
+		end
+		st7: begin 
+			//NO IDEA ABOUT THIS ONE
+		end
+	//---------------Jump Instruction---------------
+		jr3: begin 
+			MDRout<=0; IRin<=0; 
+			Gra<=1; Rout<=1; PCin<=1;
+		end
+	//---------------Jal Instruction---------------
+		jal3:begin 
+			MDRout<=0; IRin<=0;
+			PCout<=1; regIn<=16'h8000;
+		end
+		jal4:begin 
+			PCout<=0; regIn<=16'd0;
+			Gra<=1; Rout<=1; PCin<=1;
+		end
+	//---------------Move HI/LO Instructions---------------
+		mfhi3:begin 
+			MDRout<=0; IRin<=0;
+			Gra<=1; Rin<=1 HIout<=1;
+		end
+		mflo3:begin 
+			MDRout<=0; IRin<=0;
+			Gra<=1; Rin<=1 LOout<=1;
+		end
+	//---------------Branch Instructions---------------
+		br3:begin 
+			MDRout<=0; IRin<=0;
+			Gra<=1; Rout<=1; CONin<=1; 
+		end
+		br4:begin 
+			Gra<=0; Rout<=0; CONin<=0;
+			PCout<=1; Yin<=1;
+		end
+		br5:begin 
+			PCout<=0; Yin<=0;
+			Cout<=1; Zin<=1;
+		end
+		br6:begin 
+			Cout<=0; Zin<=0;
+			ZLOout<=1; PCin<=1;
+		end
+		br7:begin 
+			ZLOout<=0; PCin<=0;
+			PCout<=1;
+		end
+	//---------------Nop / Halt---------------
+		nop3: begin end
+		halt3: begin 
+			Run<=0;
+		end
+	//---------------Default---------------
+		default: begin end
 	endcase
 end
-
 endmodule
