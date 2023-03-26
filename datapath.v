@@ -11,7 +11,8 @@ module datapath(
     output [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
 		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister,
 	output [8:0] marToRam,
-    output [31:0] mdrToRam
+    output [31:0] mdrToRam,
+    output [7:0] present_state
 );
     wire [31:0] encoderIn;
     wire [63:0] alu_out;
@@ -23,7 +24,7 @@ module datapath(
     assign encoderIn = {6'd0, Cout, Yout, INPORTout, OUTPORTout,  MDRout, PCout, ZLOout, ZHIout, LOout, HIout, outSignals[15:0]};
     
     control_unit cUnit(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin, HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout, Gra, Grb, Grc, Rin, Rout, BAout, 
-        Read, IncPC, write, run, regIn, Clock, Reset, Stop, IRregister);
+        Read, IncPC, write, run, regIn, Clock, Reset, Stop, IRregister, present_state);
 	selectAndEncode selogic(.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .IRin(IRregister), .registersIn(inSignals), .registersOut(outSignals), .CsignExt(Cregister));
     ram memory(.data(BusMuxInMDR), .addr(marToRam), .we(write), .clk(Clock), .q(mdrToRam));
     busEncoder enc(encoderIn, encoderOut);

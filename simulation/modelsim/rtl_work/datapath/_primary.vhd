@@ -68,6 +68,7 @@ entity datapath is
         IRregister      : out    vl_logic_vector(31 downto 0);
         Cregister       : out    vl_logic_vector(31 downto 0);
         marToRam        : out    vl_logic_vector(8 downto 0);
-        mdrToRam        : out    vl_logic_vector(31 downto 0)
+        mdrToRam        : out    vl_logic_vector(31 downto 0);
+        present_state   : out    vl_logic_vector(7 downto 0)
     );
 end datapath;

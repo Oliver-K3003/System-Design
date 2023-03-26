@@ -5,7 +5,8 @@ module control_unit(
 	Gra, Grb, Grc, Rin, Rout, BAout, Read, IncPC, Write, Run,
 	output reg [15:0] regIn,
 	input Clock, Reset, Stop,
-	input [31:0] IR
+	input [31:0] IR,
+	output reg [7:0] present_state
 );
 	parameter reset_state=8'd0, 
 				fetch0=8'd1, fetch1=8'd2, fetch2=8'd3, 
@@ -35,145 +36,154 @@ module control_unit(
 				in3=8'd74, 
 				out3=8'd75,
 				nop3=8'd76,
-				halt3=8'd77;
+				halt3=8'd77,
+				shra3=8'd78, shra4=8'd79, shra5=8'd80;
 				
-reg [7:0] present_state = reset_state;
+
+initial begin 
+	present_state = reset_state;
+end
  
 always@(posedge Clock, posedge Reset, posedge Stop)begin 
 	if (Reset == 1'b1) present_state = reset_state;
 		if (Stop == 1'b1) present_state = halt3;
 		else case (present_state)
-			reset_state		:	present_state = fetch0;
-			fetch0			:	present_state = fetch1;
-			fetch1			:	#20 present_state = fetch2;
+			reset_state		:	begin #30 present_state = 8'bxxxxxxxx; #40 present_state = fetch0; end
+			fetch0			:	#30 present_state = fetch1;
+			fetch1			:	#30 present_state = fetch2;
 			fetch2			:	begin	
 										@(posedge Clock);
 										case	(IR[31:27])
-											5'b00011		:		present_state=add3;	
-											5'b00100		: 		present_state=sub3;
-											5'b01110		:		present_state=mul3;
-											5'b01111		:		present_state=div3;
-											5'b00101		:		present_state=shr3;
-											5'b00110		:		present_state=shl3;
-											5'b00111		:		present_state=ror3;
-											5'b01000		:		present_state=rol3;
-											5'b01001		:		present_state=and3;
-											5'b01010		:		present_state=or3;
-											5'b10000		:		present_state=neg3;
-											5'b10001		:		present_state=not3;
 											5'b00000		:		present_state=ld3;
 											5'b00001		:		present_state=ldi3;
 											5'b00010		:		present_state=st3;
-											5'b01011		:		present_state=addi3;
-											5'b01100		:		present_state=andi3;
-											5'b01101		:		present_state=ori3;
-											5'b10010		:		present_state=br3;
-											5'b10011		:		present_state=jr3;
-											5'b10100		:		present_state=jal3;
-											5'b10111		:		present_state=mfhi3;
-											5'b11000		:		present_state=mflo3;
-											5'b10101		:		present_state=in3;
-											5'b10110		:		present_state=out3;
-											5'b11001		:		present_state=nop3;
-											5'b11010		:		present_state=halt3;
+											5'b00011		:		present_state=add3;
+											5'b00100		:		present_state=sub3;
+											5'b00101		:		present_state=and3;
+											5'b00110		:		present_state=or3;
+											5'b00111		:		present_state=shr3;
+											5'b01000		:		present_state=shra3;
+											5'b01001		:		present_state=shl3;
+											5'b01010		:		present_state=ror3;
+											5'b01011		:		present_state=rol3;
+											5'b01100		:		present_state=addi3;
+											5'b01101		:		present_state=andi3;
+											5'b01110		:		present_state=ori3;
+											5'b01111		:		present_state=mul3;
+											5'b10000		:		present_state=div3;
+											5'b10001		:		present_state=neg3;
+											5'b10010		:		present_state=not3;
+											5'b10011		:		present_state=br3;
+											5'b10100		:		present_state=jr3;
+											5'b10101		:		present_state=jal3;
+											5'b10110		:		present_state=in3;
+											5'b10111		:		present_state=out3;
+											5'b11000		:		present_state=mfhi3;
+											5'b11001		:		present_state=mflo3;
+											5'b11010		:		present_state=nop3;
+											5'b11011		:		present_state=halt3;
 										endcase
 									end
-			add3				: 	present_state = add4;
-			add4				:	present_state = add5;
-			add5 				:	present_state = fetch0;
+			add3				: 	#30 present_state = add4;
+			add4				:	#30 present_state = add5;
+			add5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			addi3				: 	present_state = addi4;
-			addi4				:	present_state = addi5;
-			addi5 				:	present_state = fetch0;
+			addi3				: 	#30 present_state = addi4;
+			addi4				:	#30 present_state = addi5;
+			addi5 			:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			sub3				: 	present_state = sub4;
-			sub4				: 	present_state = sub5;
-			sub5				:	present_state = fetch0;
+			sub3				: 	#30 present_state = sub4;
+			sub4				: 	#30 present_state = sub5;
+			sub5				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			mul3				: 	present_state = mul4;
-			mul4				: 	present_state = mul5;
-			mul5				: 	present_state = mul6;
-			mul6           :	present_state = fetch0; 
+			mul3				: 	#30 present_state = mul4;
+			mul4				: 	#30 present_state = mul5;
+			mul5				: 	#30 present_state = mul6;
+			mul6           :	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end 
 			
-			div3				: 	present_state = div4;
-			div4				: 	present_state = div5;
-			div5				: 	present_state = div6;
-			div6				:	present_state = fetch0;
+			div3				: 	#30 present_state = div4;
+			div4				: 	#30 present_state = div5;
+			div5				: 	#30 present_state = div6;
+			div6				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			or3				: 	present_state = or4;
-			or4				: 	present_state = or5;
-			or5				:	present_state = fetch0;
+			or3				: 	#30 present_state = or4;
+			or4				: 	#30 present_state = or5;
+			or5				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			and3				: 	present_state = and4;
-			and4				: 	present_state = and5;
-			and5   			:	present_state = fetch0;
+			and3				: 	#30 present_state = and4;
+			and4				: 	#30 present_state = and5;
+			and5   			:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			shl3				: 	present_state = shl4;
-			shl4				: 	present_state = shl5;
-			shl5 				:	present_state = fetch0;
+			shl3				: 	#30 present_state = shl4;
+			shl4				: 	#30 present_state = shl5;
+			shl5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			shr3				: 	present_state = shr4;
-			shr4				: 	present_state = shr5;
-			shr5 				:	present_state = fetch0;
+			shr3				: 	#30 present_state = shr4;
+			shr4				: 	#30 present_state = shr5;
+			shr5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			rol3				: 	present_state = rol4;
-			rol4				: 	present_state = rol5;
-			rol5 				:	present_state = fetch0;
+			shra3				: 	#30 present_state = shra4;
+			shra4				: 	#30 present_state = shra5;
+			shra5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			ror3				: 	present_state = ror4;
-			ror4				: 	present_state = ror5;
-			ror5 				:	present_state = fetch0;
+			rol3				: 	#30 present_state = rol4;
+			rol4				: 	#30 present_state = rol5;
+			rol5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			neg3				: 	present_state = neg4;
-			neg4				: 	present_state = fetch0;
+			ror3				: 	#30 present_state = ror4;
+			ror4				: 	#30 present_state = ror5;
+			ror5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			not3				: 	present_state = not4;
-			not4				: 	present_state = fetch0;
+			neg3				: 	#30 present_state = neg4;
+			neg4				: 	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			ld3				: 	present_state = ld4;
-			ld4				: 	present_state = ld5;
-			ld5				: 	#20 present_state = ld6;
-			ld6				: 	present_state = ld7;
-			ld7				:  present_state = fetch0;
+			not3				: 	#30 present_state = not4;
+			not4				: 	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			ldi3				: 	present_state = ldi4;
-			ldi4				: 	present_state = ldi5;
-			ldi5 				:	present_state = fetch0;
+			ld3				: 	#30 present_state = ld4;
+			ld4				: 	#30 present_state = ld5;
+			ld5				: 	#30 present_state = ld6;
+			ld6				: 	#30 present_state = ld7;
+			ld7				:  begin #30 present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			st3				: 	present_state = st4;
-			st4				: 	present_state = st5;
-			st5				: 	present_state = st6;
-			st6				: 	present_state = st7;
-			st7 				:	present_state = fetch0;
+			ldi3				: 	#30 present_state = ldi4;
+			ldi4				: 	#30 present_state = ldi5;
+			ldi5 				:	begin #30 present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			andi3				: 	present_state = andi4;
-			andi4				: 	present_state = andi5;
-			andi5 			:	present_state = fetch0;
+			st3				: 	#30 present_state = st4;
+			st4				: 	#30 present_state = st5;
+			st5				: 	#30 present_state = st6;
+			st6				: 	#30 present_state = st7;
+			st7 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			ori3				: 	present_state = ori4;
-			ori4				: 	present_state = ori5;
-			ori5 				:	present_state = fetch0;
+			andi3				: 	#30 present_state = andi4;
+			andi4				: 	#30 present_state = andi5;
+			andi5 			:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			jal3				: 	present_state = jal4;
-			jal4 				:	present_state = fetch0;
+			ori3				: 	#30 present_state = ori4;
+			ori4				: 	#30 present_state = ori5;
+			ori5 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			jr3 				:	present_state = fetch0;
+			jal3				: 	#30 present_state = jal4;
+			jal4 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			br3				: 	present_state = br4;
-			br4				: 	present_state = br5;
-			br5				: 	present_state = br6;
-			br6  				:	present_state = br7;
-			br7  				:	present_state = fetch0;
+			jr3 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			out3 				:	present_state = fetch0;
+			br3				: 	#30 present_state = br4;
+			br4				: 	#30 present_state = br5;
+			br5				: 	#30 present_state = br6;
+			br6  				:	#30 present_state = br7;
+			br7  				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			in3 				:	present_state = fetch0;
+			out3 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			mflo3 			:	present_state = fetch0;
+			in3 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			mfhi3 			:	present_state = fetch0;
+			mflo3 			:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
-			nop3 				:	present_state = fetch0;
+			mfhi3 			:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
+			
+			nop3 				:	begin present_state=8'bxxxxxxxx; #40 present_state = fetch0; end
 			
 			endcase
 end
@@ -212,38 +222,38 @@ always@(present_state)begin
 		end
 		add4, sub4: begin 
 			Grb<=0; Rout<=0; Yin<=0;
-			Cout<=1; Zin<=1; //Check if this works -> might need to be Grc Rout and Zin
+			Grc<=1; Rout<=1; Zin<=1;
 		end
 		add5, sub5: begin 
-			Cout<=0; Zin<=0;
+			Grc<=0; Rout<=0; Zin<=0;
 			ZLOout<=1; Gra<=1; Rin<=1;
 			#20 ZLOout<=0; Gra<=0; Rin<=0;
 		end
 	//---------------And / Or / Shift / Rotate---------------
-		and3, or3, shl3, shr3, rol3, ror3: begin 
+		and3, or3, shl3, shr3, rol3, ror3, shra3: begin 
 			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
 			Grb<=1; Rout<=1; Yin<=1;
 		end
-		and4, or4, shl4, shr4, rol4, ror4: begin 
+		and4, or4, shl4, shr4, rol4, ror4, shra4: begin 
 			Grb<=0; Rout<=0; Yin<=0;
-			Cout<=1; Zin<=1; //Check if this works -> might need to be Grc Rout and Zin
+			Grc<=1; Rout<=1; Zin<=1;
 		end
-		and5, or5, shl5, shr5, rol5, ror5: begin 
-			Cout<=0; Zin<=0;
+		and5, or5, shl5, shr5, rol5, ror5, shra5: begin 
+			Grc<=0; Rout<=0; Zin<=0;
 			ZLOout<=1; Gra<=1; Rin<=1;
 			#20 ZLOout<=0; Gra<=0; Rin<=0;
 		end
 	//---------------Multiply / Divide---------------
 		mul3, div3: begin 
 			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
-			Grb<=1; Rout<=1; Yin<=1;
+			Gra<=1; Rout<=1; Yin<=1;
 		end
 		mul4, div4: begin 
-			Grb<=0; Rout<=0; Yin<=0;
-			Cout<=1; Zin<=1; //Check if this works -> might need to be Grc Yout and Zin
+			Gra<=0; Rout<=0; Yin<=0;
+			Grb<=1; Rout<=1; Zin<=1;
 		end
 		mul5, div5: begin 
-			Cout<=0; Zin<=0;
+			Grb<=0; Rout<=0; Zin<=0;
 			ZLOout<=1; LOin<=1;
 		end
 		mul6, div6: begin 
@@ -254,10 +264,10 @@ always@(present_state)begin
 	//---------------Not / Negate---------------
 		not3, neg3: begin 
 			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
-			Grb<=1; Rout<=1; Yin<=1;//Might need to be ZHIin and ZLOin instead of Yin
+			Grb<=1; Rout<=1; Zin<=1;
 		end
 		not4, neg4: begin 
-			Grb<=0; Rout<=0; Yin<=0;
+			Grb<=0; Rout<=0; Zin<=0;
 			ZLOout<=1; Gra<=1; Rin<=1;
 			#20 ZLOout<=0; Gra<=0; Rin<=0;
 		end
@@ -293,7 +303,7 @@ always@(present_state)begin
 			Read<=1; MDRin<=1;
 		end
 		ld7: begin 
-			Read<=0; MDRin<=0;
+			#11 Read<=0; MDRin<=0;
 			MDRout<=1; Gra<=1; Rin<=1;
 			#20 MDRout<=0; Gra<=0; Rin<=0;
 		end
@@ -377,7 +387,6 @@ always@(present_state)begin
 		end
 		br7:begin 
 			ZLOout<=0; PCin<=0;
-			PCout<=1;
 		end
 	//---------------Nop / Halt---------------
 		nop3: begin end

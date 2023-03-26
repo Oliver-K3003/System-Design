@@ -79,7 +79,10 @@ entity control_unit is
         in3             : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi0, Hi1, Hi0);
         out3            : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi0, Hi1, Hi1);
         nop3            : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi1, Hi0, Hi0);
-        halt3           : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi1, Hi0, Hi1)
+        halt3           : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi1, Hi0, Hi1);
+        shra3           : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi1, Hi1, Hi0);
+        shra4           : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi0, Hi1, Hi1, Hi1, Hi1);
+        shra5           : vl_logic_vector(0 to 7) := (Hi0, Hi1, Hi0, Hi1, Hi0, Hi0, Hi0, Hi0)
     );
     port(
         HIin            : out    vl_logic;
@@ -116,7 +119,8 @@ entity control_unit is
         Clock           : in     vl_logic;
         Reset           : in     vl_logic;
         Stop            : in     vl_logic;
-        IR              : in     vl_logic_vector(31 downto 0)
+        IR              : in     vl_logic_vector(31 downto 0);
+        present_state   : out    vl_logic_vector(7 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of reset_state : constant is 1;
@@ -197,4 +201,7 @@ entity control_unit is
     attribute mti_svvh_generic_type of out3 : constant is 1;
     attribute mti_svvh_generic_type of nop3 : constant is 1;
     attribute mti_svvh_generic_type of halt3 : constant is 1;
+    attribute mti_svvh_generic_type of shra3 : constant is 1;
+    attribute mti_svvh_generic_type of shra4 : constant is 1;
+    attribute mti_svvh_generic_type of shra5 : constant is 1;
 end control_unit;
