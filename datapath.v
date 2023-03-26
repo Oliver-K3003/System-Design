@@ -10,13 +10,14 @@ module datapath(
     output CON,
     output [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
 		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister,
-	output [8:0] marToRam
+	output [8:0] marToRam,
+    output [31:0] mdrToRam
 );
     wire [31:0] encoderIn;
     wire [63:0] alu_out;
     wire [32:0] highIn, lowIn;
     wire clr = 0;
-	wire [31:0] mdrToRam, R0output, PCoutput;
+	wire [31:0] R0output, PCoutput;
     wire [15:0] inSignals, outSignals;
 	
     assign encoderIn = {6'd0, Cout, Yout, INPORTout, OUTPORTout,  MDRout, PCout, ZLOout, ZHIout, LOout, HIout, outSignals[15:0]};
