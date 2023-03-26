@@ -284,7 +284,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME inporttb -section_id eda_simulat
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id inporttb
 set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "500 ns" -section_id inporttb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME inporttb -section_id inporttb
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE Registertb.v -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busEncodertb.v -section_id busEncodertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busMUXtb.v -section_id busMUXtb
@@ -326,3 +325,4 @@ set_global_assignment -name EDA_TEST_BENCH_FILE mflotb.v -section_id mflotb
 set_global_assignment -name EDA_TEST_BENCH_FILE outporttb.v -section_id outporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE inporttb.v -section_id inporttb
 set_global_assignment -name VERILOG_FILE control_unit.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

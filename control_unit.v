@@ -1,8 +1,8 @@
 `timescale 1ns/10ps
 module control_unit(
-	output reg HIin, LOin, PCin, MDRin, Zin, Yin, IRin, CONin, OUTPORTin, 
+	output reg HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin, 
 	HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout,
-	Gra, Grb, Grc, Rin, Rout, BAout, Read, IncPC, Write,
+	Gra, Grb, Grc, Rin, Rout, BAout, Read, IncPC, Write, Run,
 	output reg [15:0] regIn,
 	input Clock, Reset, Stop,
 	input [31:0] IR
@@ -183,6 +183,7 @@ always@(present_state)begin
 	case(present_state)
 	//---------------Reset---------------
 		reset_state:begin 
+			Run<=1;
 			HIin<=0; LOin<=0; PCin<=0; MDRin<=0; Zin<=0; Yin<=0; IRin<=0; CONin<=0; OUTPORTin<=0;
 			HIout<=0; LOout<=0; ZHIout<=0; ZLOout<=0; PCout<=0; MDRout<=0; INPORTout<=0; OUTPORTout<=0; Yout<=0; Cout<=0;
 			Gra<=0; Grb<=0; Grc<=0; Rin<=0; Rout<=0; BAout<=0; Read<=0; IncPC<=0; Write<=0; 
@@ -315,7 +316,7 @@ always@(present_state)begin
 		end
 		st6: begin 
 			ZLOout<=0; MARin<=0; 
-			Gra<=1; Rout<=1; MDRin<=1; write<=1;
+			Gra<=1; Rout<=1; MDRin<=1; Write<=1;
 		end
 		st7: begin 
 			//NO IDEA ABOUT THIS ONE
@@ -337,11 +338,11 @@ always@(present_state)begin
 	//---------------Move HI/LO Instructions---------------
 		mfhi3:begin 
 			MDRout<=0; IRin<=0;
-			Gra<=1; Rin<=1 HIout<=1;
+			Gra<=1; Rin<=1; HIout<=1;
 		end
 		mflo3:begin 
 			MDRout<=0; IRin<=0;
-			Gra<=1; Rin<=1 LOout<=1;
+			Gra<=1; Rin<=1; LOout<=1;
 		end
 	//---------------Branch Instructions---------------
 		br3:begin 

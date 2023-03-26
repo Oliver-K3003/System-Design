@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Mon Mar 20 14:59:17 2023
+Sat Mar 25 11:10:47 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,53 +14,56 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Registers Packed Into Inferred Megafunctions
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Source assignments for ram:memory|altsyncram:ram_rtl_0|altsyncram_7d81:auto_generated
- 13. Parameter Settings for User Entity Instance: ram:memory
- 14. Parameter Settings for User Entity Instance: ALU:logic_unit
- 15. Parameter Settings for Inferred Entity Instance: ram:memory|altsyncram:ram_rtl_0
- 16. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add3
- 17. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add5
- 18. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add7
- 19. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add9
- 20. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add11
- 21. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add13
- 22. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add15
- 23. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add17
- 24. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add19
- 25. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add21
- 26. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add23
- 27. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add25
- 28. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add27
- 29. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add29
- 30. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add31
- 31. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add33
- 32. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add35
- 33. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add37
- 34. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add39
- 35. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add41
- 36. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add43
- 37. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add45
- 38. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add47
- 39. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add49
- 40. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add51
- 41. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add53
- 42. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add55
- 43. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add57
- 44. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add59
- 45. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add61
- 46. altsyncram Parameter Settings by Entity Instance
- 47. Port Connectivity Checks: "ALU:logic_unit|sub:sub_instance"
- 48. Port Connectivity Checks: "ALU:logic_unit|adder:add_instance"
- 49. Port Connectivity Checks: "Register:INPORT"
- 50. Port Connectivity Checks: "mar:mar_reg|Register:MAR"
- 51. Port Connectivity Checks: "Register:R0"
- 52. Port Connectivity Checks: "busEncoder:enc"
- 53. Elapsed Time Per Partition
- 54. Analysis & Synthesis Messages
- 55. Analysis & Synthesis Suppressed Messages
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for ram:memory|altsyncram:ram_rtl_0|altsyncram_7d81:auto_generated
+ 15. Parameter Settings for User Entity Instance: control_unit:cUnit
+ 16. Parameter Settings for User Entity Instance: ram:memory
+ 17. Parameter Settings for User Entity Instance: ALU:logic_unit
+ 18. Parameter Settings for Inferred Entity Instance: ram:memory|altsyncram:ram_rtl_0
+ 19. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add3
+ 20. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add5
+ 21. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add7
+ 22. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add9
+ 23. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add11
+ 24. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add13
+ 25. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add15
+ 26. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add17
+ 27. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add19
+ 28. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add21
+ 29. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add23
+ 30. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add25
+ 31. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add27
+ 32. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add29
+ 33. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add31
+ 34. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add33
+ 35. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add35
+ 36. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add37
+ 37. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add39
+ 38. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add41
+ 39. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add43
+ 40. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add45
+ 41. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add47
+ 42. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add49
+ 43. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add51
+ 44. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add53
+ 45. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add55
+ 46. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add57
+ 47. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add59
+ 48. Parameter Settings for Inferred Entity Instance: ALU:logic_unit|division:div_instance|lpm_add_sub:Add61
+ 49. altsyncram Parameter Settings by Entity Instance
+ 50. Port Connectivity Checks: "ALU:logic_unit|sub:sub_instance"
+ 51. Port Connectivity Checks: "ALU:logic_unit|adder:add_instance"
+ 52. Port Connectivity Checks: "Register:INPORT"
+ 53. Port Connectivity Checks: "mar:mar_reg|Register:MAR"
+ 54. Port Connectivity Checks: "Register:R0"
+ 55. Port Connectivity Checks: "busEncoder:enc"
+ 56. Elapsed Time Per Partition
+ 57. Analysis & Synthesis Messages
+ 58. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -86,16 +89,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 20 14:59:16 2023           ;
+; Analysis & Synthesis Status        ; Successful - Sat Mar 25 11:10:47 2023           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; system                                          ;
 ; Top-level Entity Name              ; datapath                                        ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 7,020                                           ;
-;     Total combinational functions  ; 6,307                                           ;
-;     Dedicated logic registers      ; 841                                             ;
-; Total registers                    ; 841                                             ;
-; Total pins                         ; 989                                             ;
+; Total logic elements               ; 7,282                                           ;
+;     Total combinational functions  ; 6,633                                           ;
+;     Dedicated logic registers      ; 809                                             ;
+; Total registers                    ; 809                                             ;
+; Total pins                         ; 992                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 16,384                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -231,6 +234,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; mar.v                            ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/mar.v                            ;         ;
 ; memoryInit.mif                   ; yes             ; User Memory Initialization File                       ; C:/altera/13.0sp1/elec374/system-design/System-Design/memoryInit.mif                   ;         ;
 ; incrementPC.v                    ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/incrementPC.v                    ;         ;
+; control_unit.v                   ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/control_unit.v                   ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
@@ -252,35 +256,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+-------------------------------------------------------+----------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 7,020       ;
-;                                             ;             ;
-; Total combinational functions               ; 6307        ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 2531        ;
-;     -- 3 input functions                    ; 2010        ;
-;     -- <=2 input functions                  ; 1766        ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 4587        ;
-;     -- arithmetic mode                      ; 1720        ;
-;                                             ;             ;
-; Total registers                             ; 841         ;
-;     -- Dedicated logic registers            ; 841         ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 989         ;
-; Total memory bits                           ; 16384       ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-; Maximum fan-out node                        ; Clock~input ;
-; Maximum fan-out                             ; 873         ;
-; Total fan-out                               ; 24584       ;
-; Average fan-out                             ; 2.68        ;
-+---------------------------------------------+-------------+
++------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                      ;
++---------------------------------------------+--------------------+
+; Resource                                    ; Usage              ;
++---------------------------------------------+--------------------+
+; Estimated Total logic elements              ; 7,282              ;
+;                                             ;                    ;
+; Total combinational functions               ; 6633               ;
+; Logic element usage by number of LUT inputs ;                    ;
+;     -- 4 input functions                    ; 2897               ;
+;     -- 3 input functions                    ; 3348               ;
+;     -- <=2 input functions                  ; 388                ;
+;                                             ;                    ;
+; Logic elements by mode                      ;                    ;
+;     -- normal mode                          ; 4913               ;
+;     -- arithmetic mode                      ; 1720               ;
+;                                             ;                    ;
+; Total registers                             ; 809                ;
+;     -- Dedicated logic registers            ; 809                ;
+;     -- I/O registers                        ; 0                  ;
+;                                             ;                    ;
+; I/O pins                                    ; 992                ;
+; Total memory bits                           ; 16384              ;
+; Embedded Multiplier 9-bit elements          ; 0                  ;
+; Maximum fan-out node                        ; busMUX:mux|Mux28~8 ;
+; Maximum fan-out                             ; 1808               ;
+; Total fan-out                               ; 27145              ;
+; Average fan-out                             ; 2.87               ;
++---------------------------------------------+--------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -288,20 +292,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
-; |datapath                                    ; 6307 (48)         ; 841 (0)      ; 16384       ; 0            ; 0       ; 0         ; 989  ; 0            ; |datapath                                                                                       ; work         ;
-;    |ALU:logic_unit|                          ; 5539 (474)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit                                                                        ; work         ;
-;       |adder:add_instance|                   ; 96 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                                     ; work         ;
-;          |cla_16:instance1|                  ; 46 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                                    ; work         ;
-;             |cla_4:instance1|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1                    ; work         ;
+; |datapath                                    ; 6633 (33)         ; 809 (0)      ; 16384       ; 0            ; 0       ; 0         ; 992  ; 0            ; |datapath                                                                                       ; work         ;
+;    |ALU:logic_unit|                          ; 5574 (472)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit                                                                        ; work         ;
+;       |adder:add_instance|                   ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                                     ; work         ;
+;          |cla_16:instance1|                  ; 48 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                                    ; work         ;
+;             |cla_4:instance1|                ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1                    ; work         ;
 ;             |cla_4:instance2|                ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2                    ; work         ;
-;             |cla_4:instance3|                ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3                    ; work         ;
+;             |cla_4:instance3|                ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3                    ; work         ;
 ;             |cla_4:instance4|                ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance4                    ; work         ;
-;          |cla_16:instance2|                  ; 50 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                                    ; work         ;
+;          |cla_16:instance2|                  ; 51 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                                    ; work         ;
 ;             |cla_4:instance1|                ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance1                    ; work         ;
 ;             |cla_4:instance2|                ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance2                    ; work         ;
-;             |cla_4:instance3|                ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance3                    ; work         ;
+;             |cla_4:instance3|                ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance3                    ; work         ;
 ;             |cla_4:instance4|                ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance4                    ; work         ;
-;       |division:div_instance|                ; 2145 (165)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance                                                  ; work         ;
+;       |division:div_instance|                ; 2143 (163)        ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance                                                  ; work         ;
 ;          |lpm_add_sub:Add11|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add11                                ; work         ;
 ;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add11|add_sub_hui:auto_generated     ; work         ;
 ;          |lpm_add_sub:Add13|                 ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add13                                ; work         ;
@@ -362,34 +366,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add7|add_sub_hui:auto_generated      ; work         ;
 ;          |lpm_add_sub:Add9|                  ; 66 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9                                 ; work         ;
 ;             |add_sub_hui:auto_generated|     ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|division:div_instance|lpm_add_sub:Add9|add_sub_hui:auto_generated      ; work         ;
-;       |log_and_32bit:land_instance|          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_and_32bit:land_instance                                            ; work         ;
-;       |log_or_32bit:lor_instance|            ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_or_32bit:lor_instance                                              ; work         ;
-;       |multiplier:mul_instance|              ; 2085 (2085)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|multiplier:mul_instance                                                ; work         ;
-;       |rotate_left:rol_instance|             ; 152 (152)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_left:rol_instance                                               ; work         ;
-;       |rotate_right:ror_instance|            ; 179 (179)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_right:ror_instance                                              ; work         ;
-;       |shift_left:shl_instance|              ; 120 (120)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_left:shl_instance                                                ; work         ;
-;       |shift_right:shr_instance|             ; 94 (94)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right:shr_instance                                               ; work         ;
-;       |shift_right_arithmetic:shra_instance| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right_arithmetic:shra_instance                                   ; work         ;
-;       |sub:sub_instance|                     ; 148 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance                                                       ; work         ;
-;          |adder:adder_instance|              ; 116 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance                                  ; work         ;
-;             |cla_16:instance1|               ; 55 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1                 ; work         ;
+;       |log_and_32bit:land_instance|          ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_and_32bit:land_instance                                            ; work         ;
+;       |log_or_32bit:lor_instance|            ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|log_or_32bit:lor_instance                                              ; work         ;
+;       |multiplier:mul_instance|              ; 2093 (2093)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|multiplier:mul_instance                                                ; work         ;
+;       |rotate_left:rol_instance|             ; 151 (151)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_left:rol_instance                                               ; work         ;
+;       |rotate_right:ror_instance|            ; 188 (188)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|rotate_right:ror_instance                                              ; work         ;
+;       |shift_left:shl_instance|              ; 121 (121)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_left:shl_instance                                                ; work         ;
+;       |shift_right:shr_instance|             ; 98 (98)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right:shr_instance                                               ; work         ;
+;       |shift_right_arithmetic:shra_instance| ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|shift_right_arithmetic:shra_instance                                   ; work         ;
+;       |sub:sub_instance|                     ; 151 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance                                                       ; work         ;
+;          |adder:adder_instance|              ; 119 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance                                  ; work         ;
+;             |cla_16:instance1|               ; 60 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1                 ; work         ;
 ;                |cla_4:instance1|             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance1 ; work         ;
-;                |cla_4:instance2|             ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance2 ; work         ;
-;                |cla_4:instance3|             ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance3 ; work         ;
-;                |cla_4:instance4|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance4 ; work         ;
-;             |cla_16:instance2|               ; 61 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2                 ; work         ;
-;                |cla_4:instance1|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance1 ; work         ;
-;                |cla_4:instance2|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance2 ; work         ;
+;                |cla_4:instance2|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance2 ; work         ;
+;                |cla_4:instance3|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance3 ; work         ;
+;                |cla_4:instance4|             ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance1|cla_4:instance4 ; work         ;
+;             |cla_16:instance2|               ; 59 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2                 ; work         ;
+;                |cla_4:instance1|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance1 ; work         ;
+;                |cla_4:instance2|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance2 ; work         ;
 ;                |cla_4:instance3|             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance3 ; work         ;
 ;                |cla_4:instance4|             ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|adder:adder_instance|cla_16:instance2|cla_4:instance4 ; work         ;
 ;          |negate:negate_instance|            ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ALU:logic_unit|sub:sub_instance|negate:negate_instance                                ; work         ;
 ;    |MDR:mdr_reg|                             ; 32 (0)            ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg                                                                           ; work         ;
-;       |Register:MDR|                         ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg|Register:MDR                                                              ; work         ;
+;       |Register:MDR|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg|Register:MDR                                                              ; work         ;
+;       |mdrmux2to1:MDMux|                     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|MDR:mdr_reg|mdrmux2to1:MDMux                                                          ; work         ;
 ;    |Register:HI|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:HI                                                                           ; work         ;
 ;    |Register:INPORT|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:INPORT                                                                       ; work         ;
 ;    |Register:IR|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:IR                                                                           ; work         ;
 ;    |Register:LO|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:LO                                                                           ; work         ;
-;    |Register:OUTPORT|                        ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:OUTPORT                                                                      ; work         ;
 ;    |Register:R0|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R0                                                                           ; work         ;
 ;    |Register:R10|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R10                                                                          ; work         ;
 ;    |Register:R11|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R11                                                                          ; work         ;
@@ -408,17 +412,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |Register:R9|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:R9                                                                           ; work         ;
 ;    |Register:Y|                              ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:Y                                                                            ; work         ;
 ;    |Register:ZHI|                            ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZHI                                                                          ; work         ;
-;    |Register:ZLO|                            ; 17 (17)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZLO                                                                          ; work         ;
-;    |busEncoder:enc|                          ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busEncoder:enc                                                                        ; work         ;
-;    |busMUX:mux|                              ; 552 (552)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busMUX:mux                                                                            ; work         ;
+;    |Register:ZLO|                            ; 16 (16)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|Register:ZLO                                                                          ; work         ;
+;    |busEncoder:enc|                          ; 45 (45)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busEncoder:enc                                                                        ; work         ;
+;    |busMUX:mux|                              ; 553 (553)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|busMUX:mux                                                                            ; work         ;
 ;    |conff_logic:CONFF|                       ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|conff_logic:CONFF                                                                     ; work         ;
+;    |control_unit:cUnit|                      ; 298 (298)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|control_unit:cUnit                                                                    ; work         ;
 ;    |incrementPC:incpc|                       ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|incrementPC:incpc                                                                     ; work         ;
 ;    |mar:mar_reg|                             ; 0 (0)             ; 9 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|mar:mar_reg                                                                           ; work         ;
 ;       |Register:MAR|                         ; 0 (0)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|mar:mar_reg|Register:MAR                                                              ; work         ;
 ;    |ram:memory|                              ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ram:memory                                                                            ; work         ;
 ;       |altsyncram:ram_rtl_0|                 ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ram:memory|altsyncram:ram_rtl_0                                                       ; work         ;
 ;          |altsyncram_7d81:auto_generated|    ; 0 (0)             ; 0 (0)        ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|ram:memory|altsyncram:ram_rtl_0|altsyncram_7d81:auto_generated                        ; work         ;
-;    |selectAndEncode:selogic|                 ; 25 (9)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selectAndEncode:selogic                                                               ; work         ;
+;    |selectAndEncode:selogic|                 ; 36 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selectAndEncode:selogic                                                               ; work         ;
 ;       |decoder4to16:decoder|                 ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |datapath|selectAndEncode:selogic|decoder4to16:decoder                                          ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -433,17 +438,138 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                            ;
++------------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal            ; Free of Timing Hazards ;
++------------------------------------------------------+--------------------------------+------------------------+
+; control_unit:cUnit|HIin                              ; control_unit:cUnit|WideOr51    ; yes                    ;
+; control_unit:cUnit|LOin                              ; control_unit:cUnit|WideOr53    ; yes                    ;
+; control_unit:cUnit|PCin                              ; control_unit:cUnit|WideOr55    ; yes                    ;
+; control_unit:cUnit|MDRin                             ; control_unit:cUnit|WideOr58    ; yes                    ;
+; control_unit:cUnit|Zin                               ; control_unit:cUnit|WideOr61    ; yes                    ;
+; control_unit:cUnit|Yin                               ; control_unit:cUnit|WideOr64    ; yes                    ;
+; control_unit:cUnit|MARin                             ; control_unit:cUnit|WideOr94    ; yes                    ;
+; control_unit:cUnit|IRin                              ; control_unit:cUnit|WideOr67    ; yes                    ;
+; control_unit:cUnit|CONin                             ; control_unit:cUnit|WideOr68    ; yes                    ;
+; control_unit:cUnit|HIout                             ; control_unit:cUnit|WideOr69    ; yes                    ;
+; control_unit:cUnit|LOout                             ; control_unit:cUnit|WideOr70    ; yes                    ;
+; control_unit:cUnit|ZHIout                            ; control_unit:cUnit|WideOr51    ; yes                    ;
+; control_unit:cUnit|ZLOout                            ; control_unit:cUnit|WideOr72    ; yes                    ;
+; control_unit:cUnit|PCout                             ; control_unit:cUnit|WideOr76    ; yes                    ;
+; control_unit:cUnit|MDRout                            ; control_unit:cUnit|WideOr77    ; yes                    ;
+; control_unit:cUnit|Cout                              ; control_unit:cUnit|WideOr61    ; yes                    ;
+; control_unit:cUnit|Gra                               ; control_unit:cUnit|WideOr78    ; yes                    ;
+; control_unit:cUnit|Grb                               ; control_unit:cUnit|WideOr81    ; yes                    ;
+; control_unit:cUnit|Rin                               ; control_unit:cUnit|WideOr83    ; yes                    ;
+; control_unit:cUnit|Rout                              ; control_unit:cUnit|WideOr86    ; yes                    ;
+; control_unit:cUnit|BAout                             ; control_unit:cUnit|WideOr89    ; yes                    ;
+; control_unit:cUnit|Read                              ; control_unit:cUnit|WideOr91    ; yes                    ;
+; control_unit:cUnit|IncPC                             ; control_unit:cUnit|WideOr92    ; yes                    ;
+; control_unit:cUnit|Write                             ; control_unit:cUnit|WideOr93    ; yes                    ;
+; control_unit:cUnit|regIn[15]                         ; control_unit:cUnit|WideOr96    ; yes                    ;
+; control_unit:cUnit|present_state.div6_1780           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.mul6_1820           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.halt3_1200          ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.nop3_1210           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.mflo3_1240          ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.mfhi3_1250          ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.jal4_1260           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.jal3_1270           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.jr3_1280            ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.br7_1290            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.br6_1300            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.br5_1310            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.br4_1320            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.br3_1330            ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.ori5_1340           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ori4_1350           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ori3_1360           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.andi5_1370          ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.andi4_1380          ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.andi3_1390          ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.addi5_1400          ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.addi4_1410          ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.addi3_1420          ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.st7_1430            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.st6_1440            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.st5_1450            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.st4_1460            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.st3_1470            ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.ldi5_1480           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ldi4_1490           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ldi3_1500           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.ld7_1510            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ld6_1520            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ld5_1530            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ld4_1540            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ld3_1550            ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.not4_1560           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.not3_1570           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.neg4_1580           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.neg3_1590           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.ror5_1600           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ror4_1610           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.ror3_1620           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.rol5_1630           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.rol4_1640           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.rol3_1650           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.shr5_1660           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.shr4_1670           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.shr3_1680           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.shl5_1690           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.shl4_1700           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.shl3_1710           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.and5_1720           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.and4_1730           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.and3_1740           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.or5_1750            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.or4_1760            ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.or3_1770            ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.div5_1790           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.div4_1800           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.div3_1810           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.mul5_1830           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.mul4_1840           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.mul3_1850           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.sub5_1860           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.sub4_1870           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.sub3_1880           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.add5_1890           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.add4_1900           ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.add3_1910           ; control_unit:cUnit|Selector47  ; yes                    ;
+; control_unit:cUnit|present_state.fetch2_1920         ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.fetch1_1930         ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.fetch0_1940         ; control_unit:cUnit|Selector141 ; yes                    ;
+; control_unit:cUnit|present_state.reset_state_1950    ; control_unit:cUnit|Selector171 ; yes                    ;
+; control_unit:cUnit|present_state.out3_1220           ; control_unit:cUnit|Selector47  ; yes                    ;
+; Number of user-specified and inferred latches = 101  ;                                ;                        ;
++------------------------------------------------------+--------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; Register:OUTPORT|q[1..31]              ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[0]                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 32 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 841   ;
+; Total registers                              ; 809   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 64    ;
+; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 809   ;
+; Number of registers using Clock Enable       ; 777   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -463,37 +589,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |datapath|incrementPC:incpc|outPC[14]                         ;
-; 36:1               ; 16 bits   ; 384 LEs       ; 176 LEs              ; 208 LEs                ; Yes        ; |datapath|Register:ZLO|q[22]                                  ;
+; 36:1               ; 16 bits   ; 384 LEs       ; 176 LEs              ; 208 LEs                ; Yes        ; |datapath|Register:ZLO|q[26]                                  ;
 ; 36:1               ; 13 bits   ; 312 LEs       ; 156 LEs              ; 156 LEs                ; Yes        ; |datapath|Register:ZLO|q[8]                                   ;
-; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux1         ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux9         ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux31        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:logic_unit|shift_right:shr_instance|ShiftRight0 ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_right:shr_instance|ShiftRight0 ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux31        ;
 ; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
-; 32:1               ; 17 bits   ; 357 LEs       ; 306 LEs              ; 51 LEs                 ; No         ; |datapath|busMUX:mux|Mux23                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
+; 32:1               ; 17 bits   ; 357 LEs       ; 289 LEs              ; 68 LEs                 ; No         ; |datapath|busMUX:mux|Mux28                                    ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|shift_left:shl_instance|ShiftLeft0   ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux45        ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux98        ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux163       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux244       ;
-; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_right:ror_instance|ShiftLeft0 ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux493       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux442       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux370       ;
-; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux304       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux93        ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux153       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux201       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux264       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux456       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux401       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux320       ;
-; 29:1               ; 15 bits   ; 285 LEs       ; 270 LEs              ; 15 LEs                 ; No         ; |datapath|busMUX:mux|Mux2                                     ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux40        ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux97        ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux175       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux238       ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |datapath|ALU:logic_unit|rotate_left:rol_instance|ShiftRight0 ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux508       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux420       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux381       ;
+; 6:1                ; 30 bits   ; 120 LEs       ; 90 LEs               ; 30 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux293       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux69        ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux136       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux203       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux266       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux468       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux402       ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 93 LEs               ; 62 LEs                 ; No         ; |datapath|ALU:logic_unit|multiplier:mul_instance|Mux325       ;
+; 29:1               ; 15 bits   ; 285 LEs       ; 255 LEs              ; 30 LEs                 ; No         ; |datapath|busMUX:mux|Mux14                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------+
 
 
@@ -504,6 +630,93 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+-------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                       ;
 +---------------------------------+--------------------+------+-------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: control_unit:cUnit ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; reset_state    ; 00000000 ; Unsigned Binary                     ;
+; fetch0         ; 00000001 ; Unsigned Binary                     ;
+; fetch1         ; 00000010 ; Unsigned Binary                     ;
+; fetch2         ; 00000011 ; Unsigned Binary                     ;
+; add3           ; 00000100 ; Unsigned Binary                     ;
+; add4           ; 00000101 ; Unsigned Binary                     ;
+; add5           ; 00000110 ; Unsigned Binary                     ;
+; sub3           ; 00000111 ; Unsigned Binary                     ;
+; sub4           ; 00001000 ; Unsigned Binary                     ;
+; sub5           ; 00001001 ; Unsigned Binary                     ;
+; mul3           ; 00001010 ; Unsigned Binary                     ;
+; mul4           ; 00001011 ; Unsigned Binary                     ;
+; mul5           ; 00001100 ; Unsigned Binary                     ;
+; mul6           ; 00001101 ; Unsigned Binary                     ;
+; div3           ; 00001110 ; Unsigned Binary                     ;
+; div4           ; 00001111 ; Unsigned Binary                     ;
+; div5           ; 00010000 ; Unsigned Binary                     ;
+; div6           ; 00010001 ; Unsigned Binary                     ;
+; or3            ; 00010010 ; Unsigned Binary                     ;
+; or4            ; 00010011 ; Unsigned Binary                     ;
+; or5            ; 00010100 ; Unsigned Binary                     ;
+; and3           ; 00010101 ; Unsigned Binary                     ;
+; and4           ; 00010110 ; Unsigned Binary                     ;
+; and5           ; 00010111 ; Unsigned Binary                     ;
+; shl3           ; 00011000 ; Unsigned Binary                     ;
+; shl4           ; 00011001 ; Unsigned Binary                     ;
+; shl5           ; 00011010 ; Unsigned Binary                     ;
+; shr3           ; 00011011 ; Unsigned Binary                     ;
+; shr4           ; 00011100 ; Unsigned Binary                     ;
+; shr5           ; 00011101 ; Unsigned Binary                     ;
+; rol3           ; 00011110 ; Unsigned Binary                     ;
+; rol4           ; 00011111 ; Unsigned Binary                     ;
+; rol5           ; 00100000 ; Unsigned Binary                     ;
+; ror3           ; 00100001 ; Unsigned Binary                     ;
+; ror4           ; 00100010 ; Unsigned Binary                     ;
+; ror5           ; 00100011 ; Unsigned Binary                     ;
+; neg3           ; 00100100 ; Unsigned Binary                     ;
+; neg4           ; 00100101 ; Unsigned Binary                     ;
+; neg5           ; 00100110 ; Unsigned Binary                     ;
+; not3           ; 00100111 ; Unsigned Binary                     ;
+; not4           ; 00101000 ; Unsigned Binary                     ;
+; not5           ; 00101001 ; Unsigned Binary                     ;
+; ld3            ; 00101010 ; Unsigned Binary                     ;
+; ld4            ; 00101011 ; Unsigned Binary                     ;
+; ld5            ; 00101100 ; Unsigned Binary                     ;
+; ld6            ; 00101101 ; Unsigned Binary                     ;
+; ld7            ; 00101110 ; Unsigned Binary                     ;
+; ldi3           ; 00101111 ; Unsigned Binary                     ;
+; ldi4           ; 00110000 ; Unsigned Binary                     ;
+; ldi5           ; 00110001 ; Unsigned Binary                     ;
+; st3            ; 00110010 ; Unsigned Binary                     ;
+; st4            ; 00110011 ; Unsigned Binary                     ;
+; st5            ; 00110100 ; Unsigned Binary                     ;
+; st6            ; 00110101 ; Unsigned Binary                     ;
+; st7            ; 00110110 ; Unsigned Binary                     ;
+; addi3          ; 00110111 ; Unsigned Binary                     ;
+; addi4          ; 00111000 ; Unsigned Binary                     ;
+; addi5          ; 00111001 ; Unsigned Binary                     ;
+; andi3          ; 00111010 ; Unsigned Binary                     ;
+; andi4          ; 00111011 ; Unsigned Binary                     ;
+; andi5          ; 00111100 ; Unsigned Binary                     ;
+; ori3           ; 00111101 ; Unsigned Binary                     ;
+; ori4           ; 00111110 ; Unsigned Binary                     ;
+; ori5           ; 00111111 ; Unsigned Binary                     ;
+; br3            ; 01000000 ; Unsigned Binary                     ;
+; br4            ; 01000001 ; Unsigned Binary                     ;
+; br5            ; 01000010 ; Unsigned Binary                     ;
+; br6            ; 01000011 ; Unsigned Binary                     ;
+; br7            ; 01000100 ; Unsigned Binary                     ;
+; jr3            ; 01000101 ; Unsigned Binary                     ;
+; jal3           ; 01000110 ; Unsigned Binary                     ;
+; jal4           ; 01000111 ; Unsigned Binary                     ;
+; mfhi3          ; 01001000 ; Unsigned Binary                     ;
+; mflo3          ; 01001001 ; Unsigned Binary                     ;
+; in3            ; 01001010 ; Unsigned Binary                     ;
+; out3           ; 01001011 ; Unsigned Binary                     ;
+; nop3           ; 01001100 ; Unsigned Binary                     ;
+; halt3          ; 01001101 ; Unsigned Binary                     ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------+
@@ -1536,7 +1749,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:20     ;
+; Top            ; 00:00:24     ;
 +----------------+--------------+
 
 
@@ -1546,7 +1759,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 20 14:58:52 2023
+    Info: Processing started: Sat Mar 25 11:10:19 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -1686,8 +1899,169 @@ Info (12021): Found 1 design units, including 1 entities, in source file outport
     Info (12023): Found entity 1: outporttb
 Info (12021): Found 1 design units, including 1 entities, in source file inporttb.v
     Info (12023): Found entity 1: inporttb
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
+    Info (12023): Found entity 1: control_unit
 Warning (10236): Verilog HDL Implicit Net warning at ALUtb.v(9): created implicit net for "IncPC"
 Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:cUnit"
+Warning (10270): Verilog HDL Case Statement warning at control_unit.v(51): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at control_unit.v(45): incomplete case statement has no default case item
+Info (10264): Verilog HDL Case Statement information at control_unit.v(45): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(42): inferring latch(es) for variable "present_state", which holds its previous value in one or more paths through the always construct
+Info (10264): Verilog HDL Case Statement information at control_unit.v(183): all case item expressions in this case statement are onehot
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "HIin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "LOin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "PCin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "MDRin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Zin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Yin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "IRin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "CONin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "OUTPORTin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "HIout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "LOout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "ZHIout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "ZLOout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "PCout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "MDRout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "INPORTout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "OUTPORTout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Yout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Cout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Gra", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Grb", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Grc", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Rin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Rout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "BAout", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Read", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "IncPC", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Write", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "MARin", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "regIn", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control_unit.v(182): inferring latch(es) for variable "Run", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Run" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[0]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[1]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[2]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[3]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[4]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[5]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[6]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[7]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[8]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[9]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[10]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[11]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[12]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[13]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[14]" at control_unit.v(182)
+Info (10041): Inferred latch for "regIn[15]" at control_unit.v(182)
+Info (10041): Inferred latch for "MARin" at control_unit.v(182)
+Info (10041): Inferred latch for "Write" at control_unit.v(182)
+Info (10041): Inferred latch for "IncPC" at control_unit.v(182)
+Info (10041): Inferred latch for "Read" at control_unit.v(182)
+Info (10041): Inferred latch for "BAout" at control_unit.v(182)
+Info (10041): Inferred latch for "Rout" at control_unit.v(182)
+Info (10041): Inferred latch for "Rin" at control_unit.v(182)
+Info (10041): Inferred latch for "Grc" at control_unit.v(182)
+Info (10041): Inferred latch for "Grb" at control_unit.v(182)
+Info (10041): Inferred latch for "Gra" at control_unit.v(182)
+Info (10041): Inferred latch for "Cout" at control_unit.v(182)
+Info (10041): Inferred latch for "Yout" at control_unit.v(182)
+Info (10041): Inferred latch for "OUTPORTout" at control_unit.v(182)
+Info (10041): Inferred latch for "INPORTout" at control_unit.v(182)
+Info (10041): Inferred latch for "MDRout" at control_unit.v(182)
+Info (10041): Inferred latch for "PCout" at control_unit.v(182)
+Info (10041): Inferred latch for "ZLOout" at control_unit.v(182)
+Info (10041): Inferred latch for "ZHIout" at control_unit.v(182)
+Info (10041): Inferred latch for "LOout" at control_unit.v(182)
+Info (10041): Inferred latch for "HIout" at control_unit.v(182)
+Info (10041): Inferred latch for "OUTPORTin" at control_unit.v(182)
+Info (10041): Inferred latch for "CONin" at control_unit.v(182)
+Info (10041): Inferred latch for "IRin" at control_unit.v(182)
+Info (10041): Inferred latch for "Yin" at control_unit.v(182)
+Info (10041): Inferred latch for "Zin" at control_unit.v(182)
+Info (10041): Inferred latch for "MDRin" at control_unit.v(182)
+Info (10041): Inferred latch for "PCin" at control_unit.v(182)
+Info (10041): Inferred latch for "LOin" at control_unit.v(182)
+Info (10041): Inferred latch for "HIin" at control_unit.v(182)
+Info (10041): Inferred latch for "present_state.halt3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.nop3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.out3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.in3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.mflo3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.mfhi3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.jal4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.jal3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.jr3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.br7" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.br6" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.br5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.br4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.br3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ori5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ori4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ori3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.andi5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.andi4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.andi3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.addi5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.addi4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.addi3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.st7" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.st6" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.st5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.st4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.st3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ldi5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ldi4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ldi3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ld7" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ld6" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ld5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ld4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ld3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.not4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.not3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.neg4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.neg3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ror5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ror4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.ror3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.rol5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.rol4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.rol3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.shr5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.shr4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.shr3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.shl5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.shl4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.shl3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.and5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.and4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.and3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.or5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.or4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.or3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.div6" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.div5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.div4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.div3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.mul6" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.mul5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.mul4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.mul3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.sub5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.sub4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.sub3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.add5" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.add4" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.add3" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.fetch2" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.fetch1" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.fetch0" at control_unit.v(45)
+Info (10041): Inferred latch for "present_state.reset_state" at control_unit.v(45)
 Info (12128): Elaborating entity "selectAndEncode" for hierarchy "selectAndEncode:selogic"
 Info (12128): Elaborating entity "decoder4to16" for hierarchy "selectAndEncode:selogic|decoder4to16:decoder"
 Info (12128): Elaborating entity "ram" for hierarchy "ram:memory"
@@ -1800,22 +2174,275 @@ Info (12133): Instantiated megafunction "ALU:logic_unit|division:div_instance|lp
     Info (12134): Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_hui.tdf
     Info (12023): Found entity 1: add_sub_hui
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|ZHIout" merged with LATCH primitive "control_unit:cUnit|HIin"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|Cout" merged with LATCH primitive "control_unit:cUnit|Zin"
+Warning (13012): Latch control_unit:cUnit|HIin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.div6_1780
+Warning (13012): Latch control_unit:cUnit|LOin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.div5_1790
+Warning (13012): Latch control_unit:cUnit|PCin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.jal4_1260
+Warning (13012): Latch control_unit:cUnit|MDRin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.st6_1440
+Warning (13012): Latch control_unit:cUnit|Zin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.br5_1310
+Warning (13012): Latch control_unit:cUnit|Yin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.br4_1320
+Warning (13012): Latch control_unit:cUnit|MARin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.st6_1440
+Warning (13012): Latch control_unit:cUnit|IRin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.fetch2_1920
+Warning (13012): Latch control_unit:cUnit|CONin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.br3_1330
+Warning (13012): Latch control_unit:cUnit|HIout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.mfhi3_1250
+Warning (13012): Latch control_unit:cUnit|LOout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.mflo3_1240
+Warning (13012): Latch control_unit:cUnit|ZLOout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.br6_1300
+Warning (13012): Latch control_unit:cUnit|PCout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.jal3_1270
+Warning (13012): Latch control_unit:cUnit|MDRout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.ld7_1510
+Warning (13012): Latch control_unit:cUnit|Gra has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.mflo3_1240
+Warning (13012): Latch control_unit:cUnit|Grb has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.ori3_1360
+Warning (13012): Latch control_unit:cUnit|Rin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.mflo3_1240
+Warning (13012): Latch control_unit:cUnit|Rout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.jal4_1260
+Warning (13012): Latch control_unit:cUnit|BAout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.st3_1470
+Warning (13012): Latch control_unit:cUnit|Read has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.ld6_1520
+Warning (13012): Latch control_unit:cUnit|IncPC has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.fetch1_1930
+Warning (13012): Latch control_unit:cUnit|Write has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.st6_1440
+Warning (13012): Latch control_unit:cUnit|regIn[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state.jal4_1260
+Warning (13012): Latch control_unit:cUnit|present_state.div6_1780 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.mul6_1820 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.halt3_1200 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.nop3_1210 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.mflo3_1240 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.mfhi3_1250 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.jal4_1260 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.jal3_1270 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.jr3_1280 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.br7_1290 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.br6_1300 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.br5_1310 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.br4_1320 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.br3_1330 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.ori5_1340 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ori4_1350 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ori3_1360 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.andi5_1370 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.andi4_1380 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.andi3_1390 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.addi5_1400 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.addi4_1410 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.addi3_1420 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.st7_1430 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.st6_1440 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.st5_1450 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.st4_1460 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.st3_1470 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.ldi5_1480 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ldi4_1490 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ldi3_1500 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.ld7_1510 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ld6_1520 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ld5_1530 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ld4_1540 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ld3_1550 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.not4_1560 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.not3_1570 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.neg4_1580 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.neg3_1590 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.ror5_1600 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ror4_1610 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.ror3_1620 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.rol5_1630 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.rol4_1640 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.rol3_1650 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.shr5_1660 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.shr4_1670 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.shr3_1680 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.shl5_1690 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.shl4_1700 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.shl3_1710 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.and5_1720 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.and4_1730 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.and3_1740 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.or5_1750 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.or4_1760 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.or3_1770 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.div5_1790 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.div4_1800 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.div3_1810 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.mul5_1830 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.mul4_1840 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.mul3_1850 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.sub5_1860 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.sub4_1870 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.sub3_1880 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.add5_1890 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.add4_1900 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.add3_1910 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.fetch2_1920 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.fetch1_1930 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.fetch0_1940 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.reset_state_1950 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|present_state.out3_1220 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13012): Latch control_unit:cUnit|present_state.in3_1230 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Register:IR|q[27]
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "OUTPORTin" is stuck at GND
+    Warning (13410): Pin "INPORTout" is stuck at GND
+    Warning (13410): Pin "OUTPORTout" is stuck at GND
+    Warning (13410): Pin "Yout" is stuck at GND
+    Warning (13410): Pin "Grc" is stuck at GND
+    Warning (13410): Pin "run" is stuck at GND
+    Warning (13410): Pin "regIn[0]" is stuck at GND
+    Warning (13410): Pin "regIn[1]" is stuck at GND
+    Warning (13410): Pin "regIn[2]" is stuck at GND
+    Warning (13410): Pin "regIn[3]" is stuck at GND
+    Warning (13410): Pin "regIn[4]" is stuck at GND
+    Warning (13410): Pin "regIn[5]" is stuck at GND
+    Warning (13410): Pin "regIn[6]" is stuck at GND
+    Warning (13410): Pin "regIn[7]" is stuck at GND
+    Warning (13410): Pin "regIn[8]" is stuck at GND
+    Warning (13410): Pin "regIn[9]" is stuck at GND
+    Warning (13410): Pin "regIn[10]" is stuck at GND
+    Warning (13410): Pin "regIn[11]" is stuck at GND
+    Warning (13410): Pin "regIn[12]" is stuck at GND
+    Warning (13410): Pin "regIn[13]" is stuck at GND
+    Warning (13410): Pin "regIn[14]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[0]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[1]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[2]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[3]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[4]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[5]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[6]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[7]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[8]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[9]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[10]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[11]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[12]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[13]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[14]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[15]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[16]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[17]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[18]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[19]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[20]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[21]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[22]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[23]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[24]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[25]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[26]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[27]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[28]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[29]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[30]" is stuck at GND
+    Warning (13410): Pin "BusMuxInOutport[31]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374/system-design/System-Design/output_files/system.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CONin"
-Info (21057): Implemented 8073 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 78 input pins
-    Info (21059): Implemented 911 output pins
-    Info (21061): Implemented 7052 logic cells
+Info (21057): Implemented 8338 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 35 input pins
+    Info (21059): Implemented 957 output pins
+    Info (21061): Implemented 7314 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 306 warnings
     Info: Peak virtual memory: 4624 megabytes
-    Info: Processing ended: Mon Mar 20 14:59:17 2023
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Processing ended: Sat Mar 25 11:10:47 2023
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+
