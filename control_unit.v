@@ -393,6 +393,17 @@ always@(present_state)begin
 		halt3: begin 
 			Run<=0;
 		end
+	//---------------IO Ports---------------
+		out3: begin 
+			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
+			Gra<=1; Rout<=1; Yin<=1; OUTPORTin<=1;
+			#20 Gra<=0; Rout<=0; Yin<=0; OUTPORTin<=0;
+		end
+		in3: begin 
+			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
+			Gra<=1; Rin<=1; INPORTout<=1;
+			#20 Gra<=0; Rin<=0; INPORTout<=0;
+		end
 	//---------------Default---------------
 		default: begin end
 	endcase

@@ -332,3 +332,30 @@ set_global_assignment -name EDA_TEST_BENCH_FILE mflotb.v -section_id mflotb
 set_global_assignment -name EDA_TEST_BENCH_FILE outporttb.v -section_id outporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE inporttb.v -section_id inporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE control_unittb.v -section_id control_unittb
+set_global_assignment -name VERILOG_FILE seven_seg_disp.v
+set_global_assignment -name MIF_FILE phase4.mif
+set_location_assignment PIN_G3 -to stop
+set_location_assignment PIN_H2 -to Reset
+set_location_assignment PIN_H1 -to run
+set_location_assignment PIN_J6 -to inportInput[0]
+set_location_assignment PIN_E3 -to inportInput[7]
+set_location_assignment PIN_H7 -to inportInput[6]
+set_location_assignment PIN_J7 -to inportInput[5]
+set_location_assignment PIN_G5 -to inportInput[4]
+set_location_assignment PIN_G4 -to inportInput[3]
+set_location_assignment PIN_H6 -to inportInput[2]
+set_location_assignment PIN_H5 -to inportInput[1]
+set_location_assignment PIN_A15 -to BusMuxInOutport[13]
+set_location_assignment PIN_E14 -to BusMuxInOutport[12]
+set_location_assignment PIN_B14 -to BusMuxInOutport[11]
+set_location_assignment PIN_A14 -to BusMuxInOutport[10]
+set_location_assignment PIN_C13 -to BusMuxInOutport[9]
+set_location_assignment PIN_B13 -to BusMuxInOutport[8]
+set_location_assignment PIN_A13 -to BusMuxInOutport[7]
+set_location_assignment PIN_F13 -to BusMuxInOutport[6]
+set_location_assignment PIN_F12 -to BusMuxInOutport[5]
+set_location_assignment PIN_G12 -to BusMuxInOutport[4]
+set_location_assignment PIN_H13 -to BusMuxInOutport[3]
+set_location_assignment PIN_H12 -to BusMuxInOutport[2]
+set_location_assignment PIN_F11 -to BusMuxInOutport[1]
+set_location_assignment PIN_E11 -to BusMuxInOutport[0]
