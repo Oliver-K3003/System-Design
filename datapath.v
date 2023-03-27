@@ -1,17 +1,8 @@
 module datapath(
-    output HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin,
-    output HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, 
-    output Gra, Grb, Grc, Rin, Rout, BAout, Read, IncPC, write, run,
+    output IncPC, write, run,
     input Clock, Reset, Stop, 
     input [31:0] inportInput,
-    output [15:0] regIn,
     output [31:0] busMuxOut,
-    output [4:0] encoderOut,
-    output CON,
-    output [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
-		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister,
-	output [8:0] marToRam,
-    output [31:0] mdrToRam,
     output [7:0] present_state, seg0out, seg1out
 );
 	//Intermediate Connections
@@ -21,6 +12,16 @@ module datapath(
     wire clr = 0;
 	 wire [31:0] R0output, PCoutput, OUTPORToutput;
     wire [15:0] inSignals, outSignals;
+	 wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
+		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister;
+	 wire [8:0] marToRam;
+    wire [31:0] mdrToRam;
+	 wire [15:0] regIn;
+    wire [4:0] encoderOut;
+    wire CON;
+	 wire HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin;
+    wire HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout; 
+	 wire Gra, Grb, Grc, Rin, Rout, BAout, Read;
 	
     assign encoderIn = {6'd0, Cout, Yout, INPORTout, OUTPORTout,  MDRout, PCout, ZLOout, ZHIout, LOout, HIout, outSignals[15:0]};
     

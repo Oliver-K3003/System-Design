@@ -345,7 +345,7 @@ always@(present_state)begin
 		jr3: begin 
 			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
 			Gra<=1; Rout<=1; PCin<=1;
-			#20 PCin<=0;
+			#20 PCin<=0; Gra<=0; Rout<=0;
 		end
 	//---------------Jal Instruction---------------
 		jal3:begin 

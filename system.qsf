@@ -287,8 +287,35 @@ set_global_assignment -name VERILOG_FILE control_unit.v
 set_global_assignment -name VERILOG_FILE control_unittb.v
 set_global_assignment -name EDA_TEST_BENCH_NAME control_unittb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id control_unittb
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "11000 ns" -section_id control_unittb
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "15000 ns" -section_id control_unittb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME control_unittb -section_id control_unittb
+set_global_assignment -name VERILOG_FILE seven_seg_disp.v
+set_global_assignment -name MIF_FILE phase4.mif
+set_location_assignment PIN_U7 -to Reset
+set_location_assignment PIN_N1 -to run
+set_location_assignment PIN_U13 -to inportInput[0]
+set_location_assignment PIN_AA13 -to inportInput[7]
+set_location_assignment PIN_AA14 -to inportInput[6]
+set_location_assignment PIN_AB15 -to inportInput[5]
+set_location_assignment PIN_AA15 -to inportInput[4]
+set_location_assignment PIN_T12 -to inportInput[3]
+set_location_assignment PIN_T13 -to inportInput[2]
+set_location_assignment PIN_V13 -to inportInput[1]
+set_location_assignment PIN_AA20 -to seg1out[0]
+set_location_assignment PIN_AA22 -to seg0out[6]
+set_location_assignment PIN_Y21 -to seg0out[5]
+set_location_assignment PIN_Y22 -to seg0out[4]
+set_location_assignment PIN_W21 -to seg0out[3]
+set_location_assignment PIN_W22 -to seg0out[2]
+set_location_assignment PIN_V21 -to seg0out[1]
+set_location_assignment PIN_U21 -to seg0out[0]
+set_location_assignment PIN_U22 -to seg1out[6]
+set_location_assignment PIN_AA17 -to seg1out[5]
+set_location_assignment PIN_AB18 -to seg1out[4]
+set_location_assignment PIN_AA18 -to seg1out[3]
+set_location_assignment PIN_AA19 -to seg1out[2]
+set_location_assignment PIN_AB20 -to seg1out[1]
+set_location_assignment PIN_W9 -to Stop
 set_global_assignment -name EDA_TEST_BENCH_FILE Registertb.v -section_id Registertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busEncodertb.v -section_id busEncodertb
 set_global_assignment -name EDA_TEST_BENCH_FILE busMUXtb.v -section_id busMUXtb
@@ -330,31 +357,5 @@ set_global_assignment -name EDA_TEST_BENCH_FILE mflotb.v -section_id mflotb
 set_global_assignment -name EDA_TEST_BENCH_FILE outporttb.v -section_id outporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE inporttb.v -section_id inporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE control_unittb.v -section_id control_unittb
-set_global_assignment -name VERILOG_FILE seven_seg_disp.v
-set_global_assignment -name MIF_FILE phase4.mif
-set_location_assignment PIN_U7 -to Reset
-set_location_assignment PIN_N1 -to run
-set_location_assignment PIN_U13 -to inportInput[0]
-set_location_assignment PIN_AA13 -to inportInput[7]
-set_location_assignment PIN_AA14 -to inportInput[6]
-set_location_assignment PIN_AB15 -to inportInput[5]
-set_location_assignment PIN_AA15 -to inportInput[4]
-set_location_assignment PIN_T12 -to inportInput[3]
-set_location_assignment PIN_T13 -to inportInput[2]
-set_location_assignment PIN_V13 -to inportInput[1]
+set_global_assignment -name VERILOG_FILE phase4tb.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_location_assignment PIN_AA20 -to seg1out[0]
-set_location_assignment PIN_AA22 -to seg0out[6]
-set_location_assignment PIN_Y21 -to seg0out[5]
-set_location_assignment PIN_Y22 -to seg0out[4]
-set_location_assignment PIN_W21 -to seg0out[3]
-set_location_assignment PIN_W22 -to seg0out[2]
-set_location_assignment PIN_V21 -to seg0out[1]
-set_location_assignment PIN_U21 -to seg0out[0]
-set_location_assignment PIN_U22 -to seg1out[6]
-set_location_assignment PIN_AA17 -to seg1out[5]
-set_location_assignment PIN_AB18 -to seg1out[4]
-set_location_assignment PIN_AA18 -to seg1out[3]
-set_location_assignment PIN_AA19 -to seg1out[2]
-set_location_assignment PIN_AB20 -to seg1out[1]
-set_location_assignment PIN_W9 -to Stop
