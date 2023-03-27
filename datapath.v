@@ -12,24 +12,32 @@ module datapath(
 		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister,
 	output [8:0] marToRam,
     output [31:0] mdrToRam,
-    output [7:0] present_state
+    output [7:0] present_state, seg0out, seg1out
 );
+	//Intermediate Connections
     wire [31:0] encoderIn;
     wire [63:0] alu_out;
     wire [32:0] highIn, lowIn;
     wire clr = 0;
-	wire [31:0] R0output, PCoutput;
+	 wire [31:0] R0output, PCoutput, OUTPORToutput;
     wire [15:0] inSignals, outSignals;
 	
     assign encoderIn = {6'd0, Cout, Yout, INPORTout, OUTPORTout,  MDRout, PCout, ZLOout, ZHIout, LOout, HIout, outSignals[15:0]};
     
+	 //Control Unit
     control_unit cUnit(HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin, HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Yout, Cout, Gra, Grb, Grc, Rin, Rout, BAout, 
         Read, IncPC, write, run, regIn, Clock, Reset, Stop, IRregister, present_state);
+	
+	//Select & Encode
 	selectAndEncode selogic(.Gra(Gra), .Grb(Grb), .Grc(Grc), .Rin(Rin), .Rout(Rout), .BAout(BAout), .IRin(IRregister), .registersIn(inSignals), .registersOut(outSignals), .CsignExt(Cregister));
     ram memory(.data(BusMuxInMDR), .addr(marToRam), .we(write), .clk(Clock), .q(mdrToRam));
-    busEncoder enc(encoderIn, encoderOut);
+    
+	 //Bus
+	 busEncoder enc(encoderIn, encoderOut);
     busMUX mux(BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6, BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15,
 			BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, Cregister, encoderOut, busMuxOut);
+	 
+	 //Numbered Registers
 	 assign BusMuxInR0 = {32{!BAout}} & R0output;
     Register R0(.d(busMuxOut), .q(R0output), .clr(clr), .clk(Clock), .le(inSignals[0]|regIn[0]));
     Register R1(.d(busMuxOut), .q(BusMuxInR1), .clr(clr), .clk(Clock), .le(inSignals[1]|regIn[1]));
@@ -48,7 +56,7 @@ module datapath(
     Register R14(.d(busMuxOut), .q(BusMuxInR14), .clr(clr), .clk(Clock), .le(inSignals[14]|regIn[14]));
     Register R15(.d(busMuxOut), .q(BusMuxInR15), .clr(clr), .clk(Clock), .le(inSignals[15]|regIn[15]));
 	 
-	 
+	 //Other Registers
     Register HI(.d(busMuxOut), .q(BusMuxInHI), .clr(clr), .clk(Clock), .le(HIin));
     Register LO(.d(busMuxOut), .q(BusMuxInLO), .clr(clr), .clk(Clock), .le(LOin));
     Register ZHI(.d(alu_out[63:32]), .q(BusMuxInZhi), .clr(clr), .clk(Clock), .le(Zin));
@@ -56,12 +64,19 @@ module datapath(
     MDR mdr_reg(.clr(clr), .clk(Clock), .MDRin(MDRin), .read(Read), .busMuxOut(busMuxOut), .Mdatain(mdrToRam), .q(BusMuxInMDR));
     mar mar_reg(.d(busMuxOut), .q(marToRam), .le(MARin), .clk(Clock), .clr(clr));
     Register IR(.d(busMuxOut), .q(IRregister), .clr(clr), .clk(Clock), .le(IRin));
-	Register INPORT(.d(inportInput), .q(BusMuxInInport), .clr(clr), .clk(Clock), .le(1'b1));
-	Register OUTPORT(.d(busMuxOut), .q(BusMuxInOutport), .clr(clr), .clk(Clock), .le(OUTPORTin));
+	 Register INPORT(.d(inportInput), .q(BusMuxInInport), .clr(clr), .clk(Clock), .le(1'b1));
+	 Register OUTPORT(.d(busMuxOut), .q(OUTPORToutput), .clr(clr), .clk(Clock), .le(OUTPORTin));
     Register Y(.d(busMuxOut), .q(BusMuxInY), .clr(clr), .clk(Clock), .le(Yin));
-
     incrementPC incpc(.clk(Clock), .IncPC(IncPC), .PCen(PCin), .inPC(busMuxOut), .outPC(BusMuxInPC));
+	 
+	 //Conff Logic
     conff_logic CONFF(.IRin(IRregister[20:19]), .busMuxOut(busMuxOut), .conIn(CONin), .conOut(CON));
+	 
+	 //7 Segment
+	 seven_seg_disp d0(.out(OUTPORToutput[3:0]), .clk(Clock), .data(seg0out));
+	 seven_seg_disp d1(.out(OUTPORToutput[5:0]), .clk(Clock), .data(seg1out));
+	 
+	 //ALU
     ALU logic_unit(Clock, clr, IncPC, CON, BusMuxInY, busMuxOut, IRregister[31:27], alu_out);
 
 endmodule

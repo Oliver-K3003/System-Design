@@ -160,6 +160,12 @@
 # 
 # Top level modules:
 # 	control_unit
+# vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module seven_seg_disp
+# 
+# Top level modules:
+# 	seven_seg_disp
 # vlog -vlog01compat -work work +incdir+C:/altera/13.0sp1/elec374/system-design/System-Design {C:/altera/13.0sp1/elec374/system-design/System-Design/ram.v}
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 # -- Compiling module ram
@@ -192,6 +198,7 @@
 # Loading work.conff_logic
 # Loading work.decoder2to4
 # Loading work.ff_register
+# Loading work.seven_seg_disp
 # Loading work.ALU
 # Loading work.adder
 # Loading work.cla_16
@@ -208,6 +215,18 @@
 # Loading work.multiplier
 # Loading work.division
 # Loading work.not_32
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(76): [PCDPC] - Port size (8 or 8) does not match connection size (4) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(2).
+# 
+#         Region: /control_unittb/DUT/d0
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(76): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'data'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(4).
+# 
+#         Region: /control_unittb/DUT/d0
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(77): [PCDPC] - Port size (8 or 8) does not match connection size (6) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(2).
+# 
+#         Region: /control_unittb/DUT/d1
+# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(77): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'data'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(4).
+# 
+#         Region: /control_unittb/DUT/d1
 # 
 # add wave *
 # view structure
