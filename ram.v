@@ -17,6 +17,7 @@ module ram
 	reg [ADDR_WIDTH-1:0] addr_reg;
 
 	initial $readmemh("memoryInit.mif", ram);
+	//initial $readmemh('phase4.mif, ram);
 	
 	always @ (posedge clk)
 	begin

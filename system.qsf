@@ -36,8 +36,8 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone III"
-set_global_assignment -name DEVICE EP3C16F484C6
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CEBA4F23C7
 set_global_assignment -name TOP_LEVEL_ENTITY datapath
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:03:53  JANUARY 22, 2023"
@@ -46,7 +46,6 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name VERILOG_FILE bidirectionalBus.v
@@ -333,31 +332,29 @@ set_global_assignment -name EDA_TEST_BENCH_FILE inporttb.v -section_id inporttb
 set_global_assignment -name EDA_TEST_BENCH_FILE control_unittb.v -section_id control_unittb
 set_global_assignment -name VERILOG_FILE seven_seg_disp.v
 set_global_assignment -name MIF_FILE phase4.mif
-set_location_assignment PIN_G3 -to stop
-set_location_assignment PIN_H2 -to Reset
-set_location_assignment PIN_H1 -to run
-set_location_assignment PIN_J6 -to inportInput[0]
-set_location_assignment PIN_E3 -to inportInput[7]
-set_location_assignment PIN_H7 -to inportInput[6]
-set_location_assignment PIN_J7 -to inportInput[5]
-set_location_assignment PIN_G5 -to inportInput[4]
-set_location_assignment PIN_G4 -to inportInput[3]
-set_location_assignment PIN_H6 -to inportInput[2]
-set_location_assignment PIN_H5 -to inportInput[1]
+set_location_assignment PIN_U7 -to Reset
+set_location_assignment PIN_N1 -to run
+set_location_assignment PIN_U13 -to inportInput[0]
+set_location_assignment PIN_AA13 -to inportInput[7]
+set_location_assignment PIN_AA14 -to inportInput[6]
+set_location_assignment PIN_AB15 -to inportInput[5]
+set_location_assignment PIN_AA15 -to inportInput[4]
+set_location_assignment PIN_T12 -to inportInput[3]
+set_location_assignment PIN_T13 -to inportInput[2]
+set_location_assignment PIN_V13 -to inportInput[1]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_location_assignment PIN_A13 -to seg1out[0]
-set_location_assignment PIN_D13 -to seg0out[7]
-set_location_assignment PIN_F13 -to seg0out[6]
-set_location_assignment PIN_F12 -to seg0out[5]
-set_location_assignment PIN_G12 -to seg0out[4]
-set_location_assignment PIN_H13 -to seg0out[3]
-set_location_assignment PIN_H12 -to seg0out[2]
-set_location_assignment PIN_F11 -to seg0out[1]
-set_location_assignment PIN_E11 -to seg0out[0]
-set_location_assignment PIN_B15 -to seg1out[7]
-set_location_assignment PIN_A15 -to seg1out[6]
-set_location_assignment PIN_E14 -to seg1out[5]
-set_location_assignment PIN_B14 -to seg1out[4]
-set_location_assignment PIN_A14 -to seg1out[3]
-set_location_assignment PIN_C13 -to seg1out[2]
-set_location_assignment PIN_B13 -to seg1out[1]
+set_location_assignment PIN_AA20 -to seg1out[0]
+set_location_assignment PIN_AA22 -to seg0out[6]
+set_location_assignment PIN_Y21 -to seg0out[5]
+set_location_assignment PIN_Y22 -to seg0out[4]
+set_location_assignment PIN_W21 -to seg0out[3]
+set_location_assignment PIN_W22 -to seg0out[2]
+set_location_assignment PIN_V21 -to seg0out[1]
+set_location_assignment PIN_U21 -to seg0out[0]
+set_location_assignment PIN_U22 -to seg1out[6]
+set_location_assignment PIN_AA17 -to seg1out[5]
+set_location_assignment PIN_AB18 -to seg1out[4]
+set_location_assignment PIN_AA18 -to seg1out[3]
+set_location_assignment PIN_AA19 -to seg1out[2]
+set_location_assignment PIN_AB20 -to seg1out[1]
+set_location_assignment PIN_W9 -to Stop
