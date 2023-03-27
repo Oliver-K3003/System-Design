@@ -396,8 +396,8 @@ always@(present_state)begin
 	//---------------IO Ports---------------
 		out3: begin 
 			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;
-			Gra<=1; Rout<=1; Yin<=1; OUTPORTin<=1;
-			#20 Gra<=0; Rout<=0; Yin<=0; OUTPORTin<=0;
+			Gra<=1; Rout<=1; OUTPORTin<=1;
+			#20 Gra<=0; Rout<=0; OUTPORTin<=0;
 		end
 		in3: begin 
 			MDRout<=0; IRin<=0; PCin<=0; IncPC<=0;

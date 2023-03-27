@@ -12,6 +12,7 @@ module phase4tb();
 		initial begin 
 			Clock=0;
 			forever #10 Clock =~Clock;
+			inportInput = 32'h00000088;
 		end
 		
 endmodule

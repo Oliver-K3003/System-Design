@@ -1,5 +1,5 @@
 Flow report for system
-Mon Mar 27 15:43:47 2023
+Mon Mar 27 16:04:27 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,27 +40,27 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Flow Status                         ; Successful - Mon Mar 27 15:43:47 2023           ;
+; Flow Status                         ; Successful - Mon Mar 27 16:04:27 2023           ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; system                                          ;
 ; Top-level Entity Name               ; datapath                                        ;
 ; Family                              ; Cyclone V                                       ;
 ; Device                              ; 5CEBA4F23C7                                     ;
 ; Timing Models                       ; Final                                           ;
-; Logic utilization (in ALMs)         ; 276 / 18,480 ( 1 % )                            ;
-; Total registers                     ; 416                                             ;
-; Total pins                          ; 94 / 224 ( 42 % )                               ;
+; Logic utilization (in ALMs)         ; N/A                                             ;
+; Total registers                     ; 713                                             ;
+; Total pins                          ; 1,048                                           ;
 ; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 0 / 3,153,920 ( 0 % )                           ;
-; Total DSP Blocks                    ; 0 / 66 ( 0 % )                                  ;
+; Total block memory bits             ; 16,384                                          ;
+; Total DSP Blocks                    ; 0                                               ;
 ; Total HSSI RX PCSs                  ; 0                                               ;
 ; Total HSSI PMA RX Deserializers     ; 0                                               ;
 ; Total HSSI PMA RX ATT Deserializers ; 0                                               ;
 ; Total HSSI TX PCSs                  ; 0                                               ;
 ; Total HSSI PMA TX Serializers       ; 0                                               ;
 ; Total HSSI PMA TX ATT Serializers   ; 0                                               ;
-; Total PLLs                          ; 0 / 4 ( 0 % )                                   ;
-; Total DLLs                          ; 0 / 4 ( 0 % )                                   ;
+; Total PLLs                          ; 0                                               ;
+; Total DLLs                          ; 0                                               ;
 +-------------------------------------+-------------------------------------------------+
 
 
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/27/2023 15:41:36 ;
+; Start date & time ; 03/27/2023 16:04:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; system              ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+---------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id          ;
 +--------------------------------------+---------------------------------------+---------------+-------------+---------------------+
-; COMPILER_SIGNATURE_ID                ; 269049658834448.167994609612176       ; --            ; --          ; --                  ;
+; COMPILER_SIGNATURE_ID                ; 269049658834448.167994745723136       ; --            ; --          ; --                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; Registertb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busEncodertb        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; busMUXtb            ;
@@ -303,41 +303,29 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+---------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4661 MB             ; 00:00:06                           ;
-; Fitter                    ; 00:01:26     ; 1.0                     ; 5573 MB             ; 00:01:08                           ;
-; Assembler                 ; 00:00:12     ; 1.0                     ; 4707 MB             ; 00:00:08                           ;
-; TimeQuest Timing Analyzer ; 00:00:18     ; 1.0                     ; 5149 MB             ; 00:00:17                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4591 MB             ; 00:00:02                           ;
-; Total                     ; 00:02:04     ; --                      ; --                  ; 00:01:41                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4660 MB             ; 00:00:07                           ;
+; Total                ; 00:00:09     ; --                      ; --                  ; 00:00:07                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                        ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-2KSAKAI  ; Windows 7 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-2KSAKAI  ; Windows 7 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-2KSAKAI  ; Windows 7 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-2KSAKAI  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-2KSAKAI  ; Windows 7 ; 6.2        ; x86_64         ;
-+---------------------------+------------------+-----------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; DESKTOP-2KSAKAI  ; Windows 7 ; 6.2        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off system -c system
-quartus_fit --read_settings_files=off --write_settings_files=off system -c system
-quartus_asm --read_settings_files=off --write_settings_files=off system -c system
-quartus_sta system -c system
-quartus_eda --read_settings_files=off --write_settings_files=off system -c system
 
 
 

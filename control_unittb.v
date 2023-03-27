@@ -23,6 +23,7 @@ module control_unittb();
 		
 		initial begin 
 			Clock=0;
+			inportInput = 32'h00000088;
 			forever #10 Clock =~Clock;
 		end
 		

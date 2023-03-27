@@ -1,8 +1,18 @@
 module datapath(
+	 output HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin,
+    output HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout, 
+	 output Gra, Grb, Grc, Rin, Rout, BAout, Read,
     output IncPC, write, run,
     input Clock, Reset, Stop, 
     input [31:0] inportInput,
+    output [15:0] regIn,
     output [31:0] busMuxOut,
+    output [4:0] encoderOut,
+    output CON,
+	 output [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
+		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister,
+	 output [8:0] marToRam,
+    output [31:0] mdrToRam,
     output [7:0] present_state, seg0out, seg1out
 );
 	//Intermediate Connections
@@ -12,16 +22,6 @@ module datapath(
     wire clr = 0;
 	 wire [31:0] R0output, PCoutput, OUTPORToutput;
     wire [15:0] inSignals, outSignals;
-	 wire [31:0] BusMuxInR0, BusMuxInR1, BusMuxInR2, BusMuxInR3, BusMuxInR4, BusMuxInR5, BusMuxInR6,BusMuxInR7, BusMuxInR8, BusMuxInR9, BusMuxInR10, BusMuxInR11, BusMuxInR12, BusMuxInR13, BusMuxInR14, BusMuxInR15, 
-		BusMuxInHI, BusMuxInLO, BusMuxInZhi, BusMuxInZlo, BusMuxInPC, BusMuxInMDR, BusMuxInInport, BusMuxInOutport, BusMuxInY, IRregister, Cregister;
-	 wire [8:0] marToRam;
-    wire [31:0] mdrToRam;
-	 wire [15:0] regIn;
-    wire [4:0] encoderOut;
-    wire CON;
-	 wire HIin, LOin, PCin, MDRin, Zin, Yin, MARin, IRin, CONin, OUTPORTin;
-    wire HIout, LOout, ZHIout, ZLOout, PCout, MDRout, INPORTout, OUTPORTout, Cout, Yout; 
-	 wire Gra, Grb, Grc, Rin, Rout, BAout, Read;
 	
     assign encoderIn = {6'd0, Cout, Yout, INPORTout, OUTPORTout,  MDRout, PCout, ZLOout, ZHIout, LOout, HIout, outSignals[15:0]};
     
@@ -66,7 +66,7 @@ module datapath(
     mar mar_reg(.d(busMuxOut), .q(marToRam), .le(MARin), .clk(Clock), .clr(clr));
     Register IR(.d(busMuxOut), .q(IRregister), .clr(clr), .clk(Clock), .le(IRin));
 	 Register INPORT(.d(inportInput), .q(BusMuxInInport), .clr(clr), .clk(Clock), .le(1'b1));
-	 Register OUTPORT(.d(busMuxOut), .q(OUTPORToutput), .clr(clr), .clk(Clock), .le(OUTPORTin));
+	 Register OUTPORT(.d(busMuxOut), .q(BusMuxInOutport), .clr(clr), .clk(Clock), .le(OUTPORTin));
     Register Y(.d(busMuxOut), .q(BusMuxInY), .clr(clr), .clk(Clock), .le(Yin));
     incrementPC incpc(.clk(Clock), .IncPC(IncPC), .PCen(PCin), .inPC(busMuxOut), .outPC(BusMuxInPC));
 	 
@@ -74,8 +74,8 @@ module datapath(
     conff_logic CONFF(.IRin(IRregister[20:19]), .busMuxOut(busMuxOut), .conIn(CONin), .conOut(CON));
 	 
 	 //7 Segment
-	 seven_seg_disp d0(.out(OUTPORToutput[3:0]), .clk(Clock), .data(seg0out));
-	 seven_seg_disp d1(.out(OUTPORToutput[5:0]), .clk(Clock), .data(seg1out));
+	 seven_seg_disp d0(.out(seg0out), .clk(Clock), .data(BusMuxInOutport[3:0]));
+	 seven_seg_disp d1(.out(seg1out), .clk(Clock), .data(BusMuxInOutport[7:4]));
 	 
 	 //ALU
     ALU logic_unit(Clock, clr, IncPC, CON, BusMuxInY, busMuxOut, IRregister[31:27], alu_out);

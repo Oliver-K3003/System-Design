@@ -215,22 +215,11 @@
 # Loading work.multiplier
 # Loading work.division
 # Loading work.not_32
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(76): [PCDPC] - Port size (8 or 8) does not match connection size (4) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(2).
-# 
-#         Region: /control_unittb/DUT/d0
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(76): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'data'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(4).
-# 
-#         Region: /control_unittb/DUT/d0
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(77): [PCDPC] - Port size (8 or 8) does not match connection size (6) for port 'out'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(2).
-# 
-#         Region: /control_unittb/DUT/d1
-# ** Warning: (vsim-3015) C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v(77): [PCDPC] - Port size (4 or 4) does not match connection size (8) for port 'data'. The port definition is at: C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v(4).
-# 
-#         Region: /control_unittb/DUT/d1
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 15000 ns
+# run 60000 ns
+# WARNING: No extended dataflow license exists
