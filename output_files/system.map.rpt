@@ -1,5 +1,5 @@
 Analysis & Synthesis report for system
-Mon Mar 27 16:04:27 2023
+Mon Apr 03 21:33:06 2023
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,9 +13,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
  11. General Register Statistics
  12. Registers Packed Into Inferred Megafunctions
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
@@ -27,16 +27,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  19. altsyncram Parameter Settings by Entity Instance
  20. Port Connectivity Checks: "ALU:logic_unit|sub:sub_instance"
  21. Port Connectivity Checks: "ALU:logic_unit|adder:add_instance"
- 22. Port Connectivity Checks: "seven_seg_disp:d1"
- 23. Port Connectivity Checks: "seven_seg_disp:d0"
- 24. Port Connectivity Checks: "Register:OUTPORT"
- 25. Port Connectivity Checks: "Register:INPORT"
- 26. Port Connectivity Checks: "mar:mar_reg|Register:MAR"
- 27. Port Connectivity Checks: "Register:R0"
- 28. Port Connectivity Checks: "busEncoder:enc"
- 29. Elapsed Time Per Partition
- 30. Analysis & Synthesis Messages
- 31. Analysis & Synthesis Suppressed Messages
+ 22. Port Connectivity Checks: "Register:INPORT"
+ 23. Port Connectivity Checks: "mar:mar_reg|Register:MAR"
+ 24. Port Connectivity Checks: "Register:R0"
+ 25. Port Connectivity Checks: "busEncoder:enc"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,16 +59,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +-------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status         ; Successful - Mon Mar 27 16:04:27 2023           ;
+; Analysis & Synthesis Status         ; Successful - Mon Apr 03 21:33:06 2023           ;
 ; Quartus II 64-Bit Version           ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                       ; system                                          ;
-; Top-level Entity Name               ; datapath                                        ;
+; Top-level Entity Name               ; phase4datapath                                  ;
 ; Family                              ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)         ; N/A                                             ;
-; Total registers                     ; 713                                             ;
-; Total pins                          ; 1,048                                           ;
+; Total registers                     ; 416                                             ;
+; Total pins                          ; 94                                              ;
 ; Total virtual pins                  ; 0                                               ;
-; Total block memory bits             ; 16,384                                          ;
+; Total block memory bits             ; 0                                               ;
 ; Total DSP Blocks                    ; 0                                               ;
 ; Total HSSI RX PCSs                  ; 0                                               ;
 ; Total HSSI PMA RX Deserializers     ; 0                                               ;
@@ -90,7 +87,7 @@ applicable agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; datapath           ; system             ;
+; Top-level entity name                                                           ; phase4datapath     ; system             ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -201,7 +198,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; not_32.v                         ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/not_32.v                         ;         ;
 ; multiplier.v                     ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/multiplier.v                     ;         ;
 ; division.v                       ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/division.v                       ;         ;
-; datapath.v                       ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/datapath.v                       ;         ;
 ; ALU.v                            ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/ALU.v                            ;         ;
 ; sub.v                            ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/sub.v                            ;         ;
 ; MDR.v                            ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/MDR.v                            ;         ;
@@ -210,10 +206,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; conff_logic.v                    ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/conff_logic.v                    ;         ;
 ; ram.v                            ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/ram.v                            ;         ;
 ; mar.v                            ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/mar.v                            ;         ;
-; memoryInit.mif                   ; yes             ; User Memory Initialization File                       ; C:/altera/13.0sp1/elec374/system-design/System-Design/memoryInit.mif                   ;         ;
 ; incrementPC.v                    ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/incrementPC.v                    ;         ;
 ; control_unit.v                   ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/control_unit.v                   ;         ;
 ; seven_seg_disp.v                 ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/seven_seg_disp.v                 ;         ;
+; phase4.mif                       ; yes             ; User Memory Initialization File                       ; C:/altera/13.0sp1/elec374/system-design/System-Design/phase4.mif                       ;         ;
+; phase4datapath.v                 ; yes             ; User Verilog HDL File                                 ; C:/altera/13.0sp1/elec374/system-design/System-Design/phase4datapath.v                 ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                                          ; c:/altera/13.0sp1/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
@@ -233,89 +230,62 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 485         ;
+; Estimate of Logic utilization (ALMs needed) ; 323         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 443         ;
-;     -- 7 input functions                    ; 0           ;
-;     -- 6 input functions                    ; 161         ;
-;     -- 5 input functions                    ; 59          ;
-;     -- 4 input functions                    ; 95          ;
-;     -- <=3 input functions                  ; 128         ;
+; Combinational ALUT usage for logic          ; 332         ;
+;     -- 7 input functions                    ; 32          ;
+;     -- 6 input functions                    ; 135         ;
+;     -- 5 input functions                    ; 37          ;
+;     -- 4 input functions                    ; 59          ;
+;     -- <=3 input functions                  ; 69          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 713         ;
+; Dedicated logic registers                   ; 416         ;
 ;                                             ;             ;
-; I/O pins                                    ; 1048        ;
-; Total MLAB memory bits                      ; 0           ;
-; Total block memory bits                     ; 16384       ;
+; I/O pins                                    ; 94          ;
 ; Total DSP Blocks                            ; 0           ;
 ; Maximum fan-out node                        ; Clock~input ;
-; Maximum fan-out                             ; 745         ;
-; Total fan-out                               ; 6394        ;
-; Average fan-out                             ; 1.95        ;
+; Maximum fan-out                             ; 416         ;
+; Total fan-out                               ; 3011        ;
+; Average fan-out                             ; 3.22        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
-+-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Library Name ;
-+-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+--------------+
-; |datapath                                 ; 443 (32)          ; 713 (0)      ; 16384             ; 0          ; 1048 ; 0            ; |datapath                                                                    ; work         ;
-;    |ALU:logic_unit|                       ; 74 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit                                                     ; work         ;
-;       |adder:add_instance|                ; 74 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance                                  ; work         ;
-;          |cla_16:instance1|               ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                 ; work         ;
-;             |cla_4:instance1|             ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1 ; work         ;
-;             |cla_4:instance2|             ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2 ; work         ;
-;             |cla_4:instance3|             ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3 ; work         ;
-;             |cla_4:instance4|             ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance4 ; work         ;
-;          |cla_16:instance2|               ; 38 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                 ; work         ;
-;             |cla_4:instance1|             ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance1 ; work         ;
-;             |cla_4:instance2|             ; 12 (12)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance2 ; work         ;
-;             |cla_4:instance3|             ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance3 ; work         ;
-;             |cla_4:instance4|             ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance4 ; work         ;
-;    |MDR:mdr_reg|                          ; 0 (0)             ; 32 (0)       ; 0                 ; 0          ; 0    ; 0            ; |datapath|MDR:mdr_reg                                                        ; work         ;
-;       |Register:MDR|                      ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|MDR:mdr_reg|Register:MDR                                           ; work         ;
-;    |Register:INPORT|                      ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:INPORT                                                    ; work         ;
-;    |Register:LO|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:LO                                                        ; work         ;
-;    |Register:R0|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R0                                                        ; work         ;
-;    |Register:R10|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R10                                                       ; work         ;
-;    |Register:R11|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R11                                                       ; work         ;
-;    |Register:R12|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R12                                                       ; work         ;
-;    |Register:R13|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R13                                                       ; work         ;
-;    |Register:R14|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R14                                                       ; work         ;
-;    |Register:R15|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R15                                                       ; work         ;
-;    |Register:R1|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R1                                                        ; work         ;
-;    |Register:R2|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R2                                                        ; work         ;
-;    |Register:R3|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R3                                                        ; work         ;
-;    |Register:R4|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R4                                                        ; work         ;
-;    |Register:R5|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R5                                                        ; work         ;
-;    |Register:R6|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R6                                                        ; work         ;
-;    |Register:R7|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R7                                                        ; work         ;
-;    |Register:R8|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R8                                                        ; work         ;
-;    |Register:R9|                          ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:R9                                                        ; work         ;
-;    |Register:Y|                           ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:Y                                                         ; work         ;
-;    |Register:ZLO|                         ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|Register:ZLO                                                       ; work         ;
-;    |busEncoder:enc|                       ; 6 (6)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|busEncoder:enc                                                     ; work         ;
-;    |busMUX:mux|                           ; 154 (154)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|busMUX:mux                                                         ; work         ;
-;    |conff_logic:CONFF|                    ; 15 (15)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|conff_logic:CONFF                                                  ; work         ;
-;    |control_unit:cUnit|                   ; 162 (162)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|control_unit:cUnit                                                 ; work         ;
-;    |incrementPC:incpc|                    ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |datapath|incrementPC:incpc                                                  ; work         ;
-;    |mar:mar_reg|                          ; 0 (0)             ; 9 (0)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|mar:mar_reg                                                        ; work         ;
-;       |Register:MAR|                      ; 0 (0)             ; 9 (9)        ; 0                 ; 0          ; 0    ; 0            ; |datapath|mar:mar_reg|Register:MAR                                           ; work         ;
-;    |ram:memory|                           ; 0 (0)             ; 0 (0)        ; 16384             ; 0          ; 0    ; 0            ; |datapath|ram:memory                                                         ; work         ;
-;       |altsyncram:ram_rtl_0|              ; 0 (0)             ; 0 (0)        ; 16384             ; 0          ; 0    ; 0            ; |datapath|ram:memory|altsyncram:ram_rtl_0                                    ; work         ;
-;          |altsyncram_0le1:auto_generated| ; 0 (0)             ; 0 (0)        ; 16384             ; 0          ; 0    ; 0            ; |datapath|ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated     ; work         ;
-+-------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node    ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Library Name ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------+
+; |phase4datapath               ; 332 (0)           ; 416 (0)      ; 0                 ; 0          ; 94   ; 0            ; |phase4datapath                                                                    ; work         ;
+;    |ALU:logic_unit|           ; 74 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit                                                     ; work         ;
+;       |adder:add_instance|    ; 74 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance                                  ; work         ;
+;          |cla_16:instance1|   ; 36 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1                 ; work         ;
+;             |cla_4:instance1| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance1 ; work         ;
+;             |cla_4:instance2| ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance2 ; work         ;
+;             |cla_4:instance3| ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance3 ; work         ;
+;             |cla_4:instance4| ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance1|cla_4:instance4 ; work         ;
+;          |cla_16:instance2|   ; 38 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2                 ; work         ;
+;             |cla_4:instance1| ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance1 ; work         ;
+;             |cla_4:instance2| ; 12 (12)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance2 ; work         ;
+;             |cla_4:instance3| ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance3 ; work         ;
+;             |cla_4:instance4| ; 9 (9)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|ALU:logic_unit|adder:add_instance|cla_16:instance2|cla_4:instance4 ; work         ;
+;    |Register:R0|              ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R0                                                        ; work         ;
+;    |Register:R12|             ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R12                                                       ; work         ;
+;    |Register:R13|             ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R13                                                       ; work         ;
+;    |Register:R14|             ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R14                                                       ; work         ;
+;    |Register:R15|             ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R15                                                       ; work         ;
+;    |Register:R1|              ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R1                                                        ; work         ;
+;    |Register:R2|              ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R2                                                        ; work         ;
+;    |Register:R3|              ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R3                                                        ; work         ;
+;    |Register:R4|              ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R4                                                        ; work         ;
+;    |Register:R9|              ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:R9                                                        ; work         ;
+;    |Register:Y|               ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:Y                                                         ; work         ;
+;    |Register:ZLO|             ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|Register:ZLO                                                       ; work         ;
+;    |busEncoder:enc|           ; 5 (5)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|busEncoder:enc                                                     ; work         ;
+;    |busMUX:mux|               ; 136 (136)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|busMUX:mux                                                         ; work         ;
+;    |control_unit:cUnit|       ; 117 (117)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|control_unit:cUnit                                                 ; work         ;
+;    |incrementPC:incpc|        ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |phase4datapath|incrementPC:incpc                                                  ; work         ;
++-------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                      ;
-+---------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
-; Name                                                                      ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                              ;
-+---------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
-; ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 512          ; 32           ; --           ; --           ; 16384 ; db/system.ram0_ram_1d0cf.hdl.mif ;
-+---------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------+
@@ -323,40 +293,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------+-------------------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal           ; Free of Timing Hazards ;
 +-----------------------------------------------------+-------------------------------+------------------------+
-; control_unit:cUnit|LOin                             ; control_unit:cUnit|WideOr64   ; yes                    ;
-; control_unit:cUnit|PCin                             ; control_unit:cUnit|WideOr40   ; yes                    ;
-; control_unit:cUnit|MDRin                            ; control_unit:cUnit|WideOr53   ; yes                    ;
-; control_unit:cUnit|Zin                              ; control_unit:cUnit|WideOr22   ; yes                    ;
-; control_unit:cUnit|Yin                              ; control_unit:cUnit|WideOr35   ; yes                    ;
-; control_unit:cUnit|MARin                            ; control_unit:cUnit|WideOr57   ; yes                    ;
-; control_unit:cUnit|CONin                            ; control_unit:cUnit|WideOr52   ; yes                    ;
-; control_unit:cUnit|ZLOout                           ; control_unit:cUnit|WideOr25   ; yes                    ;
-; control_unit:cUnit|PCout                            ; control_unit:cUnit|WideOr44   ; yes                    ;
-; control_unit:cUnit|Cout                             ; control_unit:cUnit|WideOr49   ; yes                    ;
-; control_unit:cUnit|Gra                              ; control_unit:cUnit|WideOr28   ; yes                    ;
-; control_unit:cUnit|Grb                              ; control_unit:cUnit|WideOr32   ; yes                    ;
-; control_unit:cUnit|Grc                              ; control_unit:cUnit|WideOr16   ; yes                    ;
-; control_unit:cUnit|Rout                             ; control_unit:cUnit|WideOr19   ; yes                    ;
-; control_unit:cUnit|BAout                            ; control_unit:cUnit|WideOr59   ; yes                    ;
-; control_unit:cUnit|Read                             ; control_unit:cUnit|WideOr62   ; yes                    ;
 ; control_unit:cUnit|Write                            ; control_unit:cUnit|WideOr56   ; yes                    ;
 ; control_unit:cUnit|Run                              ; control_unit:cUnit|WideOr43   ; yes                    ;
-; control_unit:cUnit|regIn[0]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[1]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[2]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[3]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[4]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[5]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[6]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[7]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[8]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[9]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[10]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[11]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[12]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[13]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[14]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
-; control_unit:cUnit|regIn[15]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|BAout                            ; control_unit:cUnit|WideOr59   ; yes                    ;
+; control_unit:cUnit|Cout                             ; control_unit:cUnit|WideOr49   ; yes                    ;
+; control_unit:cUnit|PCout                            ; control_unit:cUnit|WideOr44   ; yes                    ;
+; control_unit:cUnit|ZLOout                           ; control_unit:cUnit|WideOr25   ; yes                    ;
+; control_unit:cUnit|Rout                             ; control_unit:cUnit|WideOr19   ; yes                    ;
 ; control_unit:cUnit|present_state[0]                 ; control_unit:cUnit|Selector47 ; yes                    ;
 ; control_unit:cUnit|present_state[1]                 ; control_unit:cUnit|Selector47 ; yes                    ;
 ; control_unit:cUnit|present_state[2]                 ; control_unit:cUnit|Selector47 ; yes                    ;
@@ -364,75 +307,403 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; control_unit:cUnit|present_state[4]                 ; control_unit:cUnit|Selector47 ; yes                    ;
 ; control_unit:cUnit|present_state[5]                 ; control_unit:cUnit|Selector47 ; yes                    ;
 ; control_unit:cUnit|present_state[6]                 ; control_unit:cUnit|Selector47 ; yes                    ;
-; Number of user-specified and inferred latches = 41  ;                               ;                        ;
+; control_unit:cUnit|regIn[1]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[0]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[3]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[2]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[4]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[9]                         ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[13]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[12]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[15]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|regIn[14]                        ; control_unit:cUnit|WideOr47   ; yes                    ;
+; control_unit:cUnit|PCin                             ; control_unit:cUnit|WideOr40   ; yes                    ;
+; control_unit:cUnit|Zin                              ; control_unit:cUnit|WideOr22   ; yes                    ;
+; control_unit:cUnit|Yin                              ; control_unit:cUnit|WideOr35   ; yes                    ;
+; Number of user-specified and inferred latches = 27  ;                               ;                        ;
 +-----------------------------------------------------+-------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; Register:HI|q[6,14]                    ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[22]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[2,22]                    ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[18]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[10]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[10]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[18]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[26]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[0,26]                    ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[16]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[4]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[8]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[8]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[20]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[12]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[4]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[16]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[24]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[20]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[12]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[24]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[28]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[28,31]                   ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[15]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[1]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[7]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[3]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[17]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[5]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[3]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[7]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[19]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[9]                       ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[9]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[11]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[21]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[13]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[1]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[15]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[23]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[17]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[11]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[19]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[25]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[21]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[5]                       ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[23]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[27]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[25]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[13]                      ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[27]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[29,31]                   ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[29]                      ; Merged with Register:IR|q[0]           ;
-; Register:IR|q[2,6,14,30]               ; Merged with Register:IR|q[0]           ;
-; Register:HI|q[30]                      ; Merged with Register:IR|q[0]           ;
-; Register:ZHI|q[0..31]                  ; Stuck at GND due to stuck port data_in ;
-; Register:IR|q[0]                       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 96 ;                                        ;
-+----------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; seven_seg_disp:d1|out[7]                ; Stuck at VCC due to stuck port data_in ;
+; seven_seg_disp:d0|out[7]                ; Stuck at VCC due to stuck port data_in ;
+; Register:HI|q[14,30]                    ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[14]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[6]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[6,22]                     ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[22]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[22]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[18]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[26]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[2]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[2,26]                     ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[10]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[18]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[18]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[10]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[26]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[10]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[16]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[24]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[20]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[12]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[24]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[28]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[0]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[0,28]                     ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[4]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[16]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[8]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[4]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[12]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[8]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[16]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[8]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[20]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[20]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[24]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[12]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[28]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[4]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[31]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[23]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[17]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[11]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[19]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[25]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[21]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[5]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[23]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[27]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[25]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[13]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[27]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[29]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[29,31]                    ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[31]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[1]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[15]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[3]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[1]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[5]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[7]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[7]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[3]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[9]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[17]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[11]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[5]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[13]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[3]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[15]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[7]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[17]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[19]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[19]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[9]                        ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[21]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[9]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[23]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[11]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[25]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[21]                  ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[27]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[13]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:HI|q[29]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[1]                   ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[15]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:OUTPORT|q[2,6,14,30]           ; Merged with Register:OUTPORT|q[0]      ;
+; Register:IR|q[30]                       ; Merged with Register:OUTPORT|q[0]      ;
+; Register:ZHI|q[0..31]                   ; Stuck at GND due to stuck port data_in ;
+; seven_seg_disp:d1|out[0,4,5]            ; Stuck at GND due to stuck port data_in ;
+; seven_seg_disp:d0|out[0,4,5]            ; Stuck at GND due to stuck port data_in ;
+; Register:OUTPORT|q[0]                   ; Stuck at GND due to stuck port data_in ;
+; seven_seg_disp:d1|out[6]                ; Stuck at VCC due to stuck port data_in ;
+; seven_seg_disp:d1|out[1..3]             ; Stuck at GND due to stuck port data_in ;
+; seven_seg_disp:d0|out[6]                ; Stuck at VCC due to stuck port data_in ;
+; seven_seg_disp:d0|out[1..3]             ; Stuck at GND due to stuck port data_in ;
+; Register:LO|q[0]                        ; Lost fanout                            ;
+; Register:INPORT|q[0]                    ; Lost fanout                            ;
+; Register:R5|q[0]                        ; Lost fanout                            ;
+; Register:R7|q[0]                        ; Lost fanout                            ;
+; Register:R6|q[0]                        ; Lost fanout                            ;
+; Register:R8|q[0]                        ; Lost fanout                            ;
+; Register:R11|q[0]                       ; Lost fanout                            ;
+; Register:R10|q[0]                       ; Lost fanout                            ;
+; Register:LO|q[1]                        ; Lost fanout                            ;
+; Register:INPORT|q[1]                    ; Lost fanout                            ;
+; Register:R5|q[1]                        ; Lost fanout                            ;
+; Register:R7|q[1]                        ; Lost fanout                            ;
+; Register:R6|q[1]                        ; Lost fanout                            ;
+; Register:R8|q[1]                        ; Lost fanout                            ;
+; Register:R11|q[1]                       ; Lost fanout                            ;
+; Register:R10|q[1]                       ; Lost fanout                            ;
+; Register:LO|q[2]                        ; Lost fanout                            ;
+; Register:INPORT|q[2]                    ; Lost fanout                            ;
+; Register:R5|q[2]                        ; Lost fanout                            ;
+; Register:R7|q[2]                        ; Lost fanout                            ;
+; Register:R6|q[2]                        ; Lost fanout                            ;
+; Register:R8|q[2]                        ; Lost fanout                            ;
+; Register:R11|q[2]                       ; Lost fanout                            ;
+; Register:R10|q[2]                       ; Lost fanout                            ;
+; Register:LO|q[3]                        ; Lost fanout                            ;
+; Register:INPORT|q[3]                    ; Lost fanout                            ;
+; Register:R5|q[3]                        ; Lost fanout                            ;
+; Register:R7|q[3]                        ; Lost fanout                            ;
+; Register:R6|q[3]                        ; Lost fanout                            ;
+; Register:R8|q[3]                        ; Lost fanout                            ;
+; Register:R11|q[3]                       ; Lost fanout                            ;
+; Register:R10|q[3]                       ; Lost fanout                            ;
+; Register:LO|q[4]                        ; Lost fanout                            ;
+; Register:INPORT|q[4]                    ; Lost fanout                            ;
+; Register:R5|q[4]                        ; Lost fanout                            ;
+; Register:R7|q[4]                        ; Lost fanout                            ;
+; Register:R6|q[4]                        ; Lost fanout                            ;
+; Register:R8|q[4]                        ; Lost fanout                            ;
+; Register:R11|q[4]                       ; Lost fanout                            ;
+; Register:R10|q[4]                       ; Lost fanout                            ;
+; Register:LO|q[5]                        ; Lost fanout                            ;
+; Register:INPORT|q[5]                    ; Lost fanout                            ;
+; Register:R5|q[5]                        ; Lost fanout                            ;
+; Register:R7|q[5]                        ; Lost fanout                            ;
+; Register:R6|q[5]                        ; Lost fanout                            ;
+; Register:R8|q[5]                        ; Lost fanout                            ;
+; Register:R11|q[5]                       ; Lost fanout                            ;
+; Register:R10|q[5]                       ; Lost fanout                            ;
+; Register:LO|q[6]                        ; Lost fanout                            ;
+; Register:INPORT|q[6]                    ; Lost fanout                            ;
+; Register:R5|q[6]                        ; Lost fanout                            ;
+; Register:R7|q[6]                        ; Lost fanout                            ;
+; Register:R6|q[6]                        ; Lost fanout                            ;
+; Register:R8|q[6]                        ; Lost fanout                            ;
+; Register:R11|q[6]                       ; Lost fanout                            ;
+; Register:R10|q[6]                       ; Lost fanout                            ;
+; Register:LO|q[7]                        ; Lost fanout                            ;
+; Register:INPORT|q[7]                    ; Lost fanout                            ;
+; Register:R5|q[7]                        ; Lost fanout                            ;
+; Register:R7|q[7]                        ; Lost fanout                            ;
+; Register:R6|q[7]                        ; Lost fanout                            ;
+; Register:R8|q[7]                        ; Lost fanout                            ;
+; Register:R11|q[7]                       ; Lost fanout                            ;
+; Register:R10|q[7]                       ; Lost fanout                            ;
+; Register:LO|q[8]                        ; Lost fanout                            ;
+; Register:INPORT|q[8]                    ; Lost fanout                            ;
+; Register:R5|q[8]                        ; Lost fanout                            ;
+; Register:R7|q[8]                        ; Lost fanout                            ;
+; Register:R6|q[8]                        ; Lost fanout                            ;
+; Register:R8|q[8]                        ; Lost fanout                            ;
+; Register:R11|q[8]                       ; Lost fanout                            ;
+; Register:R10|q[8]                       ; Lost fanout                            ;
+; Register:LO|q[9]                        ; Lost fanout                            ;
+; Register:INPORT|q[9]                    ; Lost fanout                            ;
+; Register:R5|q[9]                        ; Lost fanout                            ;
+; Register:R7|q[9]                        ; Lost fanout                            ;
+; Register:R6|q[9]                        ; Lost fanout                            ;
+; Register:R8|q[9]                        ; Lost fanout                            ;
+; Register:R11|q[9]                       ; Lost fanout                            ;
+; Register:R10|q[9]                       ; Lost fanout                            ;
+; Register:LO|q[10]                       ; Lost fanout                            ;
+; Register:INPORT|q[10]                   ; Lost fanout                            ;
+; Register:R5|q[10]                       ; Lost fanout                            ;
+; Register:R7|q[10]                       ; Lost fanout                            ;
+; Register:R6|q[10]                       ; Lost fanout                            ;
+; Register:R8|q[10]                       ; Lost fanout                            ;
+; Register:R11|q[10]                      ; Lost fanout                            ;
+; Register:R10|q[10]                      ; Lost fanout                            ;
+; Register:LO|q[11]                       ; Lost fanout                            ;
+; Register:INPORT|q[11]                   ; Lost fanout                            ;
+; Register:R5|q[11]                       ; Lost fanout                            ;
+; Register:R7|q[11]                       ; Lost fanout                            ;
+; Register:R6|q[11]                       ; Lost fanout                            ;
+; Register:R8|q[11]                       ; Lost fanout                            ;
+; Register:R11|q[11]                      ; Lost fanout                            ;
+; Register:R10|q[11]                      ; Lost fanout                            ;
+; Register:LO|q[12]                       ; Lost fanout                            ;
+; Register:INPORT|q[12]                   ; Lost fanout                            ;
+; Register:R5|q[12]                       ; Lost fanout                            ;
+; Register:R7|q[12]                       ; Lost fanout                            ;
+; Register:R6|q[12]                       ; Lost fanout                            ;
+; Register:R8|q[12]                       ; Lost fanout                            ;
+; Register:R11|q[12]                      ; Lost fanout                            ;
+; Register:R10|q[12]                      ; Lost fanout                            ;
+; Register:LO|q[13]                       ; Lost fanout                            ;
+; Register:INPORT|q[13]                   ; Lost fanout                            ;
+; Register:R5|q[13]                       ; Lost fanout                            ;
+; Register:R7|q[13]                       ; Lost fanout                            ;
+; Register:R6|q[13]                       ; Lost fanout                            ;
+; Register:R8|q[13]                       ; Lost fanout                            ;
+; Register:R11|q[13]                      ; Lost fanout                            ;
+; Register:R10|q[13]                      ; Lost fanout                            ;
+; Register:LO|q[14]                       ; Lost fanout                            ;
+; Register:INPORT|q[14]                   ; Lost fanout                            ;
+; Register:R5|q[14]                       ; Lost fanout                            ;
+; Register:R7|q[14]                       ; Lost fanout                            ;
+; Register:R6|q[14]                       ; Lost fanout                            ;
+; Register:R8|q[14]                       ; Lost fanout                            ;
+; Register:R11|q[14]                      ; Lost fanout                            ;
+; Register:R10|q[14]                      ; Lost fanout                            ;
+; Register:LO|q[15]                       ; Lost fanout                            ;
+; Register:INPORT|q[15]                   ; Lost fanout                            ;
+; Register:R5|q[15]                       ; Lost fanout                            ;
+; Register:R7|q[15]                       ; Lost fanout                            ;
+; Register:R6|q[15]                       ; Lost fanout                            ;
+; Register:R8|q[15]                       ; Lost fanout                            ;
+; Register:R11|q[15]                      ; Lost fanout                            ;
+; Register:R10|q[15]                      ; Lost fanout                            ;
+; Register:LO|q[16]                       ; Lost fanout                            ;
+; Register:INPORT|q[16]                   ; Lost fanout                            ;
+; Register:R5|q[16]                       ; Lost fanout                            ;
+; Register:R7|q[16]                       ; Lost fanout                            ;
+; Register:R6|q[16]                       ; Lost fanout                            ;
+; Register:R8|q[16]                       ; Lost fanout                            ;
+; Register:R11|q[16]                      ; Lost fanout                            ;
+; Register:R10|q[16]                      ; Lost fanout                            ;
+; Register:LO|q[17]                       ; Lost fanout                            ;
+; Register:INPORT|q[17]                   ; Lost fanout                            ;
+; Register:R5|q[17]                       ; Lost fanout                            ;
+; Register:R7|q[17]                       ; Lost fanout                            ;
+; Register:R6|q[17]                       ; Lost fanout                            ;
+; Register:R8|q[17]                       ; Lost fanout                            ;
+; Register:R11|q[17]                      ; Lost fanout                            ;
+; Register:R10|q[17]                      ; Lost fanout                            ;
+; Register:LO|q[18]                       ; Lost fanout                            ;
+; Register:INPORT|q[18]                   ; Lost fanout                            ;
+; Register:R5|q[18]                       ; Lost fanout                            ;
+; Register:R7|q[18]                       ; Lost fanout                            ;
+; Register:R6|q[18]                       ; Lost fanout                            ;
+; Register:R8|q[18]                       ; Lost fanout                            ;
+; Register:R11|q[18]                      ; Lost fanout                            ;
+; Register:R10|q[18]                      ; Lost fanout                            ;
+; Register:LO|q[19]                       ; Lost fanout                            ;
+; Register:INPORT|q[19]                   ; Lost fanout                            ;
+; Register:R5|q[19]                       ; Lost fanout                            ;
+; Register:R7|q[19]                       ; Lost fanout                            ;
+; Register:R6|q[19]                       ; Lost fanout                            ;
+; Register:R8|q[19]                       ; Lost fanout                            ;
+; Register:R11|q[19]                      ; Lost fanout                            ;
+; Register:R10|q[19]                      ; Lost fanout                            ;
+; Register:LO|q[20]                       ; Lost fanout                            ;
+; Register:INPORT|q[20]                   ; Lost fanout                            ;
+; Register:R5|q[20]                       ; Lost fanout                            ;
+; Register:R7|q[20]                       ; Lost fanout                            ;
+; Register:R6|q[20]                       ; Lost fanout                            ;
+; Register:R8|q[20]                       ; Lost fanout                            ;
+; Register:R11|q[20]                      ; Lost fanout                            ;
+; Register:R10|q[20]                      ; Lost fanout                            ;
+; Register:LO|q[21]                       ; Lost fanout                            ;
+; Register:INPORT|q[21]                   ; Lost fanout                            ;
+; Register:R5|q[21]                       ; Lost fanout                            ;
+; Register:R7|q[21]                       ; Lost fanout                            ;
+; Register:R6|q[21]                       ; Lost fanout                            ;
+; Register:R8|q[21]                       ; Lost fanout                            ;
+; Register:R11|q[21]                      ; Lost fanout                            ;
+; Register:R10|q[21]                      ; Lost fanout                            ;
+; Register:LO|q[22]                       ; Lost fanout                            ;
+; Register:INPORT|q[22]                   ; Lost fanout                            ;
+; Register:R5|q[22]                       ; Lost fanout                            ;
+; Register:R7|q[22]                       ; Lost fanout                            ;
+; Register:R6|q[22]                       ; Lost fanout                            ;
+; Register:R8|q[22]                       ; Lost fanout                            ;
+; Register:R11|q[22]                      ; Lost fanout                            ;
+; Register:R10|q[22]                      ; Lost fanout                            ;
+; Register:LO|q[23]                       ; Lost fanout                            ;
+; Register:INPORT|q[23]                   ; Lost fanout                            ;
+; Register:R5|q[23]                       ; Lost fanout                            ;
+; Register:R7|q[23]                       ; Lost fanout                            ;
+; Register:R6|q[23]                       ; Lost fanout                            ;
+; Register:R8|q[23]                       ; Lost fanout                            ;
+; Register:R11|q[23]                      ; Lost fanout                            ;
+; Register:R10|q[23]                      ; Lost fanout                            ;
+; Register:LO|q[24]                       ; Lost fanout                            ;
+; Register:INPORT|q[24]                   ; Lost fanout                            ;
+; Register:R5|q[24]                       ; Lost fanout                            ;
+; Register:R7|q[24]                       ; Lost fanout                            ;
+; Register:R6|q[24]                       ; Lost fanout                            ;
+; Register:R8|q[24]                       ; Lost fanout                            ;
+; Register:R11|q[24]                      ; Lost fanout                            ;
+; Register:R10|q[24]                      ; Lost fanout                            ;
+; Register:LO|q[25]                       ; Lost fanout                            ;
+; Register:INPORT|q[25]                   ; Lost fanout                            ;
+; Register:R5|q[25]                       ; Lost fanout                            ;
+; Register:R7|q[25]                       ; Lost fanout                            ;
+; Register:R6|q[25]                       ; Lost fanout                            ;
+; Register:R8|q[25]                       ; Lost fanout                            ;
+; Register:R11|q[25]                      ; Lost fanout                            ;
+; Register:R10|q[25]                      ; Lost fanout                            ;
+; Register:LO|q[26]                       ; Lost fanout                            ;
+; Register:INPORT|q[26]                   ; Lost fanout                            ;
+; Register:R5|q[26]                       ; Lost fanout                            ;
+; Register:R7|q[26]                       ; Lost fanout                            ;
+; Register:R6|q[26]                       ; Lost fanout                            ;
+; Register:R8|q[26]                       ; Lost fanout                            ;
+; Register:R11|q[26]                      ; Lost fanout                            ;
+; Register:R10|q[26]                      ; Lost fanout                            ;
+; Register:LO|q[27]                       ; Lost fanout                            ;
+; Register:INPORT|q[27]                   ; Lost fanout                            ;
+; Register:R5|q[27]                       ; Lost fanout                            ;
+; Register:R7|q[27]                       ; Lost fanout                            ;
+; Register:R6|q[27]                       ; Lost fanout                            ;
+; Register:R8|q[27]                       ; Lost fanout                            ;
+; Register:R11|q[27]                      ; Lost fanout                            ;
+; Register:R10|q[27]                      ; Lost fanout                            ;
+; Register:LO|q[28]                       ; Lost fanout                            ;
+; Register:INPORT|q[28]                   ; Lost fanout                            ;
+; Register:R5|q[28]                       ; Lost fanout                            ;
+; Register:R7|q[28]                       ; Lost fanout                            ;
+; Register:R6|q[28]                       ; Lost fanout                            ;
+; Register:R8|q[28]                       ; Lost fanout                            ;
+; Register:R11|q[28]                      ; Lost fanout                            ;
+; Register:R10|q[28]                      ; Lost fanout                            ;
+; Register:LO|q[29]                       ; Lost fanout                            ;
+; Register:INPORT|q[29]                   ; Lost fanout                            ;
+; Register:R5|q[29]                       ; Lost fanout                            ;
+; Register:R7|q[29]                       ; Lost fanout                            ;
+; Register:R6|q[29]                       ; Lost fanout                            ;
+; Register:R8|q[29]                       ; Lost fanout                            ;
+; Register:R11|q[29]                      ; Lost fanout                            ;
+; Register:R10|q[29]                      ; Lost fanout                            ;
+; Register:LO|q[30]                       ; Lost fanout                            ;
+; Register:INPORT|q[30]                   ; Lost fanout                            ;
+; Register:R5|q[30]                       ; Lost fanout                            ;
+; Register:R7|q[30]                       ; Lost fanout                            ;
+; Register:R6|q[30]                       ; Lost fanout                            ;
+; Register:R8|q[30]                       ; Lost fanout                            ;
+; Register:R11|q[30]                      ; Lost fanout                            ;
+; Register:R10|q[30]                      ; Lost fanout                            ;
+; Register:LO|q[31]                       ; Lost fanout                            ;
+; Register:INPORT|q[31]                   ; Lost fanout                            ;
+; Register:R5|q[31]                       ; Lost fanout                            ;
+; Register:R7|q[31]                       ; Lost fanout                            ;
+; Register:R6|q[31]                       ; Lost fanout                            ;
+; Register:R8|q[31]                       ; Lost fanout                            ;
+; Register:R11|q[31]                      ; Lost fanout                            ;
+; Register:R10|q[31]                      ; Lost fanout                            ;
+; MDR:mdr_reg|Register:MDR|q[0..31]       ; Lost fanout                            ;
+; mar:mar_reg|Register:MAR|q[0..8]        ; Lost fanout                            ;
+; Total Number of Removed Registers = 441 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                       ;
++-----------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++-----------------------+---------------------------+-------------------------------------------------------------------------------+
+; Register:OUTPORT|q[0] ; Stuck at GND              ; seven_seg_disp:d1|out[6], seven_seg_disp:d1|out[3], seven_seg_disp:d1|out[2], ;
+;                       ; due to stuck port data_in ; seven_seg_disp:d1|out[1], seven_seg_disp:d0|out[6], seven_seg_disp:d0|out[3], ;
+;                       ;                           ; seven_seg_disp:d0|out[2], seven_seg_disp:d0|out[1]                            ;
+; Register:ZHI|q[1]     ; Stuck at GND              ; MDR:mdr_reg|Register:MDR|q[0], mar:mar_reg|Register:MAR|q[0],                 ;
+;                       ; due to stuck port data_in ; mar:mar_reg|Register:MAR|q[1], mar:mar_reg|Register:MAR|q[2],                 ;
+;                       ;                           ; mar:mar_reg|Register:MAR|q[3], mar:mar_reg|Register:MAR|q[4]                  ;
+; Register:ZHI|q[0]     ; Stuck at GND              ; MDR:mdr_reg|Register:MDR|q[1], MDR:mdr_reg|Register:MDR|q[2],                 ;
+;                       ; due to stuck port data_in ; MDR:mdr_reg|Register:MDR|q[3], MDR:mdr_reg|Register:MDR|q[4],                 ;
+;                       ;                           ; MDR:mdr_reg|Register:MDR|q[5]                                                 ;
++-----------------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -440,12 +711,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 713   ;
+; Total registers                              ; 416   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 681   ;
+; Number of registers using Clock Enable       ; 416   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -459,13 +730,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +---------------------------+----------------------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 32:1               ; 32 bits   ; 672 LEs       ; 576 LEs              ; 96 LEs                 ; No         ; |datapath|busMUX:mux|Mux25 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
+; 32:1               ; 32 bits   ; 672 LEs       ; 576 LEs              ; 96 LEs                 ; No         ; |phase4datapath|busMUX:mux|Mux25 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
@@ -716,35 +987,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seven_seg_disp:d1"                                                                                                                                                               ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; out  ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (6 bits) it drives; bit(s) "out[7..6]" have no fanouts                                                           ;
-; data ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "seven_seg_disp:d0"                                                                                                                                                               ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; out  ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (4 bits) it drives; bit(s) "out[7..4]" have no fanouts                                                           ;
-; data ; Input  ; Warning  ; Input port expression (8 bits) is wider than the input port (4 bits) it drives.  The 4 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Register:OUTPORT"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------+
 ; Port Connectivity Checks: "Register:INPORT" ;
 +------+-------+----------+-------------------+
@@ -786,7 +1028,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -796,7 +1038,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Mar 27 16:04:17 2023
+    Info: Processing started: Mon Apr 03 21:33:02 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off system -c system
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file bidirectionalbus.v
@@ -944,8 +1186,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file seven_s
     Info (12023): Found entity 1: seven_seg_disp
 Info (12021): Found 1 design units, including 1 entities, in source file phase4tb.v
     Info (12023): Found entity 1: phase4tb
+Info (12021): Found 1 design units, including 1 entities, in source file phase4datapath.v
+    Info (12023): Found entity 1: phase4datapath
 Warning (10236): Verilog HDL Implicit Net warning at ALUtb.v(9): created implicit net for "IncPC"
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12127): Elaborating entity "phase4datapath" for the top level hierarchy
 Info (12128): Elaborating entity "control_unit" for hierarchy "control_unit:cUnit"
 Warning (10270): Verilog HDL Case Statement warning at control_unit.v(56): incomplete case statement has no default case item
 Warning (10270): Verilog HDL Case Statement warning at control_unit.v(50): incomplete case statement has no default case item
@@ -1109,62 +1353,63 @@ Info (12133): Instantiated megafunction "ram:memory|altsyncram:ram_rtl_0" with t
     Info (12134): Parameter "INIT_FILE" = "db/system.ram0_ram_1d0cf.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0le1.tdf
     Info (12023): Found entity 1: altsyncram_0le1
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a0"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a1"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a2"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a3"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a4"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a5"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a6"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a7"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a8"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a9"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a10"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a11"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a12"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a13"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a14"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a15"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a16"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a17"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a18"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a19"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a20"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a21"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a22"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a23"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a24"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a25"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a26"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a27"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a28"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a29"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a30"
+        Warning (14320): Synthesized away node "ram:memory|altsyncram:ram_rtl_0|altsyncram_0le1:auto_generated|ram_block1a31"
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[14]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[13]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[12]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[11]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[10]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[9]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[8]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[7]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[6]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[5]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[4]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[3]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[2]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[1]" merged with LATCH primitive "control_unit:cUnit|regIn[0]"
-Warning (13012): Latch control_unit:cUnit|LOin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|PCin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[3]
-Warning (13012): Latch control_unit:cUnit|MDRin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Zin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Yin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[1]
-Warning (13012): Latch control_unit:cUnit|MARin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|CONin has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|ZLOout has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|PCout has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[3]
-Warning (13012): Latch control_unit:cUnit|Cout has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Gra has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Grb has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Grc has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Rout has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|BAout has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|Read has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[14]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[13]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[12]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[9]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[4]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[3]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[2]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
+    Info (13026): Duplicate LATCH primitive "control_unit:cUnit|regIn[0]" merged with LATCH primitive "control_unit:cUnit|regIn[1]"
 Warning (13012): Latch control_unit:cUnit|Write has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
 Warning (13012): Latch control_unit:cUnit|Run has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|regIn[0] has unsafe behavior
+Warning (13012): Latch control_unit:cUnit|BAout has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
-Warning (13012): Latch control_unit:cUnit|regIn[15] has unsafe behavior
+Warning (13012): Latch control_unit:cUnit|Cout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
+Warning (13012): Latch control_unit:cUnit|PCout has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[3]
+Warning (13012): Latch control_unit:cUnit|ZLOout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
+Warning (13012): Latch control_unit:cUnit|Rout has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
 Warning (13012): Latch control_unit:cUnit|present_state[0] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[2]
 Warning (13012): Latch control_unit:cUnit|present_state[1] has unsafe behavior
@@ -1179,179 +1424,18 @@ Warning (13012): Latch control_unit:cUnit|present_state[5] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
 Warning (13012): Latch control_unit:cUnit|present_state[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal Reset
+Warning (13012): Latch control_unit:cUnit|regIn[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
+Warning (13012): Latch control_unit:cUnit|regIn[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[3]
+Warning (13012): Latch control_unit:cUnit|PCin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[3]
+Warning (13012): Latch control_unit:cUnit|Zin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[6]
+Warning (13012): Latch control_unit:cUnit|Yin has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal control_unit:cUnit|present_state[1]
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HIin" is stuck at GND
-    Warning (13410): Pin "IRin" is stuck at GND
-    Warning (13410): Pin "OUTPORTin" is stuck at GND
-    Warning (13410): Pin "HIout" is stuck at GND
-    Warning (13410): Pin "LOout" is stuck at GND
-    Warning (13410): Pin "ZHIout" is stuck at GND
-    Warning (13410): Pin "MDRout" is stuck at GND
-    Warning (13410): Pin "INPORTout" is stuck at GND
-    Warning (13410): Pin "OUTPORTout" is stuck at GND
-    Warning (13410): Pin "Yout" is stuck at GND
-    Warning (13410): Pin "Rin" is stuck at GND
     Warning (13410): Pin "IncPC" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInHI[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInZhi[31]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[0]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[1]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[2]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[3]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[4]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[5]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[6]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[7]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[8]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[9]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[10]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[11]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[12]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[13]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[14]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[15]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[16]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[17]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[18]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[19]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[20]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[21]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[22]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[23]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[24]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[25]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[26]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[27]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[28]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[29]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[30]" is stuck at GND
-    Warning (13410): Pin "BusMuxInOutport[31]" is stuck at GND
-    Warning (13410): Pin "IRregister[0]" is stuck at GND
-    Warning (13410): Pin "IRregister[1]" is stuck at GND
-    Warning (13410): Pin "IRregister[2]" is stuck at GND
-    Warning (13410): Pin "IRregister[3]" is stuck at GND
-    Warning (13410): Pin "IRregister[4]" is stuck at GND
-    Warning (13410): Pin "IRregister[5]" is stuck at GND
-    Warning (13410): Pin "IRregister[6]" is stuck at GND
-    Warning (13410): Pin "IRregister[7]" is stuck at GND
-    Warning (13410): Pin "IRregister[8]" is stuck at GND
-    Warning (13410): Pin "IRregister[9]" is stuck at GND
-    Warning (13410): Pin "IRregister[10]" is stuck at GND
-    Warning (13410): Pin "IRregister[11]" is stuck at GND
-    Warning (13410): Pin "IRregister[12]" is stuck at GND
-    Warning (13410): Pin "IRregister[13]" is stuck at GND
-    Warning (13410): Pin "IRregister[14]" is stuck at GND
-    Warning (13410): Pin "IRregister[15]" is stuck at GND
-    Warning (13410): Pin "IRregister[16]" is stuck at GND
-    Warning (13410): Pin "IRregister[17]" is stuck at GND
-    Warning (13410): Pin "IRregister[18]" is stuck at GND
-    Warning (13410): Pin "IRregister[19]" is stuck at GND
-    Warning (13410): Pin "IRregister[20]" is stuck at GND
-    Warning (13410): Pin "IRregister[21]" is stuck at GND
-    Warning (13410): Pin "IRregister[22]" is stuck at GND
-    Warning (13410): Pin "IRregister[23]" is stuck at GND
-    Warning (13410): Pin "IRregister[24]" is stuck at GND
-    Warning (13410): Pin "IRregister[25]" is stuck at GND
-    Warning (13410): Pin "IRregister[26]" is stuck at GND
-    Warning (13410): Pin "IRregister[27]" is stuck at GND
-    Warning (13410): Pin "IRregister[28]" is stuck at GND
-    Warning (13410): Pin "IRregister[29]" is stuck at GND
-    Warning (13410): Pin "IRregister[30]" is stuck at GND
-    Warning (13410): Pin "IRregister[31]" is stuck at GND
-    Warning (13410): Pin "Cregister[0]" is stuck at GND
-    Warning (13410): Pin "Cregister[1]" is stuck at GND
-    Warning (13410): Pin "Cregister[2]" is stuck at GND
-    Warning (13410): Pin "Cregister[3]" is stuck at GND
-    Warning (13410): Pin "Cregister[4]" is stuck at GND
-    Warning (13410): Pin "Cregister[5]" is stuck at GND
-    Warning (13410): Pin "Cregister[6]" is stuck at GND
-    Warning (13410): Pin "Cregister[7]" is stuck at GND
-    Warning (13410): Pin "Cregister[8]" is stuck at GND
-    Warning (13410): Pin "Cregister[9]" is stuck at GND
-    Warning (13410): Pin "Cregister[10]" is stuck at GND
-    Warning (13410): Pin "Cregister[11]" is stuck at GND
-    Warning (13410): Pin "Cregister[12]" is stuck at GND
-    Warning (13410): Pin "Cregister[13]" is stuck at GND
-    Warning (13410): Pin "Cregister[14]" is stuck at GND
-    Warning (13410): Pin "Cregister[15]" is stuck at GND
-    Warning (13410): Pin "Cregister[16]" is stuck at GND
-    Warning (13410): Pin "Cregister[17]" is stuck at GND
-    Warning (13410): Pin "Cregister[18]" is stuck at GND
-    Warning (13410): Pin "Cregister[19]" is stuck at GND
-    Warning (13410): Pin "Cregister[20]" is stuck at GND
-    Warning (13410): Pin "Cregister[21]" is stuck at GND
-    Warning (13410): Pin "Cregister[22]" is stuck at GND
-    Warning (13410): Pin "Cregister[23]" is stuck at GND
-    Warning (13410): Pin "Cregister[24]" is stuck at GND
-    Warning (13410): Pin "Cregister[25]" is stuck at GND
-    Warning (13410): Pin "Cregister[26]" is stuck at GND
-    Warning (13410): Pin "Cregister[27]" is stuck at GND
-    Warning (13410): Pin "Cregister[28]" is stuck at GND
-    Warning (13410): Pin "Cregister[29]" is stuck at GND
-    Warning (13410): Pin "Cregister[30]" is stuck at GND
-    Warning (13410): Pin "Cregister[31]" is stuck at GND
     Warning (13410): Pin "present_state[7]" is stuck at GND
     Warning (13410): Pin "seg0out[0]" is stuck at GND
     Warning (13410): Pin "seg0out[1]" is stuck at GND
@@ -1359,30 +1443,63 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg0out[3]" is stuck at GND
     Warning (13410): Pin "seg0out[4]" is stuck at GND
     Warning (13410): Pin "seg0out[5]" is stuck at GND
-    Warning (13410): Pin "seg0out[6]" is stuck at GND
-    Warning (13410): Pin "seg0out[7]" is stuck at GND
+    Warning (13410): Pin "seg0out[6]" is stuck at VCC
+    Warning (13410): Pin "seg0out[7]" is stuck at VCC
     Warning (13410): Pin "seg1out[0]" is stuck at GND
     Warning (13410): Pin "seg1out[1]" is stuck at GND
     Warning (13410): Pin "seg1out[2]" is stuck at GND
     Warning (13410): Pin "seg1out[3]" is stuck at GND
     Warning (13410): Pin "seg1out[4]" is stuck at GND
     Warning (13410): Pin "seg1out[5]" is stuck at GND
-    Warning (13410): Pin "seg1out[6]" is stuck at GND
-    Warning (13410): Pin "seg1out[7]" is stuck at GND
+    Warning (13410): Pin "seg1out[6]" is stuck at VCC
+    Warning (13410): Pin "seg1out[7]" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 297 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/elec374/system-design/System-Design/output_files/system.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 2204 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 32 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "inportInput[0]"
+    Warning (15610): No output dependent on input pin "inportInput[1]"
+    Warning (15610): No output dependent on input pin "inportInput[2]"
+    Warning (15610): No output dependent on input pin "inportInput[3]"
+    Warning (15610): No output dependent on input pin "inportInput[4]"
+    Warning (15610): No output dependent on input pin "inportInput[5]"
+    Warning (15610): No output dependent on input pin "inportInput[6]"
+    Warning (15610): No output dependent on input pin "inportInput[7]"
+    Warning (15610): No output dependent on input pin "inportInput[8]"
+    Warning (15610): No output dependent on input pin "inportInput[9]"
+    Warning (15610): No output dependent on input pin "inportInput[10]"
+    Warning (15610): No output dependent on input pin "inportInput[11]"
+    Warning (15610): No output dependent on input pin "inportInput[12]"
+    Warning (15610): No output dependent on input pin "inportInput[13]"
+    Warning (15610): No output dependent on input pin "inportInput[14]"
+    Warning (15610): No output dependent on input pin "inportInput[15]"
+    Warning (15610): No output dependent on input pin "inportInput[16]"
+    Warning (15610): No output dependent on input pin "inportInput[17]"
+    Warning (15610): No output dependent on input pin "inportInput[18]"
+    Warning (15610): No output dependent on input pin "inportInput[19]"
+    Warning (15610): No output dependent on input pin "inportInput[20]"
+    Warning (15610): No output dependent on input pin "inportInput[21]"
+    Warning (15610): No output dependent on input pin "inportInput[22]"
+    Warning (15610): No output dependent on input pin "inportInput[23]"
+    Warning (15610): No output dependent on input pin "inportInput[24]"
+    Warning (15610): No output dependent on input pin "inportInput[25]"
+    Warning (15610): No output dependent on input pin "inportInput[26]"
+    Warning (15610): No output dependent on input pin "inportInput[27]"
+    Warning (15610): No output dependent on input pin "inportInput[28]"
+    Warning (15610): No output dependent on input pin "inportInput[29]"
+    Warning (15610): No output dependent on input pin "inportInput[30]"
+    Warning (15610): No output dependent on input pin "inportInput[31]"
+Info (21057): Implemented 810 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 35 input pins
-    Info (21059): Implemented 1013 output pins
-    Info (21061): Implemented 1124 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 299 warnings
-    Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Mon Mar 27 16:04:27 2023
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:08
+    Info (21059): Implemented 59 output pins
+    Info (21061): Implemented 716 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 178 warnings
+    Info: Peak virtual memory: 4669 megabytes
+    Info: Processing ended: Mon Apr 03 21:33:06 2023
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +------------------------------------------+

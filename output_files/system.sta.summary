@@ -2,148 +2,148 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'Clock'
-Slack : -9.518
-TNS   : -2557.889
-
 Type  : Slow 1100mV 85C Model Setup 'control_unit:cUnit|present_state[1]'
-Slack : -9.030
-TNS   : -146.289
+Slack : -9.434
+TNS   : -150.210
+
+Type  : Slow 1100mV 85C Model Setup 'Clock'
+Slack : -8.475
+TNS   : -2377.603
 
 Type  : Slow 1100mV 85C Model Setup 'Reset'
-Slack : -4.519
-TNS   : -29.870
+Slack : -5.126
+TNS   : -31.874
 
 Type  : Slow 1100mV 85C Model Hold 'Reset'
-Slack : -5.685
-TNS   : -37.078
+Slack : -5.930
+TNS   : -39.699
 
 Type  : Slow 1100mV 85C Model Hold 'control_unit:cUnit|present_state[1]'
-Slack : -1.482
-TNS   : -8.193
+Slack : -1.912
+TNS   : -11.564
 
 Type  : Slow 1100mV 85C Model Hold 'Clock'
-Slack : 0.399
+Slack : 0.319
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Reset'
-Slack : -1.519
-TNS   : -30.649
+Slack : -1.794
+TNS   : -42.002
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'control_unit:cUnit|present_state[1]'
-Slack : -1.071
-TNS   : -3.752
+Slack : -0.647
+TNS   : -3.602
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clock'
 Slack : -0.538
-TNS   : -325.817
-
-Type  : Slow 1100mV 0C Model Setup 'Clock'
-Slack : -9.253
-TNS   : -2434.845
+TNS   : -325.748
 
 Type  : Slow 1100mV 0C Model Setup 'control_unit:cUnit|present_state[1]'
-Slack : -9.019
-TNS   : -145.851
+Slack : -9.382
+TNS   : -149.264
+
+Type  : Slow 1100mV 0C Model Setup 'Clock'
+Slack : -8.177
+TNS   : -2318.521
 
 Type  : Slow 1100mV 0C Model Setup 'Reset'
-Slack : -4.604
-TNS   : -30.360
+Slack : -5.251
+TNS   : -32.379
 
 Type  : Slow 1100mV 0C Model Hold 'Reset'
-Slack : -5.592
-TNS   : -36.791
+Slack : -5.810
+TNS   : -38.937
 
 Type  : Slow 1100mV 0C Model Hold 'control_unit:cUnit|present_state[1]'
-Slack : -1.456
-TNS   : -8.117
+Slack : -1.893
+TNS   : -11.349
 
 Type  : Slow 1100mV 0C Model Hold 'Clock'
-Slack : 0.375
+Slack : 0.184
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Reset'
-Slack : -1.553
-TNS   : -31.916
+Slack : -1.800
+TNS   : -43.027
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'control_unit:cUnit|present_state[1]'
-Slack : -1.050
-TNS   : -3.683
+Slack : -0.551
+TNS   : -3.634
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clock'
 Slack : -0.538
-TNS   : -327.153
-
-Type  : Fast 1100mV 85C Model Setup 'Clock'
-Slack : -4.562
-TNS   : -1292.876
+TNS   : -326.840
 
 Type  : Fast 1100mV 85C Model Setup 'control_unit:cUnit|present_state[1]'
-Slack : -4.473
-TNS   : -70.512
+Slack : -4.655
+TNS   : -72.168
+
+Type  : Fast 1100mV 85C Model Setup 'Clock'
+Slack : -3.911
+TNS   : -1168.099
 
 Type  : Fast 1100mV 85C Model Setup 'Reset'
-Slack : -1.645
-TNS   : -10.795
+Slack : -1.875
+TNS   : -11.503
 
 Type  : Fast 1100mV 85C Model Hold 'Reset'
-Slack : -3.176
-TNS   : -20.893
+Slack : -3.279
+TNS   : -22.106
 
 Type  : Fast 1100mV 85C Model Hold 'control_unit:cUnit|present_state[1]'
-Slack : -0.686
-TNS   : -3.800
+Slack : -0.856
+TNS   : -5.354
 
 Type  : Fast 1100mV 85C Model Hold 'Clock'
-Slack : 0.181
-TNS   : 0.000
+Slack : -0.025
+TNS   : -0.025
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Reset'
-Slack : -0.912
-TNS   : -16.263
+Slack : -1.074
+TNS   : -18.048
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'control_unit:cUnit|present_state[1]'
-Slack : -0.400
-TNS   : -0.995
+Slack : -0.139
+TNS   : -0.336
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clock'
-Slack : -0.097
-TNS   : -38.842
+Slack : -0.096
+TNS   : -38.799
 
 Type  : Fast 1100mV 0C Model Setup 'control_unit:cUnit|present_state[1]'
-Slack : -4.117
-TNS   : -64.758
+Slack : -4.296
+TNS   : -66.220
 
 Type  : Fast 1100mV 0C Model Setup 'Clock'
-Slack : -3.939
-TNS   : -1067.779
+Slack : -3.332
+TNS   : -977.251
 
 Type  : Fast 1100mV 0C Model Setup 'Reset'
-Slack : -1.455
-TNS   : -9.495
+Slack : -1.666
+TNS   : -10.081
 
 Type  : Fast 1100mV 0C Model Hold 'Reset'
-Slack : -2.979
-TNS   : -19.645
+Slack : -3.047
+TNS   : -20.607
 
 Type  : Fast 1100mV 0C Model Hold 'control_unit:cUnit|present_state[1]'
-Slack : -0.633
-TNS   : -3.460
+Slack : -0.777
+TNS   : -4.874
 
 Type  : Fast 1100mV 0C Model Hold 'Clock'
-Slack : 0.169
-TNS   : 0.000
+Slack : -0.134
+TNS   : -0.134
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Reset'
-Slack : -0.832
-TNS   : -15.072
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'control_unit:cUnit|present_state[1]'
-Slack : -0.307
-TNS   : -0.716
+Slack : -0.974
+TNS   : -16.600
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clock'
-Slack : -0.096
-TNS   : -38.767
+Slack : -0.095
+TNS   : -38.576
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'control_unit:cUnit|present_state[1]'
+Slack : -0.051
+TNS   : -0.092
 
 ------------------------------------------------------------

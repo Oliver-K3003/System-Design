@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="system">
-		<CBX_INST_ENTRY INSTANCE_NAME="|datapath|ram:memory|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_0le1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|phase4datapath|ram:memory|altsyncram:ram_rtl_0" CBX_FILE_NAME="altsyncram_0le1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -1,4 +1,5 @@
 # Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
 # do system_run_msim_rtl_verilog.do 
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -222,4 +223,3 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 60000 ns
-# WARNING: No extended dataflow license exists
